@@ -25,7 +25,7 @@ function HeroSection() {
   return (
     <>
       <motion.div
-        className="progress-bar fixed top-0 left-0 right-0 h-[10px]  bg-brand_main-500"
+        className="progress-bar fixed top-0 left-0 right-0 h-[10px] select-none  bg-brand_main-500"
         style={{ scaleX }}
       />
       <main

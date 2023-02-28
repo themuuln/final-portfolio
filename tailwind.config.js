@@ -37,5 +37,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography")({
+      fontFamily: {
+        firacode: ["Fira Code", "monospace"],
+      },
+    }),
+  ],
 };
