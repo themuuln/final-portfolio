@@ -7,6 +7,12 @@
   src: url(../public/fonts/DoveOfPeace.ttf);
 }
 
+::selection {
+  background-color: #ff8531;
+  color: #00202e;
+
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
