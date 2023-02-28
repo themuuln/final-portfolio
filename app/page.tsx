@@ -8,8 +8,8 @@ export default function Home() {
     <>
       <HeroSection />
       <HeaderSection />
-      {/* <MainSection />
-      <FooterSection /> */}
+      <MainSection />
+      <FooterSection />
     </>
   );
 }
