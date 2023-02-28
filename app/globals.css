@@ -128,7 +128,7 @@ a {
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #102E44;
+  background-color: #0B1F2E;
 }
 
 *::-webkit-scrollbar-track:active {
@@ -146,4 +146,12 @@ a {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #F1903B;
+}
+
+@keyframes flip {
+
+  0%,
+  80% {
+    transform: rotateY(360deg)
+  }
 }
