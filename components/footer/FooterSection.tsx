@@ -1,7 +1,7 @@
 const FooterSection = () => {
   return (
     <>
-      <div className="h-[600vh]">FooterSection</div>
+      <div></div>
     </>
   );
 };

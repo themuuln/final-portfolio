@@ -1,7 +1,7 @@
 const MainSection = () => {
   return (
     <>
-      <div>MainSection</div>
+      <div className="h-[600vh]"></div>
     </>
   );
 };
