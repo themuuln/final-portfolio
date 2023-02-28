@@ -15,13 +15,6 @@ function HeroSection() {
     restDelta: 0.001,
   });
 
-  // scroll listen event
-  window.onscroll = function () {
-    if (window.scrollY > 500) {
-      console.log("helloo");
-      // do something when the user has scrolled down 500 pixels
-    }
-  };
   return (
     <>
       <motion.div
