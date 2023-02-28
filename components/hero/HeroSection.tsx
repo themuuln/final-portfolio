@@ -39,13 +39,13 @@ function HeroSection() {
                 TEMUULEN UNDRAKHBAYAR
               </motion.p>
               <div className="h-40 w-full bg-brand_bg-500">
-                {/* <motion.p
+                <motion.p
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   className="text-3xl "
                 >
                   Front-end Developer & UI/UX Designer
-                </motion.p> */}
+                </motion.p>
               </div>
             </div>
           </motion.div>

@@ -18,7 +18,7 @@ const HeaderSection = () => {
   };
   return (
     <>
-      <div className="h-[80px] w-full backdrop-blur">
+      <div className="sticky top-0 h-[80px] w-full bg-brand_bg-300 backdrop-blur">
         <div className="flex justify-between">
           <div className="leftSideHeader">test1</div>
           <div className="rightSideHeader flex gap-2 font-bold text-brand_main-500">
