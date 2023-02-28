@@ -4,7 +4,6 @@ import HeaderSection from "@/components/header/HeaderSection";
 import FooterSection from "@/components/footer/FooterSection";
 import Cursor from "@/components/Cursor";
 import MainSection from "@/components/main/MainSection";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
