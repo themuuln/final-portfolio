@@ -7,13 +7,11 @@ import ProgressBar from "@/components/hero/ProgressBar";
 export default function Home() {
   return (
     <>
-      <div className="snap-y snap-mandatory overflow-y-scroll">
-        <ProgressBar />
-        <HeroSection />
-        <HeaderSection />
-        <MainSection />
-        <FooterSection />
-      </div>
+      <ProgressBar />
+      <HeroSection />
+      <HeaderSection />
+      <MainSection />
+      <FooterSection />
     </>
   );
 }
