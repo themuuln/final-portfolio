@@ -1,7 +1,7 @@
 const FooterSection = () => {
   return (
     <>
-      <div></div>
+      <div className="snap-start"></div>
     </>
   );
 };
