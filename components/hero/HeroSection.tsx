@@ -10,7 +10,7 @@ function HeroSection() {
     <>
       <main
         className={
-          "flex h-screen w-screen items-center justify-center bg-brand_bg-500 text-brand_main-500"
+          "flex min-h-screen w-screen items-center justify-center bg-brand_bg-500 text-brand_main-500"
         }
       >
         <motion.div className="container flex h-full flex-col items-center justify-center">
