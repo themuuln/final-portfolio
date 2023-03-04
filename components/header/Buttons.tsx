@@ -1,5 +1,5 @@
 import { Fira_Code } from "@next/font/google";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 const firacode = Fira_Code({
   subsets: ["latin"],
@@ -13,7 +13,7 @@ type Props = {
 const Buttons = ({ context }: Props) => {
   return (
     <>
-      <motion.div
+      <m.div
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -22,7 +22,7 @@ const Buttons = ({ context }: Props) => {
         className={`${firacode.className} cursor-pointer font-sans transition ease-linear hover:text-brand_main-300`}
       >
         \\ {context}
-      </motion.div>
+      </m.div>
     </>
   );
 };

@@ -13,8 +13,8 @@ function HeroSection() {
           "flex min-h-screen w-screen items-center justify-center bg-brand_bg-500 text-brand_main-500"
         }
       >
-        <motion.div className="container flex h-full flex-col items-center justify-center">
-          <div className="textContainer flex select-none flex-col justify-start text-7xl">
+        <motion.div className="container flex flex-col items-center justify-center h-full">
+          <div className="flex flex-col justify-start select-none textContainer text-7xl">
             <HelloGreetings greetings={"Hello, my name is"} />
             <HeroMyName myName={"temuulen undrakhbayar"} />
             <Role role={"Front-end Developer & UI/UX Designer"} />
