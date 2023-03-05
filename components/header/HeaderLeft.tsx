@@ -1,6 +1,6 @@
 import { IconContext } from "react-icons";
 import { AiOutlineCode } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 type Props = {
   context: String;
@@ -8,7 +8,7 @@ type Props = {
 const HeaderLeft = ({ context }: Props) => {
   return (
     <>
-      <motion.div
+      <m.div
         initial={{ x: -200 }}
         animate={{ x: 0 }}
         className="leftSideHeader flex items-center gap-1 text-xl font-bold text-brand_main-500"
@@ -17,7 +17,7 @@ const HeaderLeft = ({ context }: Props) => {
           <AiOutlineCode />
         </IconContext.Provider>
         {context}
-      </motion.div>
+      </m.div>
     </>
   );
 };

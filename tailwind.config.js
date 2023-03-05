@@ -38,6 +38,11 @@ module.exports = {
         800: "#663514",
         900: "#331b0a",
       },
+      extraverted: "#5f96b3",
+      intuitive: "#d9b044",
+      thinking: "#5ca176",
+      prospecting: "#816499",
+      turbulent: "#dc6a63",
     },
   },
   plugins: [

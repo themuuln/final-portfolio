@@ -16,7 +16,7 @@ const Role = ({ role }: Props) => {
             stiffness: 100,
             duration: 1,
           }}
-          className="text-3xl "
+          className="text-3xl leading-5"
         >
           {role
             .toUpperCase()

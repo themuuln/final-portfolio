@@ -15,13 +15,16 @@ const HeroMyName = ({ myName }: Props) => {
           stiffness: 100,
           duration: 1,
         }}
-        className="text-[100px] font-bold "
+        className="text-[100px] font-extrabold "
       >
         {myName
           .toUpperCase()
           .split("")
           .map((letter, index) => (
-            <motion.span className="hover:text-brand_main-400" key={index}>
+            <motion.span
+              className="transition-all duration-200 hover:text-brand_main-400"
+              key={index}
+            >
               {letter}
             </motion.span>
           ))}

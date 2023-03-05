@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: DoveOfPeace;
   src: url(../public/fonts/DoveOfPeace.ttf);
-}
+} */
 
 ::selection {
   background-color: #ff8531;
   color: #00202e;
-
 }
 
 :root {

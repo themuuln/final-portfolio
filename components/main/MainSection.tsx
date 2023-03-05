@@ -1,7 +1,11 @@
+import MbtiSection from "./Mbti/MbtiSection";
+
 const MainSection = () => {
   return (
     <>
-      <div className="h-[600vh]"></div>
+      <div className="align-center container flex h-fit flex-col">
+        <MbtiSection />
+      </div>
     </>
   );
 };
