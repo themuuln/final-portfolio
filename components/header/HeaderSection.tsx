@@ -12,7 +12,7 @@ const firacode = Fira_Code({
 const HeaderSection = () => {
   return (
     <>
-      <div className="sticky top-0  h-[80px] w-full  py-6 px-8 backdrop-blur">
+      <div className="fixed top-0  h-[80px] w-full  py-6 px-8 backdrop-blur">
         <div className="flex justify-between">
           <HeaderLeft context={"THEMUULN"} />
           <HeaderRight />

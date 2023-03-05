@@ -1,7 +1,7 @@
 const FooterSection = () => {
   return (
     <>
-      <div className=""></div>
+      <div className="">Footer Section</div>
     </>
   );
 };

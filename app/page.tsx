@@ -9,9 +9,7 @@ export default function Home() {
     <>
       <ProgressBar />
       <HeroSection />
-      <HeaderSection />
       <MainSection />
-      <FooterSection />
     </>
   );
 }
