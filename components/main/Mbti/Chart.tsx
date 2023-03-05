@@ -5,7 +5,11 @@ type Props = {
 const Chart = ({ color }: Props) => {
   return (
     <>
-      <div className={`h-2 w-full bg-${color}`}></div>
+      <div
+        className={`relative h-10 w-[400px] rounded-[30px] bg-chartbg xl:w-[600px]`}
+      >
+        <div className={`bg-${color} w-10p`}></div>
+      </div>
     </>
   );
 };
