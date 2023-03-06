@@ -14,7 +14,7 @@ const HelloGreetings = ({ greetings }: Props) => {
           stiffness: 100,
           duration: 1,
         }}
-        className="text-3xl leading-6"
+        className="text-2xl leading-3 xl:text-3xl xl:leading-6"
       >
         {greetings.split("").map((letter, index) => (
           <span key={index}>{letter}</span>
