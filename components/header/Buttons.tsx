@@ -1,11 +1,5 @@
-import { Fira_Code } from "@next/font/google";
 import { motion } from "framer-motion";
-
-const firacode = Fira_Code({
-  subsets: ["latin"],
-  weight: "300",
-  variable: "--font-firacode",
-});
+import { firacode } from "@/public/fonts/fonts";
 
 type Props = {
   context: String;
