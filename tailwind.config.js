@@ -43,6 +43,7 @@ module.exports = {
       thinking: "#5CA176",
       prospecting: "#816499",
       turbulent: "#DC6A63",
+      percentage: "#51596A",
       chartbg: "#001A25",
     },
   },
