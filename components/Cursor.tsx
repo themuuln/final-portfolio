@@ -14,7 +14,7 @@ const Cursor = () => {
           left: `${clientX}px`,
           top: `${clientY}px`,
         },
-        { duration: 300, fill: "forwards" }
+        { duration: 301, fill: "forwards" }
       );
     }
   };

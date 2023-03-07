@@ -4,10 +4,11 @@ import { firacode } from "@/public/fonts/fonts";
 type Props = {
   context: String;
 };
+
 const Buttons = ({ context }: Props) => {
   return (
     <>
-      <motion.div
+      <motion.button
         whileHover={{ y: -10 }}
         whileTap={{ color: "#cc6a27" }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -16,7 +17,7 @@ const Buttons = ({ context }: Props) => {
         className={`${firacode.className} cursor-pointer font-sans transition ease-linear hover:text-brand_main-300`}
       >
         \\ {context}
-      </motion.div>
+      </motion.button>
     </>
   );
 };
