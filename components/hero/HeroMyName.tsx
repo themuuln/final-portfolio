@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 type Props = {
   myName: String;
@@ -7,7 +7,7 @@ type Props = {
 const HeroMyName = ({ myName }: Props) => {
   return (
     <>
-      <motion.p
+      <m.p
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{
@@ -21,14 +21,14 @@ const HeroMyName = ({ myName }: Props) => {
           .toUpperCase()
           .split("")
           .map((letter, index) => (
-            <motion.span
+            <m.span
               className="transition-all duration-200 hover:text-brand_main-400"
               key={index}
             >
               {letter}
-            </motion.span>
+            </m.span>
           ))}
-      </motion.p>
+      </m.p>
     </>
   );
 };
