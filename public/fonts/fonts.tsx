@@ -1,4 +1,4 @@
-import { Poppins, Montserrat, Fira_Code } from "@next/font/google";
+import { Poppins, Montserrat, Fira_Code, Kanit } from "@next/font/google";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -16,4 +16,10 @@ export const firacode = Fira_Code({
   subsets: ["latin"],
   weight: "300",
   variable: "--font-firacode",
+});
+
+export const kanit = Kanit({
+  subsets: ["latin"],
+  weight: "600",
+  variable: "--font-kanit",
 });
