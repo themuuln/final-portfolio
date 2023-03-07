@@ -1,3 +1,5 @@
+"use client";
+import { motion as m } from "framer-motion";
 type Props = {
   chartColor: String;
   width: String;
@@ -7,13 +9,15 @@ type Props = {
 const ChartRight = ({ chartColor, width, shadowColor }: Props) => {
   return (
     <>
-      <div
+      <m.div
+        initial={{ x: 1000, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         className={`relative h-10 w-[400px] rounded-[30px] bg-chartbg p-1 xl:w-[600px]`}
       >
         <div
           className={`w-20p h-8 ${width} ${shadowColor}Glow absolute right-0 rounded-[30px] rounded-l-none ${chartColor}`}
         />
-      </div>
+      </m.div>
     </>
   );
 };
