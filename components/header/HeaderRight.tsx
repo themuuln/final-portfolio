@@ -11,8 +11,8 @@ const HeaderRight = () => {
         <Link href={"/experience"}>
           <Buttons context={"experience"} />
         </Link>
-        <Link href={"/work"}>
-          <Buttons context={"work"} />
+        <Link href={"/project"}>
+          <Buttons context={"project"} />
         </Link>
         <Link href={"/blog"}>
           <Buttons context={"blog"} />
