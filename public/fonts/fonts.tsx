@@ -20,6 +20,6 @@ export const firacode = Fira_Code({
 
 export const kanit = Kanit({
   subsets: ["latin"],
-  weight: "600",
+  weight: ["300", "400", "600"],
   variable: "--font-kanit",
 });
