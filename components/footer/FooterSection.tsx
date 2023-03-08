@@ -4,7 +4,7 @@ import { motion as m } from "framer-motion";
 const FooterSection = () => {
   return (
     <>
-      <section className="relative h-[20vh]  ">
+      <section className="relative h-[20vh] snap-center  ">
         <m.div
           whileHover={{ y: 10 }}
           initial={{ opacity: 0, x: -400, y: 400 }}
