@@ -6,7 +6,7 @@ const EntpAvatar = () => {
   return (
     <>
       <m.div
-        initial={{ x: -500, opacity: 0 }}
+        initial={{ x: -400, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         className="debaterSection flex flex-col items-center"
       >

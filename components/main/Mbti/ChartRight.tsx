@@ -10,8 +10,9 @@ const ChartRight = ({ chartColor, width, shadowColor }: Props) => {
   return (
     <>
       <m.div
-        initial={{ x: 1000, opacity: 0 }}
+        initial={{ x: 400, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
+        whileHover={{ y: -10 }}
         className={`relative h-10 w-[400px] rounded-[30px] bg-chartbg p-1 xl:w-[600px]`}
       >
         <div

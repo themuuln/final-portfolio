@@ -21,7 +21,7 @@ const ChartPercentage = ({
   return (
     <>
       <m.div
-        initial={{ x: 1000, opacity: 0 }}
+        initial={{ x: 400, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         className="mt-[-10px] flex h-fit w-full justify-between px-3 text-lg"
       >
