@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "public/svg/DebaterText.tsx",
-    "public/svg/DebaterSvg.jsx"
+    "public/svg/DebaterSvg.jsx",
+    "components/WorldMap.jsx"
   ],
   "exclude": ["node_modules"]
 }

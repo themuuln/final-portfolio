@@ -1,5 +1,6 @@
 "use client";
 import { motion as m } from "framer-motion";
+import WorldMap from "../WorldMap";
 
 const FooterSection = () => {
   return (
@@ -28,8 +29,9 @@ const FooterSection = () => {
           © Temuulen Undrakhbayar 2023
         </div>
       </footer> */}
-      <div className="flex h-screen items-center justify-center">
-        Bottom Section
+      <div className="z-30 flex h-screen items-center justify-center bg-brand_bg-500 ">
+        {/* <WorldMap /> */}
+        Footer Section
       </div>
     </div>
   );

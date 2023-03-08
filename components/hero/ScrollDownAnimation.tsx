@@ -11,7 +11,7 @@ const ScrollDownAnimation = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="absolute bottom-4 animate-bounce select-none"
+          className="absolute bottom-4 z-20 select-none"
         >
           <ScrollDown />
         </motion.div>
