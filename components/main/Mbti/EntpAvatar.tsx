@@ -8,6 +8,7 @@ const EntpAvatar = () => {
       <m.div
         initial={{ x: -400, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
+        whileHover={{ scale: 1.1 }}
         className="debaterSection flex flex-col items-center"
       >
         <DebaterSvg />
