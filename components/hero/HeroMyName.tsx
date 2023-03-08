@@ -9,7 +9,7 @@ const HeroMyName = ({ myName }: Props) => {
     <>
       <m.p
         initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, y: 0, opacity: 1 }}
+        whileInView={{ x: 0, y: 0, opacity: 1 }}
         transition={{
           type: "spring",
           stiffness: 100,

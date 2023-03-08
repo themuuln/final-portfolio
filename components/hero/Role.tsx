@@ -10,7 +10,7 @@ const Role = ({ role }: Props) => {
       <div className="h-40 w-full bg-brand_bg-500">
         <motion.p
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{
             type: "spring",
             stiffness: 100,
