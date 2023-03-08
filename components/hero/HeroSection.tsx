@@ -26,7 +26,6 @@ function HeroSection() {
           </div>
         </motion.div>
         <ScrollDownAnimation />
-        {/* <ScrollUpAnimation /> */}
       </main>
     </>
   );
