@@ -1,6 +1,8 @@
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
-import HeaderMobile from "./HeaderMobile";
-import HeaderDesktop from "./HeaderDesktop";
+
+const HeaderMobile = dynamic(() => import("./HeaderMobile"));
+const HeaderDesktop = dynamic(() => import("./HeaderDesktop"));
 
 const HeaderRight = () => {
   const isPhone = useMediaQuery({ query: "(max-width: 640px)" });

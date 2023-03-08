@@ -1,11 +1,7 @@
-import HeaderHamburger from "./HeaderHamburger";
-
 const HeaderMobile = () => {
   return (
     <>
-      <div className="rightSideHeader">
-        <HeaderHamburger />
-      </div>
+      <div className="rightSideHeader">Hamburger</div>
     </>
   );
 };
