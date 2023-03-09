@@ -14,7 +14,7 @@ export const connects = [
     ],
     twitter: [
       {
-        href: "https://https://twitter.com/Themuln",
+        href: "https://www.twitter.com/themuln",
         icon: "<BsTwitter />",
       },
     ],
