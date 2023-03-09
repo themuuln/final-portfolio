@@ -31,7 +31,8 @@
     ".next/types/**/*.ts",
     "public/svg/DebaterText.tsx",
     "public/svg/DebaterSvg.jsx",
-    "components/WorldMap.jsx"
+    "components/WorldMap.jsx",
+    "public/svg/ScrollDown.tsx"
   ],
   "exclude": ["node_modules"]
 }

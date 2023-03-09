@@ -16,6 +16,7 @@ function HeroSection() {
   return (
     <>
       <main
+        id="hero"
         className={`${montserrat.className} flex min-h-screen w-screen snap-center items-center justify-center bg-brand_bg-500 text-brand_main-500`}
       >
         <motion.div className="container flex h-full w-screen flex-col items-center justify-center">

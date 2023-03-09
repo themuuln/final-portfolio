@@ -1,5 +1,4 @@
 import "../../app/svganimation.css";
-
 const ScrollDown = () => {
   return (
     <svg className="arrows">

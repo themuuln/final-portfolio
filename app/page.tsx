@@ -1,10 +1,11 @@
+"use client";
+
+import { useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import HeaderSection from "@/components/header/HeaderSection";
 import MainSection from "@/components/main/MainSection";
-import ProgressBar from "@/components/hero/ProgressBar";
 import FooterSection from "@/components/footer/FooterSection";
 import MbtiSection from "@/components/main/Mbti/MbtiSection";
-import ScrollIndicator from "@/components/scroll/ScrollIndicator";
 
 export default function Home() {
   return (
