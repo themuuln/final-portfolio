@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-hidden overflow-y-scroll">
       {/* <ProgressBar /> */}
-      <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
       <HeroSection />
       <HeaderSection />
       <MainSection />
