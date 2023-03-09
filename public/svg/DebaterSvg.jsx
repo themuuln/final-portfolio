@@ -1,7 +1,9 @@
+import { motion as m } from "framer-motion";
 const DebaterSvg = () => {
   return (
-    <svg
+    <m.svg
       width="391"
+      whileHover={{ y: -10 }}
       height="411"
       viewBox="0 0 391 411"
       fill="none"
@@ -177,7 +179,7 @@ const DebaterSvg = () => {
         d="M261.869 161.673C265.948 161.673 269.254 158.367 269.254 154.289C269.254 150.21 265.948 146.904 261.869 146.904C257.791 146.904 254.485 150.21 254.485 154.289C254.485 158.367 257.791 161.673 261.869 161.673Z"
         fill="#002738"
       />
-    </svg>
+    </m.svg>
   );
 };
 
