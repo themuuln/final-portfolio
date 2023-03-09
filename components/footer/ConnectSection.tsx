@@ -6,7 +6,7 @@ const SocialLinks: React.FC = () => {
   const getSocialLinks = () => {
     return connects.map((connect, index) => {
       return (
-        <div className="flex text-5xl" key={index}>
+        <div className="flex gap-4 text-xl" key={index}>
           {connect.facebook && (
             <ConnectButton
               icon={<BsFacebook />}
