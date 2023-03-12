@@ -1,34 +1,29 @@
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import { connects } from "../../pages/api/connect";
 import ConnectButton from "./ConnectButton";
+import ConnectText from "./ConnectText";
 
 const SocialLinks: React.FC = () => {
   const getSocialLinks = () => {
     return connects.map((connect, index) => {
       return (
-        <div className="flex gap-4 text-xl" key={index}>
+        <ul className="flex flex-col gap-2 text-xl" key={index}>
           {connect.facebook && (
-            <ConnectButton
-              icon={<BsFacebook />}
-              href={connect.facebook[0].href}
-            />
+            <ConnectText social={"Facebook"} href={connect.facebook[0].href} />
           )}
           {connect.instagram && (
-            <ConnectButton
-              icon={<BsInstagram />}
+            <ConnectText
+              social={"Instagram"}
               href={connect.instagram[0].href}
             />
           )}
           {connect.twitter && (
-            <ConnectButton
-              icon={<BsTwitter />}
-              href={connect.twitter[0].href}
-            />
+            <ConnectText social={"Twitter"} href={connect.twitter[0].href} />
           )}
           {connect.github && (
-            <ConnectButton icon={<BsGithub />} href={connect.github[0].href} />
+            <ConnectText social={"Github"} href={connect.github[0].href} />
           )}
-        </div>
+        </ul>
       );
     });
   };

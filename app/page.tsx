@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import HeaderSection from "@/components/header/HeaderSection";
 import MainSection from "@/components/main/MainSection";
@@ -9,7 +8,7 @@ import MbtiSection from "@/components/main/Mbti/MbtiSection";
 
 export default function Home() {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-hidden overflow-y-scroll">
+    <>
       {/* <ProgressBar /> */}
       {/* <ScrollIndicator /> */}
       <HeroSection />
@@ -17,6 +16,6 @@ export default function Home() {
       <MainSection />
       <MbtiSection />
       <FooterSection />
-    </div>
+    </>
   );
 }
