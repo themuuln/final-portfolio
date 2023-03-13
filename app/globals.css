@@ -19,7 +19,9 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --primary-glow: conic-gradient(from 180deg at 50% 50%,
+  --primary:
+
+    --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
       #0885ff33 55deg,
       #54d6ff33 120deg,
@@ -84,10 +86,11 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-image: url("../public/svg/background.svg");
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: #001a25; */
+  background: hsla(198, 100%, 7%, 1);
 }
 
 body {
@@ -145,8 +148,14 @@ a {
   background-color: #F1903B;
 }
 
-footer {
+/* footer {
   background-image: url(../public/svg/footerCloud.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+#hero {
+  background-image: url("../public/svg/pattern.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
