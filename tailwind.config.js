@@ -49,17 +49,7 @@ module.exports = {
       //   800: "#663514",
       //   900: "#331b0a",
       // },
-      brand_main: {
-        100: "#fcfbe8",
-        200: "#f9f7d1",
-        300: "#f6f3bb",
-        400: "#f3efa4",
-        500: "#f0eb8d",
-        600: "#c0bc71",
-        700: "#908d55",
-        800: "#605e38",
-        900: "#302f1c",
-      },
+
       extraverted: "#5F96B3",
       intuitive: "#D9B044",
       thinking: "#5CA176",
