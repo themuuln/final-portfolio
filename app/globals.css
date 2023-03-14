@@ -87,11 +87,10 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   backdrop-filter: blur(10px);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-color: #001a25; */
-  /* background: hsla(198, 100%, 7%, 1); */
-  background: #2D2727;
+  background-image: radial-gradient(#232323 1.5px, transparent 1px);
+  background-size: 30px 30px;
+  background-color: #161616;
+  background-repeat: repeat;
 }
 
 body {
@@ -154,9 +153,3 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 } */
-
-#hero {
-  background-image: url("../public/svg/pattern.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
