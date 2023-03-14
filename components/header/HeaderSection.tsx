@@ -7,11 +7,11 @@ const HeaderSection = () => {
   return (
     <>
       <div className="fixed top-0 z-10 h-[80px] w-full py-6 px-8 backdrop-blur">
-        <div className="flex justify-between">
-          <HeaderLeft context={"THEMUULN"} />
-          <div className="flex w-full justify-center ">
-            <HeaderRight />
-          </div>
+        <div className="container flex justify-between ">
+          <HeaderLeft context={"themuln.official@gmail.com"} />
+          {/* <div className="flex justify-center w-full "> */}
+          <HeaderRight />
+          {/* </div> */}
           {/* <HeaderThemeSwitcher /> */}
         </div>
       </div>

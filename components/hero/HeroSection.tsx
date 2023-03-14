@@ -17,10 +17,10 @@ function HeroSection() {
     <>
       <main
         id="hero"
-        className={`${montserrat.className} flex min-h-screen w-screen snap-center items-center justify-center bg-brand_bg-500 text-brand_main-500`}
+        className={`${montserrat.className} flex min-h-screen w-screen snap-center items-center justify-center text-brand_main-500`}
       >
-        <motion.div className="container flex h-full w-screen flex-col items-center justify-center">
-          <div className="textContainer flex select-none flex-col justify-start">
+        <motion.div className="container flex flex-col items-center justify-center w-screen h-full">
+          <div className="flex flex-col justify-start select-none textContainer">
             <HelloGreetings greetings={"Hello, my name is"} />
             <HeroMyName myName={"temuulen undrakhbayar"} />
             <Role role={"Front-end Developer & UI Designer"} />
