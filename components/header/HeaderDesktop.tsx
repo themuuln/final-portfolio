@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 const HeaderDesktop = () => {
   return (
     <>
-      <div className="flex gap-5 text-2xl font-bold rightSideHeader text-brand_main-500">
+      <div className="flex gap-5 text-2xl font-bold rightSideHeader ">
         <Link href={"#home"}>
           <Buttons context={"home"} />
         </Link>

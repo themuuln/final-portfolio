@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import ScrollDownAnimation from "./ScrollDownAnimation";
 import Role from "./Role";
 import HeroMyName from "./HeroMyName";
 import HelloGreetings from "./HeroGreetings";
@@ -17,7 +16,7 @@ function HeroSection() {
     <>
       <main
         id="hero"
-        className={`${montserrat.className} flex min-h-screen w-screen snap-center items-center justify-center text-brand_main-500`}
+        className={`${montserrat.className} text-white flex min-h-screen w-screen snap-center items-center justify-center`}
       >
         <motion.div className="container flex flex-col items-center justify-center w-screen h-full">
           <div className="flex flex-col justify-start select-none textContainer">
@@ -26,7 +25,6 @@ function HeroSection() {
             <Role role={"Front-end Developer & UI Designer"} />
           </div>
         </motion.div>
-        <ScrollDownAnimation />
       </main>
     </>
   );

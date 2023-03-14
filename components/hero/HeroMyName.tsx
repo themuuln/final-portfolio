@@ -15,7 +15,7 @@ const HeroMyName = ({ myName }: Props) => {
           stiffness: 100,
           duration: 1,
         }}
-        className="border-[1px] border-brand_bg-500 text-3xl font-extrabold leading-none xl:text-[100px]"
+        className="border-[1px] border-brand_bg-500  text-3xl font-extrabold leading-none xl:text-[100px]"
       >
         {myName
           .toUpperCase()
