@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { textEnter, textLeave } from "../../app/page";
 
 type Props = {
   greetings: String;
@@ -7,6 +8,8 @@ const HelloGreetings = ({ greetings }: Props) => {
   return (
     <>
       <motion.p
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
