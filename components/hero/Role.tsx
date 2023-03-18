@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 type Props = {
   role: String;
@@ -7,7 +7,7 @@ type Props = {
 const Role = ({ role }: Props) => {
   return (
     <>
-      <motion.p
+      <m.p
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -23,7 +23,7 @@ const Role = ({ role }: Props) => {
           .map((letter, index) => (
             <span key={index}>{letter}</span>
           ))}
-      </motion.p>
+      </m.p>
     </>
   );
 };

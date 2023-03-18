@@ -28,12 +28,12 @@ const ChartPercentage = ({
         <div className="flex gap-2">
           <p className={`${montserrat.className} ${leftColor}`}>{left}</p>
           <p className={`${kanit.className} ${leftColor}`}>
-            {leftContext ? leftContext.toUpperCase() : ""}
+            {leftContext.toUpperCase()}
           </p>
         </div>
         <div className="flex gap-2">
           <p className={`${kanit.className} ${rightColor}`}>
-            {rightContext ? leftContext.toUpperCase() : ""}
+            {rightContext.toUpperCase()}
           </p>
           <p className={`${montserrat.className} ${rightColor}`}>{right}</p>
         </div>

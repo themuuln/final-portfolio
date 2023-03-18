@@ -15,14 +15,14 @@ const HeroMyName = ({ myName }: Props) => {
           stiffness: 100,
           duration: 1,
         }}
-        className="border-[1px] border-brand_bg-500  text-3xl font-extrabold leading-none xl:text-[100px]"
+        className="border-[1px] border-brand_bg-500 px-2 text-3xl font-extrabold leading-none xl:text-8xl"
       >
         {myName
           .toUpperCase()
           .split("")
           .map((letter, index) => (
             <m.span
-              className="transition-all duration-200 hover:text-brand_main-400"
+              className="transition-all duration-1000 hover:text-brand_bg-400"
               key={index}
             >
               {letter}

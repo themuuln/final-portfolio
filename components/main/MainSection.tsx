@@ -1,9 +1,9 @@
 const MainSection = () => {
   return (
     <>
-      <div id="main" className="h-screen snap-center">
-        <div className="container flex h-screen items-center justify-center">
-          <div className="mainFirst">Main Section</div>
+      <div id="main" className="h-screen bg-brand_bg-600/5">
+        <div className="container">
+          <div>test</div>
         </div>
       </div>
     </>

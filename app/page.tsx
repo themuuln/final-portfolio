@@ -6,8 +6,6 @@ import MbtiSection from "@/components/main/Mbti/MbtiSection";
 export default function Home() {
   return (
     <>
-      {/* <ProgressBar /> */}
-      {/* <ScrollIndicator /> */}
       <HeroSection />
       <MainSection />
       <MbtiSection />

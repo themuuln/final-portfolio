@@ -1,6 +1,4 @@
-import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import { connects } from "../../pages/api/connect";
-import ConnectButton from "./ConnectButton";
 import ConnectText from "./ConnectText";
 
 const SocialLinks: React.FC = () => {

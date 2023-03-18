@@ -9,8 +9,8 @@ const Buttons = ({ context }: Props) => {
   return (
     <>
       <motion.button
-        whileHover={{ y: -10 }}
-        whileTap={{ color: "#cc6a27" }}
+        whileHover={{ y: -4 }}
+        whileTap={{ color: "#7236be" }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1, y: 0 }}

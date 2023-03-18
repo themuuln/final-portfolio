@@ -5,7 +5,7 @@ const ConnectText = ({ href, social }: any) => {
     <li>
       <a
         href={href}
-        className="flex items-center justify-center gap-1 underline-offset-1 transition-all duration-500 hover:text-brand_main-700 hover:underline"
+        className="hover:text-brand_main-700 flex items-center justify-center gap-1 underline-offset-1 transition-all duration-500 hover:underline"
         target={"blank"}
       >
         {social}
