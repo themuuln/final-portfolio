@@ -22,6 +22,7 @@ const ChartPercentage = ({
     <>
       <m.div
         initial={{ x: 400, opacity: 0 }}
+        transition={{ type: "tween" }}
         whileInView={{ x: 0, opacity: 1 }}
         className="mt-[-10px] flex h-fit w-full justify-between px-3 text-lg"
       >

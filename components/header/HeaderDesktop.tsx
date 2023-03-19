@@ -14,7 +14,7 @@ const HeaderDesktop = () => {
         <Link href={"#project"}>
           <Buttons context={"project"} />
         </Link>
-        <Link href={"#blog"}>
+        <Link href={"/blog"}>
           <Buttons context={"blog"} />
         </Link>
         <Link href={"#contact"}>

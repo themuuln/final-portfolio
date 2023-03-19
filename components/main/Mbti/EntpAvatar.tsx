@@ -1,4 +1,4 @@
-import { motion as m } from "framer-motion";
+import { easeIn, motion as m } from "framer-motion";
 import DebaterSvg from "@/public/svg/DebaterSvg";
 import DebaterCaption from "./DebaterCaption";
 
@@ -6,9 +6,10 @@ const EntpAvatar = () => {
   return (
     <>
       <m.div
-        initial={{ x: -200, opacity: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ type: "tween" }}
         whileInView={{ x: 0, opacity: 1 }}
-        className="debaterSection flex flex-col items-center"
+        className="flex flex-col items-center debaterSection"
       >
         <DebaterSvg />
         <DebaterCaption />
