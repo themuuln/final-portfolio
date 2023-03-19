@@ -21,3 +21,7 @@
 .glow {
   box-shadow: 0px 4px 105px 10px rgba(240, 93, 98, 0.9);
 }
+
+.cursorr {
+  z-index: 9999;
+}

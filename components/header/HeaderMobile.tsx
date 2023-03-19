@@ -1,7 +1,11 @@
+import { firacode } from "@/public/fonts/fonts";
+
 const HeaderMobile = () => {
   return (
     <>
-      <div className="rightSideHeader">Hamburger</div>
+      <div className={`${firacode.className} cursor-pointer`}>
+        (under construction)
+      </div>
     </>
   );
 };
