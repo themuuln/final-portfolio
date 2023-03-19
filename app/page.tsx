@@ -8,7 +8,6 @@ import "./glow.css";
 
 export default function Home() {
   const [cursorVariant, setCursorVariant] = useState("default");
-  const [isClicked, setIsClicked] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -101,7 +100,7 @@ export default function Home() {
       {/* <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
         Test
       </h1> */}
-      <HeroSection />
+      <HeroSection textEnter={textEnter} textLeave={textLeave} />
       <MainSection />
       <MbtiSection />
     </>

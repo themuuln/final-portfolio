@@ -1,10 +1,13 @@
+import { CursorHoverFunction } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
 
-type Props = {
+const Role = ({
+  role,
+  textEnter,
+  textLeave,
+}: CursorHoverFunction & {
   role: String;
-};
-
-const Role = ({ role }: Props) => {
+}) => {
   return (
     <>
       <m.p

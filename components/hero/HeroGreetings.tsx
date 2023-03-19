@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { CursorHoverFunction } from "@/lib/types/types";
 
-type Props = {
+const HelloGreetings = ({
+  greetings,
+}: CursorHoverFunction & {
   greetings: String;
-};
-const HelloGreetings = ({ greetings }: Props) => {
+}) => {
   return (
     <>
       <motion.p

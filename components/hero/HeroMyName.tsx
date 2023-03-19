@@ -1,10 +1,13 @@
+import { CursorHoverFunction } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
 
-type Props = {
+const HeroMyName = ({
+  myName,
+  textEnter,
+  textLeave,
+}: CursorHoverFunction & {
   myName: String;
-};
-
-const HeroMyName = ({ myName }: Props) => {
+}) => {
   return (
     <>
       <m.p
@@ -23,6 +26,8 @@ const HeroMyName = ({ myName }: Props) => {
           .map((letter, index) => (
             <m.span
               className="transition-all duration-1000 hover:text-brand_bg-400"
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
               key={index}
             >
               {letter}
