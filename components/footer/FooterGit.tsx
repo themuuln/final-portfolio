@@ -1,6 +1,4 @@
 import { firacode } from "@/public/fonts/fonts";
-import { GoGitCommit } from "react-icons/go";
-import { BiStar } from "react-icons/bi";
 
 const FooterGit = () => {
   return (
@@ -9,14 +7,14 @@ const FooterGit = () => {
         <div className={`flex w-full justify-center`}>
           <p>Designed & Built by Themuuln</p>
         </div>
-        <div className={`mt-3 flex w-full justify-center `}>
+        {/* <div className={`mt-3 flex w-full justify-center `}>
           <p>
             <GoGitCommit />
           </p>
           <p>
             <BiStar />
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
