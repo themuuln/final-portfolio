@@ -12,6 +12,23 @@ export default function Home() {
     x: 0,
     y: 0,
   });
+  type MixBlendMode =
+    | "normal"
+    | "multiply"
+    | "screen"
+    | "overlay"
+    | "darken"
+    | "lighten"
+    | "color-dodge"
+    | "color-burn"
+    | "hard-light"
+    | "soft-light"
+    | "difference"
+    | "exclusion"
+    | "hue"
+    | "saturation"
+    | "color"
+    | "luminosity";
 
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
@@ -35,7 +52,7 @@ export default function Home() {
       width: 100,
       x: mousePosition.x - 50,
       y: mousePosition.y - 50,
-      mixBlendMode: "multiply",
+      mixBlendMode: "multiply" as MixBlendMode,
     },
   };
 
@@ -49,7 +66,7 @@ export default function Home() {
       width: 125,
       x: mousePosition.x - 62.5,
       y: mousePosition.y - 62.5,
-      mixBlendMode: "multiply",
+      mixBlendMode: "multiply" as MixBlendMode,
     },
   };
 
