@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 function HeroSection({ textEnter, textLeave }: CursorHoverFunction) {
   return (
     <>
-      <HeaderSection />
+      <HeaderSection textEnter={textEnter} textLeave={textLeave} />
       <main
         id="hero"
         className={`${montserrat.className} text-white flex min-h-screen w-screen snap-center items-center justify-center`}

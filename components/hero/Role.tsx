@@ -23,8 +23,15 @@ const Role = ({
         {role
           .toUpperCase()
           .split("")
+
           .map((letter, index) => (
-            <span key={index}>{letter}</span>
+            <m.span
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+              key={index}
+            >
+              {letter}
+            </m.span>
           ))}
       </m.p>
     </>

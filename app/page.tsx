@@ -3,7 +3,7 @@ import HeroSection from "@/components/hero/HeroSection";
 import MainSection from "@/components/main/MainSection";
 import MbtiSection from "@/components/main/Mbti/MbtiSection";
 import { motion as m } from "framer-motion";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import "./glow.css";
 
 export default function Home() {
@@ -25,34 +25,17 @@ export default function Home() {
     };
   }, []);
 
-  //   const scrollListener = () => {
-  //     if (window.pageYOffset > 0 && !hasScrolled) {
-  //       setHasScrolled(true);
-  //  setCursorVariant("text");
-  //     } else if (window.pageYOffset === 0 && hasScrolled) {
-  //       setHasScrolled(false);
-  //       setCursorVariant("default");
-  //     }
-  //   };
-  //   window.addEventListener("mousemove", mouseMove);
-  //   window.addEventListener("scroll", scrollListener);
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //     window.removeEventListener("scroll", scrollListener);
-  //   };
-  // }, [hasScrolled]);
-
   const variants = {
     default: {
       x: mousePosition.x - 4,
       y: mousePosition.y - 4,
     },
     text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      // mixBlendMode: "difference",
+      height: 100,
+      width: 100,
+      x: mousePosition.x - 50,
+      y: mousePosition.y - 50,
+      mixBlendMode: "multiply",
     },
   };
 
@@ -62,11 +45,11 @@ export default function Home() {
       y: mousePosition.y - 16,
     },
     text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      // mixBlendMode: "difference",
+      height: 125,
+      width: 125,
+      x: mousePosition.x - 62.5,
+      y: mousePosition.y - 62.5,
+      mixBlendMode: "multiply",
     },
   };
 
