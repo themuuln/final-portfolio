@@ -1,23 +1,26 @@
 "use client";
-// importing sections
 const HeroSection = require("@/components/hero/HeroSection").default;
 const MainSection = require("@/components/main/MainSection").default;
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
 
-import { MixBlendMode } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
 import { useState, useLayoutEffect } from "react";
-import CursorContext from "@/lib/context/context";
-import "./glow.css";
-import { montserrat } from "@/public/fonts/fonts";
 import { useMediaQuery } from "react-responsive";
+
+import CursorContext from "@/lib/context/context";
+import { MixBlendMode } from "@/lib/types/types";
+import { telegraf_ultralight } from "@/public/fonts/fonts";
+import "./glow.css";
 
 export default function Home() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
+  const [hoverType, setHoverType] = useState("Link");
+
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
+    x: 1,
+    y: 1,
   });
 
   useLayoutEffect(() => {
@@ -34,49 +37,50 @@ export default function Home() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 4,
-      y: mousePosition.y - 4,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
     },
     text: {
-      height: 100,
-      width: 100,
-      x: mousePosition.x - 50,
-      y: mousePosition.y - 50,
-      mixBlendMode: "color-dodge" as MixBlendMode,
-    },
-  };
-
-  const variants2 = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 125,
-      width: 125,
-      x: mousePosition.x - 62.5,
-      y: mousePosition.y - 62.5,
+      height: 101,
+      width: 101,
+      x: mousePosition.x - 51,
+      y: mousePosition.y - 51,
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
   };
 
   const variants3 = {
     default: {
-      x: mousePosition.x - 2,
-      y: mousePosition.y - 2,
+      x: mousePosition.x - 17,
+      y: mousePosition.y - 17,
     },
     text: {
-      height: 50,
-      width: 80,
+      height: 126,
+      width: 126,
+      x: mousePosition.x - 63.5,
+      y: mousePosition.y - 63.5,
+      mixBlendMode: "color-dodge" as MixBlendMode,
+    },
+  };
+
+  const variants4 = {
+    default: {
+      x: mousePosition.x - 3,
+      y: mousePosition.y - 3,
+    },
+    text: {
+      height: 51,
+      width: 81,
       display: "flex",
-      x: mousePosition.x - 40,
-      y: mousePosition.y - 25,
+      x: mousePosition.x - 41,
+      y: mousePosition.y - 26,
       // mixBlendMode: "" as MixBlendMode,
     },
   };
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
+
   return (
     <>
       <CursorContext.Provider value={{ textEnter, textLeave }}>
@@ -85,37 +89,31 @@ export default function Home() {
             <m.div
               variants={variants}
               animate={cursorVariant}
-              // transition={{
-              //   type: "spring",
-              //   damping: 9,
-              //   stiffness: 100,
-
-              // }}
-              className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none cursorr bg-brand_bg-500 "
-            />
-            <m.div
-              variants={variants2}
-              animate={cursorVariant}
-              transition={{
-                type: "spring",
-                damping: 10,
-                stiffness: 50,
-                restDelta: 0.001,
-              }}
-              className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+              className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
             />
             <m.div
               variants={variants3}
               animate={cursorVariant}
               transition={{
                 type: "spring",
-                damping: 10,
-                stiffness: 50,
-                restDelta: 0.001,
+                damping: 11,
+                stiffness: 51,
+                restDelta: 1.001,
               }}
-              className={`${montserrat.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+              className="cursorr top1 pointer-events-none absolute left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+            />
+            <m.div
+              variants={variants4}
+              animate={cursorVariant}
+              transition={{
+                type: "spring",
+                damping: 11,
+                stiffness: 51,
+                restDelta: 1.001,
+              }}
+              className={`${telegraf_ultralight.className} cursorrr top1 pointer-events-none absolute left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
             >
-              test
+              {hoverType}
             </m.div>
           </>
         )}

@@ -5,7 +5,9 @@ import {
   Kanit,
   Lora,
   Noto_Serif,
+  Roboto_Mono,
 } from "@next/font/google";
+import localFont from "@next/font/local";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -34,11 +36,25 @@ export const kanit = Kanit({
 export const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-kanit",
+  variable: "--font-lora",
 });
 
 export const noto_serif = Noto_Serif({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-kanit",
+  variable: "--font-noto-serif",
+});
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-roboto-mono",
+});
+
+export const telegraf_regular = localFont({ src: "./PPTelegraf-Regular.otf" });
+export const telegraf_ultrabold = localFont({
+  src: "./PPTelegraf-UltraBold.otf",
+});
+export const telegraf_ultralight = localFont({
+  src: "./PPTelegraf-UltraLight.otf",
 });

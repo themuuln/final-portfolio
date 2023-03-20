@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import { noto_serif } from "@/public/fonts/fonts";
+import { firacode } from "@/public/fonts/fonts";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 
@@ -17,7 +17,7 @@ const HelloGreetings = ({ greetings }: { greetings: String }) => {
         }}
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
-        className={`${noto_serif.className} text-xl leading-4 xl:text-3xl xl:leading-6`}
+        className={`${firacode.className} mb-2 w-fit text-xl leading-4 xl:text-3xl xl:leading-6`}
       >
         {greetings.split("").map((letter, index) => (
           <m.span onMouseEnter={textEnter} onMouseLeave={textLeave} key={index}>

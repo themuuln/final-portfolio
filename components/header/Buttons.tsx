@@ -21,7 +21,7 @@ const Buttons = ({ context }: Props) => {
         whileInView={{ x: 0, opacity: 1, y: 0 }}
         className={`${firacode.className} hover:text-brand_main-300 cursor-pointer font-sans transition ease-linear`}
       >
-        \\ {context}
+        &#47;&#47; {context}
       </motion.button>
     </>
   );

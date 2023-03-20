@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import { montserrat } from "@/public/fonts/fonts";
+import { montserrat, telegraf_ultrabold } from "@/public/fonts/fonts";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 
@@ -15,7 +15,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           stiffness: 100,
           duration: 1,
         }}
-        className={`${montserrat.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl font-extrabold leading-none xl:text-8xl`}
+        className={`${telegraf_ultrabold.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl font-extrabold leading-none xl:text-8xl`}
       >
         {myName
           .toUpperCase()

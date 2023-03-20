@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: DoveOfPeace;
-  src: url(../public/fonts/DoveOfPeace.ttf);
-} */
-
 ::selection {
   background-color: rgb(135, 76, 212);
   color: white;
