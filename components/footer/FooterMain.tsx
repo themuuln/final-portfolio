@@ -6,7 +6,7 @@ const FooterMain = () => {
   return (
     <>
       <div className="container">
-        <div className="container mt-5 mb-10 flex justify-around space-y-5 ">
+        <div className="container flex justify-around mt-5 mb-10 space-y-5 ">
           <FooterTopLeftSection />
           <SocialLinks />
         </div>

@@ -1,3 +1,8 @@
-import { createContext } from "vm";
+import { createContext } from "react";
 
-export const CursorContext = createContext({});
+const CursorContext = createContext({
+  textEnter: () => {},
+  textLeave: () => {},
+});
+
+export default CursorContext;

@@ -1,14 +1,10 @@
-import { CursorHoverFunction } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
 import { montserrat } from "@/public/fonts/fonts";
+import { useContext } from "react";
+import CursorContext from "@/lib/context/context";
 
-const HeroMyName = ({
-  myName,
-  textEnter,
-  textLeave,
-}: CursorHoverFunction & {
-  myName: String;
-}) => {
+const HeroMyName = ({ myName }: { myName: String }) => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <m.p
@@ -19,7 +15,7 @@ const HeroMyName = ({
           stiffness: 100,
           duration: 1,
         }}
-        className={`${montserrat.className} border-[1px] border-brand_bg-500 px-2 py-1 text-4xl font-extrabold leading-none xl:text-8xl`}
+        className={`${montserrat.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl font-extrabold leading-none xl:text-8xl`}
       >
         {myName
           .toUpperCase()

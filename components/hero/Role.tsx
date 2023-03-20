@@ -1,13 +1,9 @@
-import { CursorHoverFunction } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
+import CursorContext from "@/lib/context/context";
+import { useContext } from "react";
 
-const Role = ({
-  role,
-  textEnter,
-  textLeave,
-}: CursorHoverFunction & {
-  role: String;
-}) => {
+const Role = ({ role }: { role: String }) => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <m.p
@@ -18,7 +14,7 @@ const Role = ({
           stiffness: 100,
           duration: 1,
         }}
-        className="text-xl leading-6 xl:text-3xl xl:leading-6"
+        className="mt-3 text-xl leading-6 xl:text-3xl xl:leading-6"
       >
         {role
           .toUpperCase()

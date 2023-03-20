@@ -1,15 +1,10 @@
 "use client";
 import { motion as m } from "framer-motion";
 import { montserrat, kanit } from "@/public/fonts/fonts";
+import { ChartPercentageProps } from "@/lib/types/types";
+import { useContext } from "react";
+import CursorContext from "@/lib/context/context";
 
-type Props = {
-  left: String;
-  right: String;
-  leftColor: String;
-  rightColor: String;
-  leftContext: String;
-  rightContext: String;
-};
 const ChartPercentage = ({
   left,
   right,
@@ -17,7 +12,8 @@ const ChartPercentage = ({
   rightColor,
   leftContext,
   rightContext,
-}: Props) => {
+}: ChartPercentageProps) => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <m.div
@@ -26,18 +22,26 @@ const ChartPercentage = ({
         whileInView={{ x: 0, opacity: 1 }}
         className="mt-[-10px] flex h-fit w-full justify-between px-3 text-lg"
       >
-        <div className="flex gap-2">
+        <m.div
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+          className="flex gap-2"
+        >
           <p className={`${montserrat.className} ${leftColor}`}>{left}</p>
           <p className={`${kanit.className} ${leftColor}`}>
             {leftContext.toUpperCase()}
           </p>
-        </div>
-        <div className="flex gap-2">
+        </m.div>
+        <m.div
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+          className="flex gap-2"
+        >
           <p className={`${kanit.className} ${rightColor}`}>
             {rightContext.toUpperCase()}
           </p>
           <p className={`${montserrat.className} ${rightColor}`}>{right}</p>
-        </div>
+        </m.div>
       </m.div>
     </>
   );

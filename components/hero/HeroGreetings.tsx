@@ -1,14 +1,10 @@
 import { motion as m } from "framer-motion";
-import { CursorHoverFunction } from "@/lib/types/types";
 import { noto_serif } from "@/public/fonts/fonts";
+import { useContext } from "react";
+import CursorContext from "@/lib/context/context";
 
-const HelloGreetings = ({
-  greetings,
-  textEnter,
-  textLeave,
-}: CursorHoverFunction & {
-  greetings: String;
-}) => {
+const HelloGreetings = ({ greetings }: { greetings: String }) => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <m.p
@@ -19,6 +15,8 @@ const HelloGreetings = ({
           stiffness: 100,
           duration: 1,
         }}
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
         className={`${noto_serif.className} text-xl leading-4 xl:text-3xl xl:leading-6`}
       >
         {greetings.split("").map((letter, index) => (

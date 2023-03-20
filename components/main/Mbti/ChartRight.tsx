@@ -1,6 +1,8 @@
 "use client";
 import { motion as m } from "framer-motion";
 import { chart } from "@/components/animation/framer";
+import { useContext } from "react";
+import CursorContext from "@/lib/context/context";
 
 type Props = {
   chartColor: String;
@@ -9,6 +11,7 @@ type Props = {
 };
 
 const ChartRight = ({ chartColor, width, shadowColor }: Props) => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <m.div
@@ -16,6 +19,8 @@ const ChartRight = ({ chartColor, width, shadowColor }: Props) => {
         initial={chart.initial}
         whileInView={chart.whileInView}
         whileHover={chart.whileHover}
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
         transition={{ type: "tween" }}
         className={`relative h-10 w-[400px] rounded-[30px] bg-chart_bg-600 p-1 xl:w-[600px]`}
       >

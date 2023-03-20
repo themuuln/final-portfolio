@@ -1,6 +1,9 @@
+import CursorContext from "@/lib/context/context";
+import { useContext } from "react";
 import { motion as m } from "framer-motion";
 
 const FooterStartSection = () => {
+  const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
       <section className="relative h-[20vh]">
@@ -12,10 +15,14 @@ const FooterStartSection = () => {
           <h2 className="text-4xl font-semibold transition duration-200 cursor-pointer hover:text-brand_main-600">
             Start a project
           </h2>
-          <p className="">Work together?</p>
-          <button className="hover:bg-brand_main-500 rounded-lg border-[1px] py-1 px-3 text-2xl font-semibold transition-all duration-200 hover:text-brand_bg-500">
+          <p>Work together?</p>
+          <m.button
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            className="hover:bg-brand_main-500 rounded-lg border-[1px] py-1 px-3 text-2xl font-semibold transition-all duration-200 hover:text-brand_bg-500"
+          >
             Go ahead!
-          </button>
+          </m.button>
         </m.div>
       </section>
     </>
