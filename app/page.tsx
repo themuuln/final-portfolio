@@ -1,22 +1,26 @@
 "use client";
-import HeroSection from "@/components/hero/HeroSection";
-import MainSection from "@/components/main/MainSection";
-import MbtiSection from "@/components/main/Mbti/MbtiSection";
+// importing sections
+const HeroSection = require("@/components/hero/HeroSection").default;
+const MainSection = require("@/components/main/MainSection").default;
+const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
+
 import { MixBlendMode } from "@/lib/types/types";
 import { motion as m } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import CursorContext from "@/lib/context/context";
 import "./glow.css";
 import { montserrat } from "@/public/fonts/fonts";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const mouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.pageX, y: e.pageY });
     };
@@ -76,41 +80,45 @@ export default function Home() {
   return (
     <>
       <CursorContext.Provider value={{ textEnter, textLeave }}>
-        <m.div
-          variants={variants}
-          animate={cursorVariant}
-          // transition={{
-          //   type: "spring",
-          //   damping: 9,
-          //   stiffness: 100,
+        {!isPortrait && (
+          <>
+            <m.div
+              variants={variants}
+              animate={cursorVariant}
+              // transition={{
+              //   type: "spring",
+              //   damping: 9,
+              //   stiffness: 100,
 
-          // }}
-          className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none cursorr bg-brand_bg-500 "
-        />
-        <m.div
-          variants={variants2}
-          animate={cursorVariant}
-          transition={{
-            type: "spring",
-            damping: 10,
-            stiffness: 50,
-            restDelta: 0.001,
-          }}
-          className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
-        />
-        <m.div
-          variants={variants3}
-          animate={cursorVariant}
-          transition={{
-            type: "spring",
-            damping: 10,
-            stiffness: 50,
-            restDelta: 0.001,
-          }}
-          className={`${montserrat.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
-        >
-          test
-        </m.div>
+              // }}
+              className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none cursorr bg-brand_bg-500 "
+            />
+            <m.div
+              variants={variants2}
+              animate={cursorVariant}
+              transition={{
+                type: "spring",
+                damping: 10,
+                stiffness: 50,
+                restDelta: 0.001,
+              }}
+              className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+            />
+            <m.div
+              variants={variants3}
+              animate={cursorVariant}
+              transition={{
+                type: "spring",
+                damping: 10,
+                stiffness: 50,
+                restDelta: 0.001,
+              }}
+              className={`${montserrat.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+            >
+              test
+            </m.div>
+          </>
+        )}
         <HeroSection />
         <MainSection />
         <MbtiSection />
