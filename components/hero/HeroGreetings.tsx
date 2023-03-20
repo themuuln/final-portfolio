@@ -20,7 +20,12 @@ const HelloGreetings = ({ greetings }: { greetings: String }) => {
         className={`${firacode.className} mb-2 w-fit text-xl leading-4 xl:text-3xl xl:leading-6`}
       >
         {greetings.split("").map((letter, index) => (
-          <m.span onMouseEnter={textEnter} onMouseLeave={textLeave} key={index}>
+          <m.span
+            className="transition-all duration-500 hover:text-brand_bg-400"
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            key={index}
+          >
             {letter}
           </m.span>
         ))}

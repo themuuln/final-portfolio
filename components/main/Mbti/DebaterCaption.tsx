@@ -9,6 +9,7 @@ const DebaterCaption = () => {
     <>
       <m.a
         href="https://www.16personalities.com/entp-personality"
+        target={"_blank"}
         initial={{ x: -100, opacity: 0 }}
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
@@ -19,6 +20,7 @@ const DebaterCaption = () => {
       </m.a>
       <m.a
         href="https://www.16personalities.com/entp-personality"
+        target={"_blank"}
         initial={{ x: -100, opacity: 0 }}
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}

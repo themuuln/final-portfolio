@@ -14,6 +14,8 @@ import "./glow.css";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import ContactSection from "@/components/contact/ContactSection";
+import ServiceSection from "@/components/services/ServiceSection";
+import HeaderSection from "@/components/header/HeaderSection";
 
 export default function Home() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -93,7 +95,7 @@ export default function Home() {
               <m.div
                 variants={variants}
                 animate={cursorVariant}
-                className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+                className="fixed left-0 w-2 h-2 rounded-full pointer-events-none top1 cursorr bg-brand_bg-500 "
               />
               <m.div
                 variants={variants3}
@@ -122,8 +124,10 @@ export default function Home() {
             </>
           )}
           <HeroSection />
+          <HeaderSection />
           <MainSection />
           <MbtiSection />
+          <ServiceSection />
           <ContactSection />
         </CursorContext.Provider>
       </IconContext.Provider>

@@ -1,5 +1,5 @@
 .highlighted {
-  @apply rounded bg-brand_bg-500 px-2 text-[#fff]
+  @apply rounded text-brand_bg-500 underline
 }
 
 .question {
