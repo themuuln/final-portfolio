@@ -107,7 +107,7 @@ export default function Home() {
             stiffness: 50,
             restDelta: 0.001,
           }}
-          className={`${montserrat.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-full border-[1px] border-brand_bg-300  bg-brand_bg-300 font-bold text-brand_bg-900 `}
+          className={`${montserrat.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
         >
           test
         </m.div>
