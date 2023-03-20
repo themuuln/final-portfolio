@@ -18,7 +18,6 @@ const Role = ({ role }: { role: String }) => {
         className={`${firacode.className} mt-2 text-xl leading-6 xl:text-3xl xl:leading-6`}
       >
         {role
-          .toUpperCase()
           .split("")
 
           .map((letter, index) => (

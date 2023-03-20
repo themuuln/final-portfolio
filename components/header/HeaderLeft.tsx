@@ -15,16 +15,18 @@ const HeaderLeft = ({ context }: Props) => {
       <m.div
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        className="flex items-center justify-center gap-2 text-lg cursor-pointer leftSideHeader "
+        className="leftSideHeader flex cursor-pointer items-center justify-center gap-2 text-lg "
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
       >
-        <div className="rounded-full border-[1px]  bg-[#1a1a1a] p-4">
+        {/* <div className="rounded-full border-[1px]  bg-[#1a1a1a] p-4">
           <IconContext.Provider value={{ size: "1em" }}>
             <AiOutlineMail />
           </IconContext.Provider>
         </div>
-        <p>{context}</p>
+        <p className="rounded-md bg-brand_bg-500/10 py-1 px-3 transition-colors duration-200 hover:bg-brand_bg-500/30">
+          {context}
+        </p> */}
       </m.div>
     </>
   );

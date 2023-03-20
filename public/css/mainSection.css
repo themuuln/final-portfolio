@@ -1,0 +1,11 @@
+.highlighted {
+  @apply rounded bg-brand_bg-500 px-2 text-[#fff]
+}
+
+.question {
+  @apply text-4xl text-brand_bg-300
+}
+
+.answer {
+  @apply text-xl text-brand_bg-100
+}

@@ -11,11 +11,14 @@ import CursorContext from "@/lib/context/context";
 import { MixBlendMode } from "@/lib/types/types";
 import { telegraf_ultralight } from "@/public/fonts/fonts";
 import "./glow.css";
+import { FiArrowUpRight } from "react-icons/fi";
+import { IconContext } from "react-icons";
+import ContactSection from "@/components/contact/ContactSection";
 
 export default function Home() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
 
-  const [hoverType, setHoverType] = useState("Link");
+  const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
 
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({
@@ -83,44 +86,47 @@ export default function Home() {
 
   return (
     <>
-      <CursorContext.Provider value={{ textEnter, textLeave }}>
-        {!isPortrait && (
-          <>
-            <m.div
-              variants={variants}
-              animate={cursorVariant}
-              className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
-            />
-            <m.div
-              variants={variants3}
-              animate={cursorVariant}
-              transition={{
-                type: "spring",
-                damping: 11,
-                stiffness: 51,
-                restDelta: 1.001,
-              }}
-              className="cursorr top1 pointer-events-none absolute left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
-            />
-            <m.div
-              variants={variants4}
-              animate={cursorVariant}
-              transition={{
-                type: "spring",
-                damping: 11,
-                stiffness: 51,
-                restDelta: 1.001,
-              }}
-              className={`${telegraf_ultralight.className} cursorrr top1 pointer-events-none absolute left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
-            >
-              {hoverType}
-            </m.div>
-          </>
-        )}
-        <HeroSection />
-        <MainSection />
-        <MbtiSection />
-      </CursorContext.Provider>
+      <IconContext.Provider value={{ size: "2.25em" }}>
+        <CursorContext.Provider value={{ textEnter, textLeave }}>
+          {!isPortrait && (
+            <>
+              <m.div
+                variants={variants}
+                animate={cursorVariant}
+                className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+              />
+              <m.div
+                variants={variants3}
+                animate={cursorVariant}
+                transition={{
+                  type: "spring",
+                  damping: 11,
+                  stiffness: 51,
+                  restDelta: 1.001,
+                }}
+                className="cursorr top1 pointer-events-none absolute left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+              />
+              <m.div
+                variants={variants4}
+                animate={cursorVariant}
+                transition={{
+                  type: "spring",
+                  damping: 11,
+                  stiffness: 51,
+                  restDelta: 1.001,
+                }}
+                className={`${telegraf_ultralight.className} cursorrr top1 pointer-events-none absolute left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+              >
+                {hoverType}
+              </m.div>
+            </>
+          )}
+          <HeroSection />
+          <MainSection />
+          <MbtiSection />
+          <ContactSection />
+        </CursorContext.Provider>
+      </IconContext.Provider>
     </>
   );
 }
