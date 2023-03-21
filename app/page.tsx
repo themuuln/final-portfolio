@@ -95,7 +95,7 @@ export default function Home() {
               <m.div
                 variants={variants}
                 animate={cursorVariant}
-                className="fixed left-0 w-2 h-2 rounded-full pointer-events-none top1 cursorr bg-brand_bg-500 "
+                className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
               />
               <m.div
                 variants={variants3}
@@ -123,8 +123,8 @@ export default function Home() {
               </m.div>
             </>
           )}
-          <HeroSection />
           <HeaderSection />
+          <HeroSection />
           <MainSection />
           <MbtiSection />
           <ServiceSection />
