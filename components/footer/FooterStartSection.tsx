@@ -6,13 +6,13 @@ const FooterStartSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
-      <section className="relative h-[20vh]">
+      <section className="h-[20vh]">
         <m.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           className="container relative flex h-full w-[90vw] flex-col items-center justify-center gap-2 rounded-lg bg-brand_bg-700/10 py-5"
         >
-          <h2 className="text-4xl font-semibold transition duration-200 cursor-pointer hover:text-brand_main-600">
+          <h2 className="hover:text-brand_main-600 cursor-pointer text-4xl font-semibold transition duration-200">
             Start a project
           </h2>
           <p>Work together?</p>

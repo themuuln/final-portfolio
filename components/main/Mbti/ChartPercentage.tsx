@@ -1,9 +1,10 @@
 "use client";
+import { useContext } from "react";
 import { motion as m } from "framer-motion";
+
+import CursorContext from "@/lib/context/context";
 import { montserrat, kanit } from "@/public/fonts/fonts";
 import { ChartPercentageProps } from "@/lib/types/types";
-import { useContext } from "react";
-import CursorContext from "@/lib/context/context";
 
 const ChartPercentage = ({
   left,

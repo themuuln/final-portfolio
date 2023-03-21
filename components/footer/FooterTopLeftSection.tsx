@@ -7,7 +7,7 @@ const FooterTopLeftSection = () => {
   return (
     <>
       <div>
-        <p className="text-3xl text-brand_main-700">SAY HELLO</p>
+        <p className="text-brand_main-700 text-3xl">SAY HELLO</p>
         <m.p
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
