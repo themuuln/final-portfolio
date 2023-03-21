@@ -3,9 +3,9 @@
 }
 
 .question {
-  @apply text-4xl text-brand_bg-300
+  @apply text-6xl font-semibold text-brand_bg-300
 }
 
 .answer {
-  @apply text-xl text-brand_bg-100
+  @apply text-2xl text-brand_bg-100
 }
