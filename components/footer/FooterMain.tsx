@@ -1,4 +1,5 @@
 import SocialLinks from "./ConnectSection";
+import FooterCopyright from "./FooterCopyright";
 import FooterGit from "./FooterGit";
 import FooterTopLeftSection from "./FooterTopLeftSection";
 
@@ -11,9 +12,7 @@ const FooterMain = () => {
           <SocialLinks />
         </div>
         <FooterGit />
-        <div className="botRow container flex h-fit justify-center border-t-[1px] pt-10 ">
-          <p className="mb-10">© Temuulen Undrakhbayar 2023</p>
-        </div>
+        <FooterCopyright />
       </div>
     </>
   );

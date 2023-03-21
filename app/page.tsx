@@ -16,6 +16,7 @@ import { IconContext } from "react-icons";
 import ContactSection from "@/components/contact/ContactSection";
 import ServiceSection from "@/components/services/ServiceSection";
 import HeaderSection from "@/components/header/HeaderSection";
+import HoverChangeContext from "@/lib/context/hoverChangeContext";
 
 export default function Home() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -89,13 +90,14 @@ export default function Home() {
   return (
     <>
       <IconContext.Provider value={{ size: "2.25em" }}>
+        {/* <HoverChangeContext value={{ home }}> */}
         <CursorContext.Provider value={{ textEnter, textLeave }}>
           {!isPortrait && (
             <>
               <m.div
                 variants={variants}
                 animate={cursorVariant}
-                className="top1 cursorr pointer-events-none fixed left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+                className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
               />
               <m.div
                 variants={variants3}
@@ -106,7 +108,7 @@ export default function Home() {
                   stiffness: 51,
                   restDelta: 1.001,
                 }}
-                className="cursorr top1 pointer-events-none absolute left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+                className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
               />
               <m.div
                 variants={variants4}
@@ -117,7 +119,7 @@ export default function Home() {
                   stiffness: 51,
                   restDelta: 1.001,
                 }}
-                className={`${telegraf_ultralight.className} cursorrr top1 pointer-events-none absolute left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+                className={`${telegraf_ultralight.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
               >
                 {hoverType}
               </m.div>
@@ -130,6 +132,7 @@ export default function Home() {
           <ServiceSection />
           <ContactSection />
         </CursorContext.Provider>
+        {/* </HoverChangeContext> */}
       </IconContext.Provider>
     </>
   );

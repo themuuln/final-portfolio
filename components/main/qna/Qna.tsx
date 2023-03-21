@@ -1,13 +1,14 @@
 const Qna = () => {
   return (
     <>
-      <div>
+      <div className="space-y-10">
         <div className="mb-2 space-y-1">
           <h2 className={`question`}>
             WHAT I <span className="highlighted">DO?</span>
           </h2>
           <p className="answer ">
-            I Design & Build Intro Website for Companies.
+            I <span className="font-semibold">Design & Build</span> Intro
+            Website for Companies.
           </p>
         </div>
         <div className="mb-2 space-y-1">
