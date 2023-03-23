@@ -1,6 +1,8 @@
+"use client";
+
 import FooterSection from "@/components/footer/FooterSection";
-import HeaderSection from "@/components/header/HeaderSection";
-import "./globals.css";
+import "../globals.css";
+import BlogHeader from "@/components/blog/BlogHeader";
 
 export default function RootLayout({
   children,
@@ -11,7 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <HeaderSection />
+        <BlogHeader />
         <>{children}</>
         <FooterSection />
       </body>

@@ -9,7 +9,7 @@ const MainSection = () => {
         id="main"
         className="flex h-screen flex-col items-center justify-center "
       >
-        <div className="container flex w-full flex-col justify-around xl:flex-row ">
+        <div className="container flex w-full flex-col justify-between space-y-8 xl:flex-row">
           <Qna />
           <Skills />
         </div>

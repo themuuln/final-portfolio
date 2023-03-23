@@ -125,7 +125,6 @@ export default function Home() {
               </m.div>
             </>
           )}
-          <HeaderSection />
           <HeroSection />
           <MainSection />
           <MbtiSection />

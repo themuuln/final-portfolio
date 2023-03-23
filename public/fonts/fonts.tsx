@@ -58,3 +58,11 @@ export const telegraf_ultrabold = localFont({
 export const telegraf_ultralight = localFont({
   src: "./PPTelegraf-UltraLight.otf",
 });
+
+// export const telegraf = localFont({
+//   src: [
+//     {
+//       path: "./PPTelegraf-Regular.otf",
+//     },
+//   ],
+// });

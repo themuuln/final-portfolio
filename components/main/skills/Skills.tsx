@@ -9,7 +9,7 @@ const Skills = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   return (
     <>
-      <div className={`${firacode.className} container w-full space-y-2`}>
+      <div className={`${firacode.className} container space-y-2`}>
         <h2
           className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
         >
