@@ -6,15 +6,15 @@ import HelloGreetings from "./HeroGreetings";
 import HeaderSection from "../header/HeaderSection";
 import { telegraf_ultrabold } from "@/public/fonts/fonts";
 
-function HeroSection() {
+function HeroSection({ hoverType, setHoverType }: any) {
   return (
     <>
       <main
         id="hero"
         className={`${telegraf_ultrabold.className} text-white flex min-h-screen w-screen snap-center items-center justify-center`}
       >
-        <motion.div className="container flex flex-col items-center justify-center w-screen h-full">
-          <div className="flex flex-col justify-start select-none textContainer">
+        <motion.div className="container flex h-full w-screen flex-col items-center justify-center">
+          <div className="textContainer flex select-none flex-col justify-start">
             <HelloGreetings greetings={"Hello, my name is"} />
             <HeroMyName myName={"temuulen undrakhbayar"} />
             <Role role={"Front-end Developer & UI Designer"} />

@@ -11,9 +11,9 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <HeaderSection />
+        {/* <HeaderSection /> */}
         <>{children}</>
-        <FooterSection />
+        {/* <FooterSection /> */}
       </body>
     </html>
   );

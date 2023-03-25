@@ -3,11 +3,11 @@
 }
 
 .question {
-  @apply text-6xl font-semibold text-[#fff]
+  @apply text-4xl md:text-6xl font-semibold text-[#fff]
 }
 
 .answer {
-  @apply text-2xl text-chart_bg-100
+  @apply text-xl md:text-2xl text-chart_bg-100
 }
 
 .informationCard {

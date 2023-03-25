@@ -4,7 +4,7 @@ const MainSection = require("@/components/main/MainSection").default;
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
 
 import { motion as m } from "framer-motion";
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, createContext } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import CursorContext from "@/lib/context/context";
@@ -17,6 +17,7 @@ import ContactSection from "@/components/contact/ContactSection";
 import ServiceSection from "@/components/services/ServiceSection";
 import HeaderSection from "@/components/header/HeaderSection";
 import HoverChangeContext from "@/lib/context/hoverChangeContext";
+import FooterSection from "@/components/footer/FooterSection";
 
 export default function Home() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -125,11 +126,13 @@ export default function Home() {
               </m.div>
             </>
           )}
-          <HeroSection />
-          <MainSection />
-          <MbtiSection />
+          <HeaderSection />
+          <HeroSection hoverType={hoverType} setHoverType={setHoverType} />
+          <MainSection hoverType={hoverType} setHoverType={setHoverType} />
+          <MbtiSection hoverType={hoverType} setHoverType={setHoverType} />
           <ServiceSection />
           <ContactSection />
+          <FooterSection />
         </CursorContext.Provider>
         {/* </HoverChangeContext> */}
       </IconContext.Provider>

@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const CursorContext = createContext({
   textEnter: () => {},
