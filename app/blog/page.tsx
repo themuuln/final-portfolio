@@ -1,7 +1,9 @@
+import BlogMainSection from "@/components/blog/BlogMainSection";
+
 const index = () => {
   return (
     <>
-      <div>Hi this is blog</div>
+      <BlogMainSection />
     </>
   );
 };

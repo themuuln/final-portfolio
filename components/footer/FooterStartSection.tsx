@@ -19,7 +19,8 @@ const FooterStartSection = () => {
           <m.button
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
-            className="hover:bg-brand_main-500 rounded-lg border-[1px] py-1 px-3 text-2xl font-semibold transition-all duration-200 hover:text-brand_bg-500"
+            // className="hover:bg-brand_main-500 rounded-lg border-[1px] text-2xl font-semibold transition-all duration-200 hover:text-brand_bg-500"
+            className="h-10 items-center rounded-full border-[1px] border-[#79747E] px-6 font-medium text-[#D0BCFF] transition-all duration-200 hover:bg-[#2b2831] focus:border-[#D0BCFF] focus:bg-[#2b2831]  "
           >
             Go ahead!
           </m.button>
