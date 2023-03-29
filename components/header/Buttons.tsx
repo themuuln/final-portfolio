@@ -8,15 +8,16 @@ import { AiFillHome, AiFillExperiment } from "react-icons/ai";
 
 type Props = {
   context: String;
+  icon: any;
 };
 
-const Buttons = ({ context }: Props) => {
+const Buttons = ({ context, icon }: Props) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
-    setHoverType(<AiFillExperiment />);
+    setHoverType(icon);
   };
 
   const handleMouseLeave = () => {
