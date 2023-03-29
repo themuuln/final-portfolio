@@ -7,7 +7,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { AiFillHome, AiFillExperiment } from "react-icons/ai";
 
 type Props = {
-  context: String;
+  context: any;
 };
 
 const Buttons = ({ context }: Props) => {

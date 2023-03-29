@@ -16,6 +16,26 @@ import ServiceSection from "@/components/services/ServiceSection";
 import HeaderSection from "@/components/header/HeaderSection";
 import FooterSection from "@/components/footer/FooterSection";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import i18n from "i18next";
+import { initReactI18next, I18nextProvider } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import enTranslation from "@/locales/en.json";
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation: enTranslation,
+      },
+    },
+    fallbackLng: "en",
+    debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default function Home() {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
@@ -97,53 +117,55 @@ export default function Home() {
 
   return (
     <>
-      <IconContext.Provider value={{ size: "2.25em" }}>
-        <CursorContext.Provider value={{ textEnter, textLeave }}>
-          <HoverTypeContext.Provider value={{ hoverType, setHoverType }}>
-            <m.div
-              variants={variants}
-              animate={cursorVariant}
-              className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
-            />
-            <m.div
-              variants={variants3}
-              animate={cursorVariant}
-              transition={{
-                type: "spring",
-                damping: 11,
-                stiffness: 51,
-                restDelta: 1.001,
-              }}
-              className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
-            />
-            <AnimatePresence>
-              <IconContext.Provider value={{ size: "1.5em" }}>
-                <m.div
-                  variants={variants4}
-                  animate={cursorVariant}
-                  transition={{
-                    type: "spring",
-                    damping: 11,
-                    stiffness: 51,
-                    restDelta: 1.001,
-                  }}
-                  exit={{ opacity: 0 }}
-                  className={`${telegraf_ultralight.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
-                >
-                  {hoverType}
-                </m.div>
-              </IconContext.Provider>
-            </AnimatePresence>
-            <HeaderSection />
-            <HeroSection hoverType={hoverType} setHoverType={setHoverType} />
-            <MainSection hoverType={hoverType} setHoverType={setHoverType} />
-            <MbtiSection hoverType={hoverType} setHoverType={setHoverType} />
-            <ServiceSection />
-            <ContactSection />
-            <FooterSection />
-          </HoverTypeContext.Provider>
-        </CursorContext.Provider>
-      </IconContext.Provider>
+      <I18nextProvider i18n={i18n}>
+        <IconContext.Provider value={{ size: "2.25em" }}>
+          <CursorContext.Provider value={{ textEnter, textLeave }}>
+            <HoverTypeContext.Provider value={{ hoverType, setHoverType }}>
+              <m.div
+                variants={variants}
+                animate={cursorVariant}
+                className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+              />
+              <m.div
+                variants={variants3}
+                animate={cursorVariant}
+                transition={{
+                  type: "spring",
+                  damping: 11,
+                  stiffness: 51,
+                  restDelta: 1.001,
+                }}
+                className="cursorr pointer-events-none absolute top-0 left-0 h-8 w-8 rounded-full border-[1px] border-brand_bg-500 "
+              />
+              <AnimatePresence>
+                <IconContext.Provider value={{ size: "1.5em" }}>
+                  <m.div
+                    variants={variants4}
+                    animate={cursorVariant}
+                    transition={{
+                      type: "spring",
+                      damping: 11,
+                      stiffness: 51,
+                      restDelta: 1.001,
+                    }}
+                    exit={{ opacity: 0 }}
+                    className={`${telegraf_ultralight.className} cursorrr pointer-events-none absolute top-0 left-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+                  >
+                    {hoverType}
+                  </m.div>
+                </IconContext.Provider>
+              </AnimatePresence>
+              <HeaderSection />
+              <HeroSection hoverType={hoverType} setHoverType={setHoverType} />
+              <MainSection hoverType={hoverType} setHoverType={setHoverType} />
+              <MbtiSection hoverType={hoverType} setHoverType={setHoverType} />
+              <ServiceSection />
+              <ContactSection />
+              <FooterSection />
+            </HoverTypeContext.Provider>
+          </CursorContext.Provider>
+        </IconContext.Provider>
+      </I18nextProvider>
     </>
   );
 }

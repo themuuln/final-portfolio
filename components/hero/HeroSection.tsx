@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import Role from "./Role";
 import HeroMyName from "./HeroMyName";
 import HelloGreetings from "./HeroGreetings";
-import HeaderSection from "../header/HeaderSection";
 import { telegraf_ultrabold } from "@/public/fonts/fonts";
+import { useTranslation } from "react-i18next";
 
 function HeroSection({ hoverType, setHoverType }: any) {
+  const { t } = useTranslation();
   return (
     <>
       <main
