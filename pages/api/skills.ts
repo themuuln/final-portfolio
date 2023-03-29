@@ -4,6 +4,7 @@ export const skills = [
       {
         name: "JavaScript (ES6+)",
         href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: "<SiJavascript />",
       },
       { name: "React", href: "https://reactjs.org/" },
       { name: "Next.js", href: "https://nextjs.org/" },

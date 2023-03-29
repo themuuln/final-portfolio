@@ -1,5 +1,8 @@
+import { RxGithubLogo, RxTwitterLogo } from "react-icons/rx";
 import { connects } from "../../pages/api/connect";
 import ConnectText from "./ConnectText";
+import { FaFacebook } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 
 const SocialLinks: React.FC = () => {
   const getSocialLinks = () => {
@@ -7,19 +10,32 @@ const SocialLinks: React.FC = () => {
       return (
         <ul className="flex flex-col gap-2 text-xl" key={index}>
           {connect.facebook && (
-            <ConnectText social={"Facebook"} href={connect.facebook[0].href} />
+            <ConnectText
+              social={"Facebook"}
+              icon={<FaFacebook />}
+              href={connect.facebook[0].href}
+            />
           )}
           {connect.instagram && (
             <ConnectText
               social={"Instagram"}
+              icon={<BsInstagram />}
               href={connect.instagram[0].href}
             />
           )}
           {connect.twitter && (
-            <ConnectText social={"Twitter"} href={connect.twitter[0].href} />
+            <ConnectText
+              social={"Twitter"}
+              icon={<RxTwitterLogo />}
+              href={connect.twitter[0].href}
+            />
           )}
           {connect.github && (
-            <ConnectText social={"Github"} href={connect.github[0].href} />
+            <ConnectText
+              social={"Github"}
+              icon={<RxGithubLogo />}
+              href={connect.github[0].href}
+            />
           )}
         </ul>
       );

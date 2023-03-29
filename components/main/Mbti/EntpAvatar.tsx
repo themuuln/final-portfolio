@@ -3,18 +3,31 @@ import DebaterSvg from "@/public/svg/DebaterSvg";
 import DebaterCaption from "./DebaterCaption";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import { RxPerson } from "react-icons/rx";
 
 const EntpAvatar = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
+  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+
+  const handleMouseEnter = () => {
+    textEnter();
+    setHoverType(<RxPerson />);
+  };
+
+  const handleMouseLeave = () => {
+    textLeave();
+  };
+
   return (
     <>
       <m.div
         initial={{ x: -100, opacity: 0 }}
         transition={{ type: "tween" }}
         whileInView={{ x: 0, opacity: 1 }}
-        onMouseEnter={textEnter}
-        onMouseLeave={textLeave}
-        className="flex flex-col items-center debaterSection"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="debaterSection flex flex-col items-center"
       >
         <DebaterSvg />
         <DebaterCaption />

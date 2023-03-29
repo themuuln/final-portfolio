@@ -3,17 +3,15 @@ import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
-import { BsInstagram } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
-import { IconContext } from "react-icons";
 
-const ConnectText = ({ href, social }: any) => {
+const ConnectText = ({ href, social, icon }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
-    setHoverType(<BsInstagram />);
+    setHoverType(icon);
   };
 
   const handleMouseLeave = () => {
