@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { FiArrowUpRight } from "react-icons/fi";
 import { AiFillHome, AiFillExperiment } from "react-icons/ai";
-import { IconType } from "react-icons";
 
 type Props = {
   context: String;
@@ -14,16 +13,10 @@ type Props = {
 const Buttons = ({ context }: Props) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
-  let Icon: any = null;
-  if (context === "home") {
-    Icon = <AiFillHome />;
-  } else if (context === "experience") {
-    Icon = <AiFillExperiment />;
-  }
 
   const handleMouseEnter = () => {
     textEnter();
-    setHoverType({ Icon });
+    setHoverType(<AiFillExperiment />);
   };
 
   const handleMouseLeave = () => {
