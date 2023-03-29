@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import Role from "./Role";
 import HeroMyName from "./HeroMyName";
 import HelloGreetings from "./HeroGreetings";
-import HeaderSection from "../header/HeaderSection";
 import { telegraf_ultrabold } from "@/public/fonts/fonts";
 
-function HeroSection({ hoverType, setHoverType }: any) {
+function HeroSection() {
   return (
     <>
       <main

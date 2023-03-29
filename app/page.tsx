@@ -135,9 +135,9 @@ export default function Home() {
               </IconContext.Provider>
             </AnimatePresence>
             <HeaderSection />
-            <HeroSection hoverType={hoverType} setHoverType={setHoverType} />
-            <MainSection hoverType={hoverType} setHoverType={setHoverType} />
-            <MbtiSection hoverType={hoverType} setHoverType={setHoverType} />
+            <HeroSection />
+            <MainSection />
+            <MbtiSection />
             <ServiceSection />
             <ContactSection />
             <FooterSection />
