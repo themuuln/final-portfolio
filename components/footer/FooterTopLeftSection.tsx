@@ -1,24 +1,35 @@
-import { useContext, useState } from "react";
-// import { GrFormClose } from "react-icons/gr";
+import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { motion as m } from "framer-motion";
-// import { IconContext } from "react-icons";
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import { MdContentCopy } from "react-icons/md";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const FooterTopLeftSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  // const [isCopied, setIsCopied] = useState(false);
+  const { hoverType, setHoverType } = useContext(HoverTypeContext);
 
   function handleCopy() {
     navigator.clipboard.writeText("themuln.official@gmail.com");
-    // setIsCopied(true);
   }
+
+  const handleMouseEnter = () => {
+    textEnter();
+    setHoverType(<MdContentCopy />);
+  };
+
+  const handleMouseLeave = () => {
+    textLeave();
+    setHoverType(<FiArrowUpRight />);
+  };
+
   return (
     <>
       <div>
-        <p className="text-3xl text-brand_main-700">SAY HELLO</p>
+        <p className="text-brand_main-700 text-3xl">SAY HELLO</p>
         <m.p
-          onMouseEnter={textEnter}
-          onMouseLeave={textLeave}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="cursor-pointer underline-offset-1 hover:underline"
           onClick={handleCopy}
         >

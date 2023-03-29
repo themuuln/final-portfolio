@@ -15,15 +15,11 @@ const HelloGreetings = ({ greetings }: { greetings: String }) => {
           stiffness: 100,
           duration: 1,
         }}
-        onMouseEnter={textEnter}
-        onMouseLeave={textLeave}
         className={`${firacode.className} mb-2 w-fit text-xl leading-4 xl:text-3xl xl:leading-6`}
       >
         {greetings.split("").map((letter, index) => (
           <m.span
             className="transition-all duration-500 hover:text-brand_bg-400"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
             key={index}
           >
             {letter}

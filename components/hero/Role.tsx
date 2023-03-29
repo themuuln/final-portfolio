@@ -23,8 +23,6 @@ const Role = ({ role }: { role: String }) => {
           .map((letter, index) => (
             <m.span
               className="transition-all duration-500 hover:text-brand_bg-400"
-              onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
               key={index}
             >
               {letter}
