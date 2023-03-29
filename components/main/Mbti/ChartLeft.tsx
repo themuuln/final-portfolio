@@ -2,7 +2,6 @@
 import { motion as m } from "framer-motion";
 
 import { chart } from "@/components/animation/framer";
-import "../../../app/glow.css";
 
 type Props = {
   color: String;
