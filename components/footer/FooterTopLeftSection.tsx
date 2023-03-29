@@ -9,9 +9,13 @@ const FooterTopLeftSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
 
-  function handleCopy() {
+  const mailHandleCopy = () => {
     navigator.clipboard.writeText("themuln.official@gmail.com");
-  }
+  };
+
+  const phoneHandleCopy = () => {
+    navigator.clipboard.writeText("+97688650115");
+  };
 
   const mailHandleMouseEnter = () => {
     textEnter();
@@ -35,7 +39,7 @@ const FooterTopLeftSection = () => {
           onMouseEnter={mailHandleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className="cursor-pointer underline-offset-1 hover:underline"
-          onClick={handleCopy}
+          onClick={mailHandleCopy}
         >
           themuln.official@gmail.com
         </m.p>
@@ -43,7 +47,7 @@ const FooterTopLeftSection = () => {
           onMouseEnter={phoneHandleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className="cursor-pointer underline-offset-1 hover:underline"
-          onClick={handleCopy}
+          onClick={phoneHandleCopy}
         >
           +976 8865-0115
         </m.p>

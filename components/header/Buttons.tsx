@@ -4,7 +4,6 @@ import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { FiArrowUpRight } from "react-icons/fi";
-import { AiFillHome, AiFillExperiment } from "react-icons/ai";
 
 type Props = {
   context: String;

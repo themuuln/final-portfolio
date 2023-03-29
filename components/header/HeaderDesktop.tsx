@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Buttons from "./Buttons";
 import { AiOutlineExperiment } from "react-icons/ai";
-import { RiContactsBook2Line, RiPagesLine } from "react-icons/ri";
+import { RiContactsBook2Line } from "react-icons/ri";
 import { BsFileEarmarkPost } from "react-icons/bs";
-import { HiOutlineHome } from "react-icons/hi";
+import { HiOutlineHome, HiTemplate } from "react-icons/hi";
 
 const HeaderDesktop = () => {
   return (
@@ -16,7 +16,7 @@ const HeaderDesktop = () => {
           <Buttons icon={<AiOutlineExperiment />} context={"experience"} />
         </Link>
         <Link href={"#project"}>
-          <Buttons icon={<RiPagesLine />} context={"project"} />
+          <Buttons icon={<HiTemplate />} context={"project"} />
         </Link>
         <Link href={"/blog"}>
           <Buttons icon={<BsFileEarmarkPost />} context={"blog"} />
