@@ -11,7 +11,7 @@ const Skills = () => {
     <>
       <div
         id="main"
-        className="flex flex-col items-center justify-center h-screen "
+        className="flex h-screen flex-col items-center justify-center "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div className={`${firacode.className} container space-y-2`}>
@@ -20,7 +20,7 @@ const Skills = () => {
             >
               Skills
             </h2>
-            <ul className="space-y-1 text-xl md:space-y-2 md:text-2xl ">
+            <ul className="w-fit space-y-1  text-xl md:space-y-2 md:text-2xl ">
               {skills[0].languages.map((skill) => (
                 <m.li
                   whileHover={{ x: 40, scale: 1.1 }}

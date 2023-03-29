@@ -3,7 +3,7 @@ const Qna = () => {
     <>
       <div
         id="main"
-        className="flex flex-col items-center justify-center h-screen "
+        className="flex h-screen flex-col items-center justify-center "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div className="space-y-10">
@@ -38,7 +38,7 @@ const Qna = () => {
             </div>
             <div className="mb-2 space-y-1">
               <h2 className={`question`}>
-                <span className="highlighted">MY</span> PHILOSOPHY?
+                PHILOSOPHY OF <span className="highlighted">MINE</span>
               </h2>
               <p className="answer ">
                 I strongly believe that design is not just about making things
