@@ -11,7 +11,7 @@ function HeroSection({ hoverType, setHoverType }: any) {
     <>
       <main
         id="hero"
-        className={`${telegraf_ultrabold.className} text-white flex min-h-screen w-screen snap-center items-center justify-center`}
+        className={`${telegraf_ultrabold.className} text-white flex min-h-screen w-screen snap-center items-center justify-center `}
       >
         <motion.div className="container flex h-full w-screen flex-col items-center justify-center">
           <div className="textContainer flex select-none flex-col justify-start">
