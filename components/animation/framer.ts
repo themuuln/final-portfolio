@@ -1,7 +1,11 @@
 export const chart = {
-  initial: { x: 400, opacity: 0 },
-  whileInView: { x: 0, opacity: 1 },
-  whileHover: { y: -4 },
+  initial: { x: 100, y: 100, opacity: 0 },
+  whileInView: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+  },
+  whileHover: { y: -2 },
 };
 
 export const slideFromBottom = {
