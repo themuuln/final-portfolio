@@ -2,6 +2,10 @@
 const HeroSection = require("@/components/hero/HeroSection").default;
 const MainSection = require("@/components/main/MainSection").default;
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
+const FooterSection = require("@/components/footer/FooterSection").default;
+const ContactSection = require("@/components/contact/ContactSection").default;
+const ServiceSection = require("@/components/services/ServiceSection").default;
+const HeaderSection = require("@/components/header/HeaderSection").default;
 
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useState, useLayoutEffect } from "react";
@@ -11,10 +15,6 @@ import { MixBlendMode } from "@/lib/types/types";
 import { telegraf_ultralight } from "@/public/fonts/fonts";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import ContactSection from "@/components/contact/ContactSection";
-import ServiceSection from "@/components/services/ServiceSection";
-import HeaderSection from "@/components/header/HeaderSection";
-import FooterSection from "@/components/footer/FooterSection";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 
 export default function Home() {
