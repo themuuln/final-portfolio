@@ -27,7 +27,7 @@ const DebaterCaption = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         whileInView={{ x: 0, opacity: 1 }}
-        className={`${poppins.className} text-brand_main-500 text-6xl font-semibold`}
+        className={`${poppins.className} text-brand_main-500 text-6xl font-semibold transition-colors duration-300 hover:text-brand_bg-500`}
       >
         Debater
       </m.a>
