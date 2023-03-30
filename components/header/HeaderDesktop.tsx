@@ -8,7 +8,7 @@ import { HiOutlineHome, HiTemplate } from "react-icons/hi";
 const HeaderDesktop = () => {
   return (
     <>
-      <div className="flex gap-5 text-2xl font-bold ">
+      <div className="headerDesktop flex gap-5 text-2xl font-bold ">
         <Link href={"#home"}>
           <Buttons icon={<HiOutlineHome />} context={"home"} />
         </Link>

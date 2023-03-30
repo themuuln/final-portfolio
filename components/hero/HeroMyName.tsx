@@ -1,5 +1,9 @@
 import { motion as m } from "framer-motion";
-import { telegraf_ultrabold } from "@/public/fonts/fonts";
+import {
+  monoton,
+  telegraf_ultrabold,
+  zen_tokyo_zoo,
+} from "@/public/fonts/fonts";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
@@ -32,14 +36,14 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           "https://www.google.com/search?q=themuuln&sxsrf=APwXEdf4N3a1DOOO6Tt-oH50pKyA_qg25w%3A1680064450470&source=hp&ei=wr8jZPW5GtOx2roPoLGwuAk&iflsig=AOEireoAAAAAZCPN0r0aiYdAPlEUtiOHhNpBRmUUKs1K&ved=0ahUKEwj1opLmp4D-AhXTmFYBHaAYDJcQ4dUDCAg&uact=5&oq=themuuln&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyBwgAEIAEEAoyCgguEIAEENQCEAoyBwgAEIAEEAoyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIIxDqAhAnUO4HWL8JYKwLaAFwAHgAgAHJAYgByQGSAQMyLTGYAQCgAQGwAQo&sclient=gws-wiz"
         }
         target="_blank"
-        className={`${telegraf_ultrabold.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl font-extrabold leading-none xl:text-8xl`}
+        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl leading-none xl:text-8xl`}
       >
         {myName
           .toUpperCase()
           .split("")
           .map((letter, index) => (
             <m.span
-              className="text-brand_bg-400 transition-all duration-500 hover:text-brand_bg-400"
+              className="text-brand_bg-400 transition-all duration-200 hover:text-[#000]"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               key={index}
