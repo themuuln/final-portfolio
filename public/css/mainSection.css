@@ -3,13 +3,17 @@
 }
 
 .question {
-  @apply text-4xl md:text-6xl font-semibold text-[#fff]
+  @apply text-4xl select-none md:text-6xl font-normal text-[#fff]
 }
 
 .answer {
-  @apply text-xl md:text-2xl text-chart_bg-100
+  @apply text-xl leading-6 md:text-2xl text-gray-200 font-light
 }
 
 .informationCard {
   @apply rounded-md bg-brand_bg-600/20
+}
+
+.cardContainer {
+  @apply mb-2 space-y-1 rounded-xl bg-gradient-to-b from-purple-900/30 p-10 border-gray-800/40 border-[1px]
 }

@@ -1,3 +1,5 @@
+import { firacode, montserrat, open_sans } from "@/public/fonts/fonts";
+
 const Qna = () => {
   return (
     <>
@@ -6,12 +8,12 @@ const Qna = () => {
         className="flex h-screen flex-col items-center justify-center "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
-          <div className="space-y-10">
-            <div className="mb-2 space-y-1">
+          <div className={`${firacode.className} space-y-10`}>
+            <div className="cardContainer">
               <h2 className={`question`}>
                 WHAT I <span className="highlighted">DO?</span>
               </h2>
-              <p className="answer ">
+              <p className="answer">
                 I specialize in crafting bespoke websites that not only look
                 stunning, but also function flawlessly to enhance your online
                 presence, establish your brand identity, and increase your
@@ -20,7 +22,7 @@ const Qna = () => {
                 tailored to meet your unique needs and objectives.
               </p>
             </div>
-            <div className="mb-2 space-y-1">
+            <div className="cardContainer">
               <h2 className={`question`}>
                 WHY CHOOSE <span className="highlighted">ME?</span>
               </h2>
@@ -36,7 +38,7 @@ const Qna = () => {
                 website is always up-to-date and performing at its best.
               </p>
             </div>
-            <div className="mb-2 space-y-1">
+            <div className="cardContainer">
               <h2 className={`question`}>
                 PHILOSOPHY OF <span className="highlighted">MINE</span>
               </h2>
