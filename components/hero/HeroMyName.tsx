@@ -1,7 +1,5 @@
 import { motion as m } from "framer-motion";
 import {
-  monoton,
-  telegraf_ultrabold,
   zen_tokyo_zoo,
 } from "@/public/fonts/fonts";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
