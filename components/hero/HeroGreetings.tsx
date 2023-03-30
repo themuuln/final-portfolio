@@ -15,7 +15,7 @@ const HelloGreetings = ({ greetings }: { greetings: String }) => {
           stiffness: 100,
           duration: 1,
         }}
-        className={`${firacode.className} mb-2 w-fit text-xl leading-4 xl:text-3xl xl:leading-6`}
+        className={`${firacode.className} mb-2 w-fit text-xl font-light leading-4 xl:text-3xl xl:leading-6`}
       >
         {greetings.split("").map((letter, index) => (
           <m.span

@@ -15,7 +15,7 @@ const Role = ({ role }: { role: String }) => {
           stiffness: 101,
           duration: 2,
         }}
-        className={`${firacode.className} mt-2 text-xl leading-6 xl:text-3xl xl:leading-6`}
+        className={`${firacode.className} mt-2 text-xl font-light leading-6 xl:text-3xl xl:leading-6`}
       >
         {role
           .split("")
