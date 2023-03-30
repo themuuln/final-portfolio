@@ -27,14 +27,14 @@ const Buttons = ({ context, icon }: Props) => {
   return (
     <>
       <motion.button
-        whileHover={{ y: -4 }}
+        whileHover={{ y: -4, color: "black" }}
         whileTap={{ color: "#7236be" }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
         initial={{ x: 100, opacity: 0 }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         whileInView={{ x: 0, opacity: 1, y: 0 }}
-        className={`${firacode.className} hover:text-brand_main-300 cursor-pointer font-sans transition ease-linear`}
+        className={`${firacode.className} header-button hover:text-brand_main-300 cursor-pointer transition ease-linear`}
       >
         &#47;&#47; {context}
       </motion.button>
