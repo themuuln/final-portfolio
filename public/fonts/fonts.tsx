@@ -6,6 +6,9 @@ import {
   Lora,
   Noto_Serif,
   Roboto_Mono,
+  Open_Sans,
+  Monoton,
+  Zen_Tokyo_Zoo,
 } from "@next/font/google";
 import localFont from "@next/font/local";
 
@@ -15,15 +18,27 @@ export const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+export const zen_tokyo_zoo = Zen_Tokyo_Zoo({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-zen-tokyo-zoo",
+});
+
 export const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800", "900"],
   variable: "--font-montserrat",
 });
 
+export const open_sans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-open_sans",
+});
+
 export const firacode = Fira_Code({
   subsets: ["latin"],
-  weight: "300",
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-firacode",
 });
 
@@ -45,6 +60,12 @@ export const noto_serif = Noto_Serif({
   variable: "--font-noto-serif",
 });
 
+export const monoton = Monoton({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-monoton",
+});
+
 export const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -58,11 +79,3 @@ export const telegraf_ultrabold = localFont({
 export const telegraf_ultralight = localFont({
   src: "./PPTelegraf-UltraLight.otf",
 });
-
-// export const telegraf = localFont({
-//   src: [
-//     {
-//       path: "./PPTelegraf-Regular.otf",
-//     },
-//   ],
-// });
