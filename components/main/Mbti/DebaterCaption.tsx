@@ -21,7 +21,7 @@ const DebaterCaption = () => {
   return (
     <>
       <m.a
-        href="https://www.16personalities.com/entp-personality"
+        href="https://www.16personalities.com/profiles/aadde637ba318"
         target={"_blank"}
         initial={{ x: -100, opacity: 0 }}
         onMouseEnter={handleMouseEnter}
@@ -32,7 +32,7 @@ const DebaterCaption = () => {
         Debater
       </m.a>
       <m.a
-        href="https://www.16personalities.com/entp-personality"
+        href="https://www.16personalities.com/profiles/aadde637ba318"
         target={"_blank"}
         initial={{ x: -100, opacity: 0 }}
         onMouseEnter={handleMouseEnter}
