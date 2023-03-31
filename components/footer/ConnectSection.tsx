@@ -1,8 +1,9 @@
-import { RxGithubLogo, RxTwitterLogo } from "react-icons/rx";
+import { RxTwitterLogo } from "react-icons/rx";
 import { connects } from "../../pages/api/connect";
 import ConnectText from "./ConnectText";
-import { FaFacebook } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { AiOutlineFacebook } from "react-icons/ai";
+import { FiGithub } from "react-icons/fi";
 
 const SocialLinks: React.FC = () => {
   const getSocialLinks = () => {
@@ -12,7 +13,7 @@ const SocialLinks: React.FC = () => {
           {connect.facebook && (
             <ConnectText
               social={"Facebook"}
-              icon={<FaFacebook />}
+              icon={<AiOutlineFacebook />}
               href={connect.facebook[0].href}
             />
           )}
@@ -33,7 +34,7 @@ const SocialLinks: React.FC = () => {
           {connect.github && (
             <ConnectText
               social={"Github"}
-              icon={<RxGithubLogo />}
+              icon={<FiGithub />}
               href={connect.github[0].href}
             />
           )}

@@ -1,4 +1,4 @@
-import { firacode, montserrat, open_sans } from "@/public/fonts/fonts";
+import { firacode } from "@/public/fonts/fonts";
 
 const Qna = () => {
   return (

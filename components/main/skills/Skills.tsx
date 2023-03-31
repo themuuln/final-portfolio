@@ -24,14 +24,14 @@ const Skills = () => {
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div
-            className={`${firacode.className} container space-y-2 font-light`}
+            className={`${firacode.className} container flex justify-center space-y-2 font-light`}
           >
-            <h2
-              className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
-            >
-              Skills
-            </h2>
             <ul className="w-fit space-y-1 text-xl md:space-y-2 md:text-2xl ">
+              <h2
+                className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
+              >
+                Skills
+              </h2>
               {skills[0].languages.map((skill) => (
                 <m.li
                   whileHover={{ x: 40, scale: 1.1 }}

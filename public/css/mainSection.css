@@ -3,11 +3,11 @@
 }
 
 .question {
-  @apply text-4xl select-none md:text-6xl font-normal text-[#fff]
+  @apply text-[40px] select-none md:text-6xl font-normal text-[#fff]
 }
 
 .answer {
-  @apply text-xl leading-6 md:text-2xl text-gray-200 font-light
+  @apply text-base sm:text-xl leading-6 md:text-2xl text-gray-200 font-light
 }
 
 .informationCard {
