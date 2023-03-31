@@ -182,3 +182,13 @@ a {
 .cursorrr {
   z-index: 99999;
 }
+
+.footerStartSection {
+  /* From https://css.glass */
+  background: rgba(151, 109, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(151, 109, 255, 0.46);
+}
