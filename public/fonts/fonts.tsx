@@ -4,10 +4,7 @@ import {
   Fira_Code,
   Kanit,
   Lora,
-  Noto_Serif,
   Roboto_Mono,
-  Open_Sans,
-  Monoton,
   Zen_Tokyo_Zoo,
 } from "@next/font/google";
 import localFont from "@next/font/local";
@@ -30,12 +27,6 @@ export const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const open_sans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-open_sans",
-});
-
 export const firacode = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -52,18 +43,6 @@ export const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-lora",
-});
-
-export const noto_serif = Noto_Serif({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-noto-serif",
-});
-
-export const monoton = Monoton({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-monoton",
 });
 
 export const roboto_mono = Roboto_Mono({
