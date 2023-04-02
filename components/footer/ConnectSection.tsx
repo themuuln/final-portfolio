@@ -9,7 +9,10 @@ const SocialLinks: React.FC = () => {
   const getSocialLinks = () => {
     return connects.map((connect, index) => {
       return (
-        <ul className="flex flex-col gap-2 text-xl" key={index}>
+        <ul
+          className="mb-5 flex flex-col gap-1 text-xl md:mb-10 md:gap-2"
+          key={index}
+        >
           {connect.facebook && (
             <ConnectText
               social={"Facebook"}
