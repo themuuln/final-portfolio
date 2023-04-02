@@ -10,9 +10,9 @@ const HeroMyName = ({ myName }: { myName: String }) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = ({ letter }: any) => {
     textEnter();
-    setHoverType(<HiSearch />);
+    setHoverType(letter);
   };
   const handleMouseLeave = () => {
     textLeave();
@@ -22,13 +22,14 @@ const HeroMyName = ({ myName }: { myName: String }) => {
     <>
       <m.p
         initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, y: 0, opacity: 1 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{
-          type: "spring",
-          stiffness: 100,
-          duration: 1,
+          duration: 0.5,
+          // type: "spring",
+          // ease: "linear",
+          // stiffness: 100,
         }}
-        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-4xl leading-none xl:text-8xl`}
+        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
       >
         {myName
           .toUpperCase()
@@ -36,7 +37,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           .map((letter, index) => (
             <m.span
               className="text-brand_bg-400 transition-all duration-200 hover:text-[#000]"
-              onMouseEnter={handleMouseEnter}
+              onMouseEnter={() => handleMouseEnter({ letter })}
               onMouseLeave={handleMouseLeave}
               key={index}
             >
