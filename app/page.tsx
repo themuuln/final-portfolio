@@ -4,7 +4,6 @@ const MainSection = require("@/components/main/MainSection").default;
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
 const FooterSection = require("@/components/footer/FooterSection").default;
 const ContactSection = require("@/components/contact/ContactSection").default;
-const ServiceSection = require("@/components/services/ServiceSection").default;
 const HeaderSection = require("@/components/header/HeaderSection").default;
 
 import { AnimatePresence, motion as m } from "framer-motion";
@@ -14,7 +13,7 @@ import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
 
 import { MixBlendMode } from "@/lib/types/types";
-import { telegraf_ultralight } from "@/public/fonts/fonts";
+import { telegraf_ultralight, zen_tokyo_zoo } from "@/public/fonts/fonts";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
@@ -90,7 +89,7 @@ export default function Home() {
             <m.div
               variants={variants}
               animate={cursorVariant}
-              className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+              className="cursorr pointer-events-none fixed left-0 top-0 h-2 w-2 rounded-full bg-brand_bg-500 "
             />
             <m.div
               variants={variants3}
@@ -115,7 +114,7 @@ export default function Home() {
                     restDelta: 1.001,
                   }}
                   exit={{ opacity: 0 }}
-                  className={`${telegraf_ultralight.className} cursorrr pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+                  className={`${zen_tokyo_zoo.className} cursorrr pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
                 >
                   {hoverType}
                 </m.div>
@@ -125,7 +124,6 @@ export default function Home() {
             <HeroSection />
             <MainSection />
             <MbtiSection />
-            <ServiceSection />
             <ContactSection />
             <FooterSection />
           </HoverTypeContext.Provider>
