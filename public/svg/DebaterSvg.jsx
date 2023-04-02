@@ -1,10 +1,10 @@
 import { motion as m } from "framer-motion";
+
 const DebaterSvg = () => {
   return (
     <m.svg
-      width="391"
+      className={"w-20 h-20 md:w-[391px] md:h-[411px]"}
       whileHover={{ y: -10 }}
-      height="411"
       viewBox="0 0 391 411"
       fill="none"
       initial="hidden"
