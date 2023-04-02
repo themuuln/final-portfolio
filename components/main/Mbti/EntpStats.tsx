@@ -5,7 +5,7 @@ import ChartRight from "./ChartRight";
 const EntpStats = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 mt-3">
+      <div className="mt-3 flex flex-col items-center gap-4">
         <ChartLeft
           color={"bg-extraverted"}
           width="w-2/3"
