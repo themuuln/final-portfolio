@@ -11,12 +11,12 @@ import { useState } from "react";
 
 import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
-
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MixBlendMode } from "@/lib/types/types";
-import { telegraf_ultralight, zen_tokyo_zoo } from "@/public/fonts/fonts";
+import { zen_tokyo_zoo } from "@/public/fonts/fonts";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 
 export default function Home() {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
@@ -89,7 +89,7 @@ export default function Home() {
             <m.div
               variants={variants}
               animate={cursorVariant}
-              className="cursorr pointer-events-none fixed left-0 top-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+              className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
             />
             <m.div
               variants={variants3}
