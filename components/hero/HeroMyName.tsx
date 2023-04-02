@@ -20,7 +20,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
   };
   return (
     <>
-      <m.p
+      <m.a
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{
@@ -29,6 +29,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           // ease: "linear",
           // stiffness: 100,
         }}
+        href="/me"
         className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
       >
         {myName
@@ -44,7 +45,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
               {letter}
             </m.span>
           ))}
-      </m.p>
+      </m.a>
     </>
   );
 };
