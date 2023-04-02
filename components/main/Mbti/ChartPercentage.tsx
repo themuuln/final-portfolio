@@ -18,7 +18,7 @@ const ChartPercentage = ({
         initial={{ x: -100, y: 100, opacity: 0 }}
         transition={{ type: "tween" }}
         whileInView={{ x: 0, y: 0, opacity: 1 }}
-        className="mt-[-10px] flex h-fit w-full justify-between px-3 text-lg"
+        className="mt-[-10px] flex h-fit w-full justify-between px-3 text-base md:text-lg"
       >
         <m.div className="flex gap-2">
           <p className={`${montserrat.className} ${leftColor}`}>{left}</p>
