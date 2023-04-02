@@ -6,6 +6,7 @@ import { HiOutlineCode } from "react-icons/hi";
 
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
+import SkillsText from "./SkillsText";
 
 const Skills = () => {
   const { hoverType, setHoverType } = useContext(HoverTypeContext);
@@ -40,13 +41,11 @@ const Skills = () => {
                   className={"transition-colors duration-200"}
                   key={skill.name}
                 >
-                  <m.a
+                  <SkillsText
                     href={skill.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {skill.name}
-                  </m.a>
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
                 </m.li>
               ))}
             </ul>
