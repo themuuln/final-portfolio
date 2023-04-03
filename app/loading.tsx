@@ -1,7 +1,9 @@
 const Loading = () => {
   return (
     <>
-      <div>Loading...</div>
+      <section className="container h-full w-full items-center justify-center">
+        <div className="text-9xl font-bold">Loading...</div>
+      </section>
     </>
   );
 };
