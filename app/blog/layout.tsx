@@ -13,7 +13,6 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <BlogHeader />
         <>{children}</>
         <FooterSection />
       </body>
