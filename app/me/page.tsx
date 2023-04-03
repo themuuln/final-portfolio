@@ -12,6 +12,7 @@ import { zen_tokyo_zoo } from "@/public/fonts/fonts";
 
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import HeaderSection from "@/components/header/HeaderSection";
 
 const Themuuln = () => {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
@@ -117,6 +118,7 @@ const Themuuln = () => {
                 </IconContext.Provider>
               </AnimatePresence>
             </div>
+            <HeaderSection />
             <MbtiSection />
           </HoverTypeContext.Provider>
         </CursorContext.Provider>
