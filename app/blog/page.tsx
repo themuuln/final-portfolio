@@ -14,6 +14,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import HeaderSection from "@/components/header/HeaderSection";
 import BlogHeader from "@/components/blog/BlogHeader";
+import FooterSection from "@/components/footer/FooterSection";
 
 const Blog = () => {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
@@ -121,6 +122,7 @@ const Blog = () => {
             </div>
             <BlogHeader />
             <BlogMainSection />
+            <FooterSection />
           </HoverTypeContext.Provider>
         </CursorContext.Provider>
       </IconContext.Provider>
