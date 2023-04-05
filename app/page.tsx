@@ -1,9 +1,7 @@
 "use client";
 const HeroSection = require("@/components/hero/HeroSection").default;
 const MainSection = require("@/components/main/MainSection").default;
-const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
 const FooterSection = require("@/components/footer/FooterSection").default;
-const ContactSection = require("@/components/contact/ContactSection").default;
 const HeaderSection = require("@/components/header/HeaderSection").default;
 
 import { AnimatePresence, motion as m } from "framer-motion";
@@ -120,10 +118,12 @@ export default function Home() {
                 </m.div>
               </IconContext.Provider>
             </AnimatePresence>
+            {/* Section started */}
             <HeaderSection />
             <HeroSection />
             <MainSection />
             <FooterSection />
+            {/* Section ending */}
           </HoverTypeContext.Provider>
         </CursorContext.Provider>
       </IconContext.Provider>

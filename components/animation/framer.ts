@@ -22,3 +22,8 @@ export const slideFromLeft = {
   initial: { x: -100 },
   whileInView: { x: 0 },
 };
+
+export const slidefromTop = {
+  initial: { y: -100 },
+  whileInView: { y: 0 },
+};

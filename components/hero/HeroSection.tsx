@@ -17,7 +17,7 @@ function HeroSection() {
           <div className="textContainer flex select-none flex-col justify-start">
             <HelloGreetings greetings={"Hello, my name is"} />
             <HeroMyName myName={"temuulen undrakhbayar"} />
-            <Role role={"Front-end Developer & UI Designer"} />
+            <Role role={"Front-end Developer"} />
           </div>
         </div>
       </main>

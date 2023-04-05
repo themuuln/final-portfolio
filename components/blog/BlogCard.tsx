@@ -19,7 +19,7 @@ const BlogCard = () => {
         <m.h2
           onMouseEnter={handleMouseEnter}
           onMouseLeave={textLeave}
-          className="cursor-pointer text-3xl font-medium"
+          className="w-fit cursor-pointer text-3xl font-medium"
         >
           BlogCard
         </m.h2>
