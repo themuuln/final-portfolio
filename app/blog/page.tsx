@@ -12,7 +12,6 @@ import { zen_tokyo_zoo } from "@/public/fonts/fonts";
 
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import HeaderSection from "@/components/header/HeaderSection";
 import BlogHeader from "@/components/blog/BlogHeader";
 import FooterSection from "@/components/footer/FooterSection";
 
@@ -88,7 +87,7 @@ const Blog = () => {
               <m.div
                 variants={variants}
                 animate={cursorVariant}
-                className="cursorr pointer-events-none fixed top-0 left-0 h-2 w-2 rounded-full bg-brand_bg-500 "
+                className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none cursorr bg-brand_bg-500 "
               />
               <m.div
                 variants={variants3}
