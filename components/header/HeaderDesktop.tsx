@@ -20,7 +20,7 @@ const HeaderDesktop = () => {
         <Link href={"/blog"}>
           <Buttons icon={<HiOutlineAnnotation />} context={"blog"} />
         </Link>
-        <Link href={"#contact"}>
+        <Link href={"/contact"}>
           <Buttons icon={<RiContactsBook2Line />} context={"contact"} />
         </Link>
       </div>

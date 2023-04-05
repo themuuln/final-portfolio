@@ -3,8 +3,10 @@ import Role from "./Role";
 import HeroMyName from "./HeroMyName";
 import HelloGreetings from "./HeroGreetings";
 import { telegraf_ultrabold } from "@/public/fonts/fonts";
+import Image from "next/image";
 
 function HeroSection() {
+  const backgroundUrl = "@/public/jpg/light-background.jpg";
   return (
     <>
       <main

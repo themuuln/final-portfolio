@@ -7,7 +7,7 @@ import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 
 const FooterTopLeftSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const mailHandleCopy = () => {
     navigator.clipboard.writeText("themuln.official@gmail.com");
@@ -34,11 +34,11 @@ const FooterTopLeftSection = () => {
   return (
     <>
       <div>
-        <p className="text-brand_main-700 text-3xl">SAY HELLO</p>
+        <p className="text-3xl text-brand_main-700">SAY HELLO</p>
         <m.p
           onMouseEnter={mailHandleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="cursor-pointer underline-offset-1 hover:underline"
+          className="text-white cursor-pointers underline-offset-1 hover:underline"
           onClick={mailHandleCopy}
         >
           themuln.official@gmail.com
