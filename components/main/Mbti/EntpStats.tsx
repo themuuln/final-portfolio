@@ -5,12 +5,8 @@ import ChartRight from "./ChartRight";
 const EntpStats = () => {
   return (
     <>
-      <div className="mt-3 flex flex-col items-center gap-4">
-        <ChartLeft
-          color={"bg-extraverted"}
-          width="w-2/3"
-          shadowColor="extraverted"
-        />
+      <div className="flex flex-col items-center gap-4 mt-3">
+        <ChartLeft color={"bg-extraverted"} shadowColor="extraverted" />
         <ChartPercentage
           leftContext={"extraverted"}
           rightContext={"introverted"}
@@ -19,11 +15,7 @@ const EntpStats = () => {
           left={"66%"}
           right={"34%"}
         />
-        <ChartLeft
-          color={"bg-intuitive"}
-          width="w-2/4"
-          shadowColor="intuitive"
-        />
+        <ChartLeft color={"bg-intuitive"} shadowColor="intuitive" />
         <ChartPercentage
           leftContext={"intuitive"}
           rightContext={"observant"}
@@ -32,7 +24,7 @@ const EntpStats = () => {
           left={"54%"}
           right={"46%"}
         />
-        <ChartLeft color={"bg-thinking"} width="w-2/4" shadowColor="thinking" />
+        <ChartLeft color={"bg-thinking"} shadowColor="thinking" />
         <ChartPercentage
           leftContext={"thinking"}
           rightContext={"feeling"}
@@ -41,11 +33,7 @@ const EntpStats = () => {
           left={"55%"}
           right={"45%"}
         />
-        <ChartRight
-          chartColor={"bg-prospecting"}
-          width="w-2/4"
-          shadowColor="prospecting"
-        />
+        <ChartRight chartColor={"bg-prospecting"} shadowColor="prospecting" />
         <ChartPercentage
           leftContext={"judging"}
           rightContext={"prospecting"}
@@ -54,11 +42,7 @@ const EntpStats = () => {
           left={"43%"}
           right={"57%"}
         />
-        <ChartRight
-          chartColor={"bg-turbulent"}
-          width="w-2/4"
-          shadowColor="turbulent"
-        />
+        <ChartRight chartColor={"bg-turbulent"} shadowColor="turbulent" />
         <ChartPercentage
           leftContext={"assertive"}
           rightContext={"turbulent"}

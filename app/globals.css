@@ -191,3 +191,23 @@ a {
   -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(151, 109, 255, 0.46);
 }
+
+#extraverted {
+  width: 66%;
+}
+
+#intuitive {
+  width: 54%
+}
+
+#thinking {
+  width: 55%
+}
+
+#prospecting {
+  width: 57%
+}
+
+#turbulent {
+  width: 53%
+}

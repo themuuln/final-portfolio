@@ -4,11 +4,10 @@ import { chart } from "@/components/animation/framer";
 
 type Props = {
   color: String;
-  width: String;
   shadowColor: String;
 };
 
-const ChartLeft = ({ color, width, shadowColor }: Props) => {
+const ChartLeft = ({ color, shadowColor }: Props) => {
   return (
     <>
       <m.div
@@ -20,7 +19,8 @@ const ChartLeft = ({ color, width, shadowColor }: Props) => {
         className={`relative h-10 w-[300px] rounded-[30px] bg-chart_bg-600 p-1 md:w-[400px] lg:w-[600px]`}
       >
         <m.div
-          className={`w-20p h-8 ${width} ${shadowColor}Glow rounded-[30px] rounded-r-none ${color}`}
+          id={`${shadowColor}`}
+          className={`w-20p h-8 ${shadowColor}Glow rounded-[30px] rounded-r-none ${color}`}
         />
       </m.div>
     </>
