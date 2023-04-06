@@ -3,7 +3,6 @@ import { zen_tokyo_zoo } from "@/public/fonts/fonts";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
-import { HiSearch } from "react-icons/hi";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const HeroMyName = ({ myName }: { myName: String }) => {
