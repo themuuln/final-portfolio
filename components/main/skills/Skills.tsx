@@ -21,13 +21,13 @@ const Skills = () => {
     <>
       <div
         id="main"
-        className="flex h-screen flex-col items-center justify-center "
+        className="flex flex-col items-center justify-center h-screen "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div
             className={`${firacode.className} container flex justify-center space-y-2 font-light`}
           >
-            <ul className="w-fit space-y-1 text-xl md:space-y-2 md:text-2xl ">
+            <ul className="space-y-1 text-xl w-fit md:space-y-2 md:text-2xl ">
               <h2
                 className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
               >
@@ -35,7 +35,9 @@ const Skills = () => {
               </h2>
               {skills[0].languages.map((skill) => (
                 <m.li
-                  whileHover={{ x: 40, scale: 1.1 }}
+                  whileHover={{ x: 30, scale: 1.1, color: "#8f43ee" }}
+                  initial={{ x: -100, opacity: 0.3 }}
+                  whileInView={{ x: 0, opacity: 1 }}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={textLeave}
                   className={"transition-colors duration-200"}

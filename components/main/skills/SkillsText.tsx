@@ -20,7 +20,7 @@ const SkillsText = ({ name, icon, href }: any) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-lg font-light leading-3  sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6"
+      className="text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6"
     >
       {name}
     </m.a>
