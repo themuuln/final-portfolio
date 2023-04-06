@@ -21,8 +21,8 @@ const HeroMyName = ({ myName }: { myName: String }) => {
   return (
     <>
       <m.a
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, y: 0, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           duration: 0.5,
           // type: "spring",
@@ -38,6 +38,12 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           .split("")
           .map((letter, index) => (
             <m.span
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 1,
+                duration: 1,
+              }}
               className=" transition-all duration-200 hover:text-[#161616]"
               onMouseEnter={() => handleMouseEnter({ letter })}
               onMouseLeave={handleMouseLeave}
