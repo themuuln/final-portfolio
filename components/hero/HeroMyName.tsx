@@ -30,14 +30,15 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           // stiffness: 100,
         }}
         href="/me"
-        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
+        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
       >
+        &lt;
         {myName
           .toUpperCase()
           .split("")
           .map((letter, index) => (
             <m.span
-              className="text-brand_bg-400 transition-all duration-200 hover:text-[#000]"
+              className=" transition-all duration-200 hover:text-[#161616]"
               onMouseEnter={() => handleMouseEnter({ letter })}
               onMouseLeave={handleMouseLeave}
               key={index}
@@ -45,6 +46,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
               {letter}
             </m.span>
           ))}
+        &gt;
       </m.a>
     </>
   );
