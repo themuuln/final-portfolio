@@ -7,7 +7,6 @@ const FooterSection = () => {
     <div id="footer" className="flex flex-col justify-end h-fit">
       <div className="text-brand_main-500 bg-brand_bg-600/5">
         <IconContext.Provider value={{ size: "1em" }}>
-          {/* <FooterStartSection /> */}
           <FooterMain />
         </IconContext.Provider>
       </div>

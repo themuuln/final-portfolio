@@ -17,6 +17,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
     textLeave();
     setHoverType(<FiArrowUpRight />);
   };
+
   return (
     <>
       <m.a

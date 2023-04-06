@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@babel/core": "^7.21.4",
     "@headlessui/react": "^1.7.9",
     "@next/font": "^13.1.6",
     "@tailwindcss/typography": "^0.5.9",
@@ -25,14 +26,25 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-responsive": "^9.0.2",
+    "styled-components": "^5.3.9",
     "typescript": "4.9.5"
   },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  },
   "devDependencies": {
+    "@babel/plugin-syntax-typescript": "^7.21.4",
+    "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-macros": "^3.1.0",
     "husky": "^8.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.3.1",
+    "twin.macro": "^3.3.0"
   }
 }
