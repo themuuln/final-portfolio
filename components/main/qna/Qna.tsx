@@ -5,7 +5,7 @@ const Qna = () => {
     <>
       <div
         id="main"
-        className="flex h-screen flex-col items-center justify-center "
+        className="flex flex-col items-center justify-center h-screen "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div className={`${firacode.className} space-y-10`}>
@@ -14,12 +14,11 @@ const Qna = () => {
                 WHAT I <span className="highlighted">DO?</span>
               </h2>
               <p className="answer">
-                I specialize in crafting bespoke websites that not only look
-                stunning, but also function flawlessly to enhance your online
-                presence, establish your brand identity, and increase your
-                revenue streams. With my extensive experience and expertise in
-                the latest web technologies, I create digital solutions that are
-                tailored to meet your unique needs and objectives.
+                I create customized websites that are visually appealing, highly
+                functional, and geared towards boosting your online profile,
+                branding, and revenue. I leverage the latest web technologies to
+                provide tailored digital solutions that cater to your specific
+                requirements and objectives.
               </p>
             </div>
             <div className="cardContainer">
@@ -27,15 +26,11 @@ const Qna = () => {
                 WHY CHOOSE <span className="highlighted">ME?</span>
               </h2>
               <p className="answer ">
-                I am dedicated to delivering exceptional results that exceed
-                your expectations. Whether it&apos;s revamping your existing
-                website or building one from scratch, I work closely with you to
-                understand your vision, goals, and audience, and collaborate
-                with you at every step of the process to ensure that the final
-                product is not only aesthetically pleasing, but also
-                user-friendly, SEO optimized, and mobile responsive. I also
-                provide ongoing maintenance and support to ensure that your
-                website is always up-to-date and performing at its best.
+                I specialize in crafting bespoke, visually stunning websites
+                that function seamlessly to enhance your online presence, brand
+                identity, and revenue streams. With my expertise in the latest
+                web technologies, I provide customized digital solutions that
+                cater to your unique needs and objectives.
               </p>
             </div>
             <div className="cardContainer">
@@ -43,16 +38,10 @@ const Qna = () => {
                 PHILOSOPHY OF <span className="highlighted">MINE</span>
               </h2>
               <p className="answer ">
-                I strongly believe that design is not just about making things
-                look pretty, but about solving problems, improving experiences,
-                and creating meaningful connections between brands and their
-                audiences. That&apos;s why I approach every project with a
-                meticulous attention to detail and a focus on user-centered
-                design. Every pixel, every line of code, every interaction is
-                carefully crafted to optimize functionality, usability, and
-                accessibility. I am committed to providing you with a website
-                that not only looks great, but also delivers tangible results
-                for your business.
+                I create stunning bespoke websites that enhance your online
+                presence, brand identity, and revenue streams. Using the latest
+                web technologies, I provide tailored digital solutions to meet
+                your unique needs and objectives.
               </p>
             </div>
           </div>
