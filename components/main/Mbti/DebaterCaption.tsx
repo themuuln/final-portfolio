@@ -7,7 +7,7 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 
 const DebaterCaption = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();

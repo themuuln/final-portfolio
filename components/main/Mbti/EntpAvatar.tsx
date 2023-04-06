@@ -8,7 +8,7 @@ import { RxPerson } from "react-icons/rx";
 
 const EntpAvatar = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
@@ -27,7 +27,7 @@ const EntpAvatar = () => {
         whileInView={{ x: 0, opacity: 1 }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="debaterSection flex flex-col items-center"
+        className="flex flex-col items-center debaterSection"
       >
         <DebaterSvg />
         <DebaterCaption />

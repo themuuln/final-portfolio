@@ -12,7 +12,7 @@ type Props = {
 
 const Buttons = ({ context, icon }: Props) => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
