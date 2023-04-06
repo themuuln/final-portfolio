@@ -21,13 +21,13 @@ const HeroMyName = ({ myName }: { myName: String }) => {
   return (
     <>
       <m.a
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ x: 500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{
           duration: 0.5,
-          // type: "spring",
+          type: "spring",
           // ease: "linear",
-          // stiffness: 100,
+          stiffness: 100,
         }}
         href="/me"
         className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
