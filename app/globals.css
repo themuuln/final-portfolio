@@ -82,9 +82,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   backdrop-filter: blur(10px);
-  background-image: radial-gradient(#232323 1.5px, transparent 1px);
+  background-image: radial-gradient(#232323 1.6px, transparent 1px);
   background-size: 30px 30px;
-  background-color: #161616;
+  background-color: #000;
   background-repeat: repeat;
 }
 
