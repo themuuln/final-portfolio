@@ -2,7 +2,7 @@ import CursorContext from "@/lib/context/context";
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
 
-const SkillsText = ({ name, icon, href }: any) => {
+const SkillsText = ({ name, href }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext);
 
   const handleMouseEnter = () => {
@@ -12,7 +12,6 @@ const SkillsText = ({ name, icon, href }: any) => {
   const handleMouseLeave = () => {
     textLeave();
   };
-
   return (
     <m.a
       onMouseEnter={handleMouseEnter}

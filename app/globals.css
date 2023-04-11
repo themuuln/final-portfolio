@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/_next/static/fonts/FiraCode-Regular.woff2') format('woff2'),
+    url('/_next/static/fonts/FiraCode-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 ::selection {
   background-color: rgb(135, 76, 212);
   color: white;
@@ -84,7 +93,7 @@ body {
   backdrop-filter: blur(10px);
   background-image: radial-gradient(#232323 1.6px, transparent 1px);
   background-size: 30px 30px;
-  background-color: #000;
+  background-color: #111;
   background-repeat: repeat;
 }
 
@@ -102,8 +111,6 @@ a {
     color-scheme: dark;
   }
 }
-
-/* scrollbar style */
 
 /* Firefox */
 * {

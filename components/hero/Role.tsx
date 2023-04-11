@@ -10,7 +10,7 @@ const Role = ({ role }: { role: String }) => {
         transition={{
           // type: "spring",
           // stiffness: 101,
-          duration: 0.5,
+          duration: 1,
         }}
         className={`${firacode.className} mt-2 text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
       >

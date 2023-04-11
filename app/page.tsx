@@ -89,7 +89,7 @@ export default function Home() {
             <m.div
               variants={variants}
               animate={cursorVariant}
-              className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none cursorr bg-brand_bg-500 "
+              className="cursorr pointer-events-none fixed left-0 top-0 h-2 w-2 rounded-full bg-brand_bg-500 "
             />
             <m.div
               variants={variants3}

@@ -23,11 +23,12 @@ const DebaterCaption = () => {
       <m.a
         href="https://www.16personalities.com/profiles/aadde637ba318"
         target={"_blank"}
-        initial={{ x: -100, y: -100, opacity: 0 }}
-        whileInView={{ x: 0, y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        // initial={{ x: -100, y: -100, opacity: 0 }}
+        // whileInView={{ x: 0, y: 0, opacity: 1 }}
+        // transition={{ duration: 0.3 }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        id="debaterCaption"
         className={`${poppins.className} text-brand_main-500 text-6xl font-semibold transition-colors duration-300 hover:text-brand_bg-500`}
       >
         Debater

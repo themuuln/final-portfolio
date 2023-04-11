@@ -10,7 +10,7 @@ const HelloGreetings = ({ greetings }: { greetings: String }) => {
         transition={{
           // type: "spring",
           // stiffness: 100,
-          duration: 0.5,
+          duration: 1,
         }}
         className={`${firacode.className} mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
       >

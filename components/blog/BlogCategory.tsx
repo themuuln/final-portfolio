@@ -18,7 +18,7 @@ import { IconMappingProps } from "@/lib/types/icon/types";
 
 const BlogCategory = ({ context }: IconMappingProps) => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const icon = () => {
     if (context == "Neovim") return <SiNeovim />;

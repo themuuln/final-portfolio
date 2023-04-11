@@ -1,15 +1,21 @@
 import { firacode } from "@/public/fonts/fonts";
+import { motion as m } from "framer-motion";
 
 const Qna = () => {
   return (
     <>
       <div
         id="main"
-        className="flex flex-col items-center justify-center h-screen "
+        className="flex h-screen flex-col items-center justify-center "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
           <div className={`${firacode.className} space-y-10`}>
-            <div className="cardContainer">
+            <m.div
+              initial={{ x: "100%", opacity: 0.3 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="cardContainer"
+            >
               <h2 className={`question`}>
                 WHAT I <span className="highlighted">DO?</span>
               </h2>
@@ -20,8 +26,13 @@ const Qna = () => {
                 provide tailored digital solutions that cater to your specific
                 requirements and objectives.
               </p>
-            </div>
-            <div className="cardContainer">
+            </m.div>
+            <m.div
+              initial={{ x: "-100%" }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="cardContainer"
+            >
               <h2 className={`question`}>
                 WHY CHOOSE <span className="highlighted">ME?</span>
               </h2>
@@ -32,8 +43,13 @@ const Qna = () => {
                 web technologies, I provide customized digital solutions that
                 cater to your unique needs and objectives.
               </p>
-            </div>
-            <div className="cardContainer">
+            </m.div>
+            <m.div
+              initial={{ x: "100%" }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="cardContainer"
+            >
               <h2 className={`question`}>
                 PHILOSOPHY OF <span className="highlighted">MINE</span>
               </h2>
@@ -43,7 +59,7 @@ const Qna = () => {
                 web technologies, I provide tailored digital solutions to meet
                 your unique needs and objectives.
               </p>
-            </div>
+            </m.div>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const ChartRight = ({ chartColor, shadowColor }: Props) => {
       >
         <m.div
           id={`${shadowColor}`}
-          className={`w-20p h-8 ${shadowColor}Glow absolute right-0 rounded-[30px] rounded-l-none ${chartColor}`}
+          className={`h-8 ${shadowColor}Glow absolute right-0 rounded-[30px] rounded-l-none ${chartColor}`}
         />
       </m.div>
     </>

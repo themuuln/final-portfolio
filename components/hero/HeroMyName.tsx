@@ -4,10 +4,11 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { FiArrowUpRight } from "react-icons/fi";
+import CircleSvg from "@/public/svg/CirlceSvg";
 
 const HeroMyName = ({ myName }: { myName: String }) => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = ({ letter }: any) => {
     textEnter();
@@ -24,10 +25,11 @@ const HeroMyName = ({ myName }: { myName: String }) => {
         initial={{ x: 500, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
-          type: "spring",
+          duration: 1,
+          // type: "spring",
+          // stiffness: 100,
+
           // ease: "linear",
-          stiffness: 100,
         }}
         href="/me"
         className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
@@ -54,6 +56,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           ))}
         &gt;
       </m.a>
+      {/* <CircleSvg /> */}
     </>
   );
 };

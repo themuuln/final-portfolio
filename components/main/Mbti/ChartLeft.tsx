@@ -20,7 +20,7 @@ const ChartLeft = ({ color, shadowColor }: Props) => {
       >
         <m.div
           id={`${shadowColor}`}
-          className={`w-20p h-8 ${shadowColor}Glow rounded-[30px] rounded-r-none ${color}`}
+          className={`h-8 ${shadowColor}Glow rounded-[30px] rounded-r-none ${color}`}
         />
       </m.div>
     </>
