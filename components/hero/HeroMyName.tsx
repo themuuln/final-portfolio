@@ -32,7 +32,7 @@ const HeroMyName = ({ myName }: { myName: String }) => {
           // ease: "linear",
         }}
         href="/me"
-        className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
+        className={`${zen_tokyo_zoo.className} text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
       >
         &lt;
         {myName
