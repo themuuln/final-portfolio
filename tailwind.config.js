@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        firacode: ["var(--font-firacode)"],
+        firacode: ["var(--font-firacode)" ],
       },
       colors: {
         brand_bg: {

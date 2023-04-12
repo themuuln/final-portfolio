@@ -18,7 +18,7 @@ const Buttons = ({ context, icon }: { context: String; icon: any }) => {
   };
 
   return (
-    <div className="overflow-hidden w-fit">
+    <motion.div className="overflow-hidden w-fit">
       <motion.li
         whileHover={{ color: "purple" }}
         whileTap={{ scale: 0.9, color: "#7236be" }}
@@ -33,7 +33,7 @@ const Buttons = ({ context, icon }: { context: String; icon: any }) => {
       >
         &#47;&#47; {context}
       </motion.li>
-    </div>
+    </motion.div>
   );
 };
 

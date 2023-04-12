@@ -70,8 +70,8 @@ function HeroSection() {
                     >
                       {letter}
                     </m.span>
-                  ))}
-                &gt;
+                  ))}{" "}
+                /&gt;
               </m.a>
             </div>
             <div className="overflow-x-hidden overflow-y-hidden w-fit">
