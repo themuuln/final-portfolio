@@ -27,3 +27,14 @@ export const slideFromLeft = {
   initial: { x: "-100%", opacity: 0.3 },
   whileInView: { x: 0, opacity: 1 },
 };
+
+export const headerContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+};

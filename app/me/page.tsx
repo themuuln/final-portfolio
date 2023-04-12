@@ -112,7 +112,7 @@ const Themuuln = () => {
                       restDelta: 1.001,
                     }}
                     exit={{ opacity: 0 }}
-                    className={`${zen_tokyo_zoo.className} cursorrr pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
+                    className={`${zen_tokyo_zoo.className} cursorrr absolute pointer-events-none left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl border-[1px] border-brand_bg-300  bg-brand_bg-300/90 font-bold text-[#333333] `}
                   >
                     {hoverType}
                   </m.div>

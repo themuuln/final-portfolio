@@ -20,86 +20,77 @@ function HeroSection() {
     textLeave();
     setHoverType(<FiArrowUpRight />);
   };
+
   return (
     <>
       <main
         id="hero"
         className={`flex min-h-screen w-screen snap-center items-center justify-center text-white `}
       >
-        <div className="container flex h-full w-screen flex-col items-center justify-center">
-          <div className="textContainer flex select-none flex-col justify-start">
-            <m.p
-              initial={{ x: -100, y: -100, opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
-              transition={{
-                // type: "spring",
-                // stiffness: 100,
-                duration: 1,
-              }}
-              className={`${firacode.className} mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
-            >
-              {greetings.split("").map((letter, index) => (
-                <m.span
-                  className="transition-all duration-500 hover:text-brand_bg-400"
-                  key={index}
-                >
-                  {letter}
-                </m.span>
-              ))}
-            </m.p>
-            <m.a
-              initial={{ x: 500, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-                // type: "spring",
-                // stiffness: 100,
-                // ease: "linear",
-              }}
-              href="/me"
-              className={`${zen_tokyo_zoo.className} border-[1px] border-brand_bg-500 px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
-            >
-              &lt;
-              {myName
-                .toUpperCase()
-                .split("")
-                .map((letter, index) => (
+        <div className="container flex flex-col items-center justify-center w-screen h-full">
+          <div className="flex flex-col justify-start select-none textContainer">
+            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+              <m.p
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className={`${firacode.className} mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
+              >
+                {greetings.split("").map((letter, index) => (
                   <m.span
-                    initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{
-                      delay: 1,
-                      duration: 1,
-                    }}
-                    className=" transition-all duration-200 hover:text-[#161616]"
-                    onMouseEnter={() => handleMouseEnter({ letter })}
-                    onMouseLeave={handleMouseLeave}
+                    className="transition-all duration-500 hover:text-brand_bg-400"
                     key={index}
                   >
                     {letter}
                   </m.span>
                 ))}
-              &gt;
-            </m.a>
-            <m.p
-              initial={{ x: -100, y: 100, opacity: 0 }}
-              animate={{ x: 1, y: 0, opacity: 1 }}
-              transition={{
-                // type: "spring",
-                // stiffness: 101,
-                duration: 1,
-              }}
-              className={`${firacode.className} mt-2 text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
-            >
-              {role.split("").map((letter, index) => (
-                <m.span
-                  className="transition-all duration-500 hover:text-brand_bg-400"
-                  key={index}
-                >
-                  {letter}
-                </m.span>
-              ))}
-            </m.p>
+              </m.p>
+            </div>
+            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+              <m.a
+                initial={{ x: 500, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                href="/me"
+                className={`${zen_tokyo_zoo.className} px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
+              >
+                &lt;
+                {myName
+                  .toUpperCase()
+                  .split("")
+                  .map((letter, index) => (
+                    <m.span
+                      initial={{ y: -100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 1, duration: 1 }}
+                      className=" transition-all duration-200 hover:text-[#161616]"
+                      onMouseEnter={() => handleMouseEnter({ letter })}
+                      onMouseLeave={handleMouseLeave}
+                      key={index}
+                    >
+                      {letter}
+                    </m.span>
+                  ))}{" "}
+                /&gt;
+              </m.a>
+            </div>
+            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+              <m.p
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className={`${firacode.className} mt-2 text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
+              >
+                {role.split("").map((letter, index) => (
+                  <m.span
+                    className="transition-all duration-500 hover:text-brand_bg-400"
+                    key={index}
+                  >
+                    {letter}
+                  </m.span>
+                ))}
+              </m.p>
+            </div>
           </div>
         </div>
       </main>

@@ -3,11 +3,18 @@ import Buttons from "./Buttons";
 import { AiOutlineExperiment } from "react-icons/ai";
 import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
+import { motion as m } from "framer-motion";
+import { headerContainer } from "../animation/framer";
 
 const HeaderDesktop = () => {
   return (
     <>
-      <div className="headerDesktop flex gap-5 text-2xl font-bold ">
+      <m.ul
+        variants={headerContainer}
+        initial="hidden"
+        animate="show"
+        className="flex gap-5 text-2xl font-bold headerDesktop "
+      >
         <Link href={"#home"}>
           <Buttons icon={<HiOutlineHome />} context={"home"} />
         </Link>
@@ -23,7 +30,7 @@ const HeaderDesktop = () => {
         <Link href={"/contact"}>
           <Buttons icon={<RiContactsBook2Line />} context={"contact"} />
         </Link>
-      </div>
+      </m.ul>
     </>
   );
 };

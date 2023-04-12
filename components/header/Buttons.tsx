@@ -18,18 +18,22 @@ const Buttons = ({ context, icon }: { context: String; icon: any }) => {
   };
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.1, color: "purple" }}
-      whileTap={{ color: "#7236be" }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-      initial={{ x: 100, opacity: 0 }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      whileInView={{ x: 0, opacity: 1, y: 0 }}
-      className={`header-button cursor-pointer ${firacode.className} font-light transition ease-linear hover:text-white`}
-    >
-      &#47;&#47; {context}
-    </motion.button>
+    <motion.div className="overflow-hidden w-fit">
+      <motion.li
+        whileHover={{ color: "purple" }}
+        whileTap={{ scale: 0.9, color: "#7236be" }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        // transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        className={`header-button cursor-pointer ${firacode.className} font-light transition ease-linear hover:text-white`}
+      >
+        &#47;&#47; {context}
+      </motion.li>
+    </motion.div>
   );
 };
 

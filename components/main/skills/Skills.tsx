@@ -19,13 +19,14 @@ const Skills = () => {
   return (
     <div
       id="main"
-      className="flex h-screen flex-col items-center justify-center "
+      data-scroll-section
+      className="flex flex-col items-center justify-center h-screen "
     >
       <div className="container w-full space-y-8 md:flex md:justify-around ">
         <div
           className={`${firacode.className} container flex justify-center space-y-2 font-light`}
         >
-          <ul className="w-fit space-y-1 text-xl md:space-y-2 md:text-2xl ">
+          <ul className="space-y-1 text-xl w-fit md:space-y-2 md:text-2xl ">
             <h2
               className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
             >

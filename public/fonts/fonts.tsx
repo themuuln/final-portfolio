@@ -30,7 +30,7 @@ export const montserrat = Montserrat({
 export const firacode = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-firacode",
+  variable: '--font-firacode',
 });
 
 export const kanit = Kanit({
@@ -58,3 +58,6 @@ export const telegraf_ultrabold = localFont({
 export const telegraf_ultralight = localFont({
   src: "./PPTelegraf-UltraLight.otf",
 });
+
+export const grille = localFont({ src: "./Grille.ttf" });
+export const grilleBook = localFont({ src: "./GrilleBook.ttf" });
