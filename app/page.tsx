@@ -10,7 +10,6 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import GlobalStyles from "@/styles/GlobalStyles";
 import Cursor from "@/components/cursor/Cursor";
 
 export default function Home() {
@@ -67,7 +66,6 @@ export default function Home() {
   const textLeave = () => setCursorVariant("default");
   return (
     <>
-      <GlobalStyles />
       <IconContext.Provider value={{ size: "2.25em" }}>
         <CursorContext.Provider value={{ textEnter, textLeave }}>
           <HoverTypeContext.Provider value={{ setHoverType }}>
