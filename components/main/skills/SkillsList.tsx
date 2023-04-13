@@ -7,12 +7,11 @@ import { skills } from "@/pages/api/skills";
 import { useContext } from "react";
 
 const SkillsList = (skill: any) => {
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
   const { textEnter, textLeave } = useContext(CursorContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
-    // setHoverType(skills[0].languages[0].icon);
     setHoverType(<HiOutlineCode />);
   };
   return (
