@@ -17,7 +17,7 @@ const BlogHeader = () => {
         <m.div
           initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          className="leftSideHeader flex cursor-pointer items-center justify-center gap-2 text-lg "
+          className="flex items-center justify-center gap-2 text-lg cursor-pointer leftSideHeader "
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
         >
@@ -31,11 +31,11 @@ const BlogHeader = () => {
             </p> */}
           Temuulen Undrakhbayar
         </m.div>
-        <div className="rightSideHeader flex gap-5 text-2xl font-bold ">
+        <ul className="flex gap-5 text-2xl font-bold rightSideHeader ">
           <Link href={"#home"}>
             <Buttons icon={<HiOutlineHome />} context={"home"} />
           </Link>
-        </div>
+        </ul>
       </div>
     </div>
   );

@@ -8,24 +8,24 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const BlogCard = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
   const handleMouseEnter = () => {
     textEnter();
     setHoverType(<FiArrowUpRight />);
   };
   return (
     <>
-      <div className="w-full rounded-xl bg-brand_bg-100/5 px-10 py-10">
+      <div className="w-full px-10 py-10 rounded-xl bg-brand_bg-100/5">
         <m.h2
           onMouseEnter={handleMouseEnter}
           onMouseLeave={textLeave}
-          className="w-fit cursor-pointer text-3xl font-medium"
+          className="text-3xl font-medium cursor-pointer w-fit"
         >
           BlogCard
         </m.h2>
         {/* <p>{createdAt.toString()}</p> */}
         <h4 className="cursor-pointer">Mar 26, 2023</h4>
-        <div className="categories flex gap-2">
+        <div className="flex gap-2 categories">
           <BlogCategory context={"Neovim"} />
           <BlogCategory context={"Tips"} />
           <BlogCategory context={"React"} />
