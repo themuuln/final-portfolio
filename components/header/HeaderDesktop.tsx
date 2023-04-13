@@ -4,15 +4,18 @@ import { AiOutlineExperiment } from "react-icons/ai";
 import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
-import { headerContainer } from "../animation/framer";
 
 const HeaderDesktop = () => {
   return (
     <>
       <m.ul
-        variants={headerContainer}
-        initial="hidden"
-        animate="show"
+        transition={{
+          type: "spring",
+          bounce: 0,
+          duration: 0.7,
+          delayChildren: 0.3,
+          staggerChildren: 0.05,
+        }}
         className="flex gap-5 text-2xl font-bold headerDesktop "
       >
         <Link href={"#home"}>
