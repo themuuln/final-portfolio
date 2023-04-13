@@ -1,6 +1,5 @@
 "use client";
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
-
 import { AnimatePresence, motion as m } from "framer-motion";
 import { useState } from "react";
 
