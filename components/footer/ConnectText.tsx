@@ -7,7 +7,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const ConnectText = ({ href, social, icon }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { hoverType, setHoverType } = useContext(HoverTypeContext);
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleMouseEnter = () => {
     textEnter();
@@ -24,7 +24,7 @@ const ConnectText = ({ href, social, icon }: any) => {
         href={href}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="hover:text-brand_main-700 flex items-center justify-center gap-1 underline-offset-1 transition-all duration-500 hover:underline"
+        className="flex items-center justify-center gap-1 transition-all duration-500 hover:text-brand_main-700 underline-offset-1 hover:underline"
         target={"blank"}
       >
         {social}
