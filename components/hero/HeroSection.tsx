@@ -63,7 +63,7 @@ function HeroSection() {
                       initial={{ y: -100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 1, duration: 1 }}
-                      className=" transition-all duration-200 hover:text-[#161616]"
+                      className="transition-all duration-200 hover:text-[#000]"
                       onMouseEnter={() => handleMouseEnter({ letter })}
                       onMouseLeave={handleMouseLeave}
                       key={index}

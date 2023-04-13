@@ -114,6 +114,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
+      <section className="min-h-screen dark:text-white">test</section>
     </>
   );
 };
