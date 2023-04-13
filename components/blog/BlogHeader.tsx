@@ -6,17 +6,11 @@ import { motion as m } from "framer-motion";
 import { HiOutlineHome } from "react-icons/hi";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
+import { buttons } from "../animation/variants";
 
 const BlogHeader = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  const buttons = {
-    hidden: {
-      y: "100%",
-    },
-    show: {
-      y: 0,
-    },
-  };
+
   return (
     <div
       className={`${firacode.className} sticky left-0 top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur-sm`}
