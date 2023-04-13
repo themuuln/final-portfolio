@@ -1,19 +1,19 @@
 .highlighted {
-  @apply rounded text-brand_bg-500 hover:underline
+  @apply rounded text-brand_bg-500
 }
 
 .question {
-  @apply text-xl select-none md:text-6xl font-semibold text-[#fff]
+  @apply text-xl pointer-events-none select-none md:text-4xl font-semibold text-[#fff]
 }
 
 .answer {
-  @apply text-base font-light sm:text-xl md:text-2xl xl:text-3xl
+  @apply text-base font-light sm:text-lg md:text-xl xl:text-2xl
 }
 
 .informationCard {
-  @apply rounded-md bg-brand_bg-600/20
+  @apply rounded-md bg-brand_bg-600/5
 }
 
 .cardContainer {
-  @apply mb-2 space-y-1 rounded-xl bg-gradient-to-b from-purple-900/30 p-10 border-gray-800/40 border-[1px]
+  @apply mb-2 space-y-1 rounded-xl bg-gradient-to-b from-purple-900/10 p-10 border-gray-800/40 border-[1px]
 }
