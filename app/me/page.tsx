@@ -81,7 +81,7 @@ const Themuuln = () => {
     <>
       <IconContext.Provider value={{ size: "2.25em" }}>
         <CursorContext.Provider value={{ textEnter, textLeave }}>
-          <HoverTypeContext.Provider value={{ hoverType, setHoverType }}>
+          <HoverTypeContext.Provider value={{ setHoverType }}>
             <div>
               <m.div
                 variants={variants}
