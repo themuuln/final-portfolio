@@ -7,10 +7,12 @@ const MbtiSection = () => {
     <>
       <section
         id="mbti"
-        className="container flex flex-col items-center justify-center h-screen gap-8 lg:flex-row xl:gap-20"
+        className="container flex justify-center min-h-screen place-items-center"
       >
-        <EntpAvatar />
-        <EntpStats />
+        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row xl:gap-20">
+          <EntpAvatar />
+          <EntpStats />
+        </div>
       </section>
     </>
   );
