@@ -2,7 +2,6 @@ import { motion as m } from "framer-motion";
 import CursorContext from "@/lib/context/context";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { HiOutlineCode } from "react-icons/hi";
-import { skills } from "@/pages/api/skills";
 
 import { useContext } from "react";
 
