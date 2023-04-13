@@ -29,3 +29,25 @@ export type ChartPercentageProps = {
   leftContext: String;
   rightContext: String;
 };
+
+export type VariantsType = {
+  default: {
+    x: number;
+    y: number;
+  };
+  text: {
+    height: number;
+    width: number;
+    display?: String;
+    x: number;
+    y: number;
+    mixBlendMode?: MixBlendMode;
+  };
+  transition?: {
+    type: string;
+    damping: number;
+    stiffness: number;
+    restDelta: number;
+  };
+  exit?: {};
+};
