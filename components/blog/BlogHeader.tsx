@@ -9,6 +9,14 @@ import CursorContext from "@/lib/context/context";
 
 const BlogHeader = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
+  const buttons = {
+    hidden: {
+      y: "100%",
+    },
+    show: {
+      y: 0,
+    },
+  };
   return (
     <div
       className={`${firacode.className} sticky left-0 top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur-sm`}
@@ -33,7 +41,11 @@ const BlogHeader = () => {
         </m.div>
         <ul className="flex gap-5 text-2xl font-bold rightSideHeader ">
           <Link href={"#home"}>
-            <Buttons icon={<HiOutlineHome />} context={"home"} />
+            <Buttons
+              variants={buttons}
+              icon={<HiOutlineHome />}
+              context={"home"}
+            />
           </Link>
         </ul>
       </div>
