@@ -18,7 +18,7 @@ const MainSection = () => {
   };
   return (
     <>
-      <div
+      <section
         data-scroll-section
         id="qna"
         className="flex flex-col items-center justify-center h-screen "
@@ -77,8 +77,8 @@ const MainSection = () => {
             </m.div>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         id="skills"
         data-scroll-section
         className="flex flex-col items-center justify-center h-screen "
@@ -113,7 +113,7 @@ const MainSection = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
