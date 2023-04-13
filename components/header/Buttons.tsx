@@ -4,7 +4,15 @@ import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 
-const Buttons = ({ context, icon }: { context: String; icon: any }) => {
+const Buttons = ({
+  context,
+  icon,
+  variants,
+}: {
+  context: String;
+  icon: any;
+  variants: any;
+}) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
 
@@ -24,8 +32,11 @@ const Buttons = ({ context, icon }: { context: String; icon: any }) => {
         whileTap={{ scale: 0.9, color: "#7236be" }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        initial={{ y: "100%" }}
-        animate={{ y: 0 }}
+        variants={variants}
+        initial={"hidden"}
+        animate={"show"}
+        // initial={{ y: "100%" }}
+        // animate={{ y: 0 }}
         // whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         // transition={{ type: "spring", stiffness: 400, damping: 10 }}

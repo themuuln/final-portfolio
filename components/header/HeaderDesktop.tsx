@@ -6,32 +6,69 @@ import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
 
 const HeaderDesktop = () => {
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const buttons = {
+    hidden: {
+      y: "100%",
+    },
+    show: {
+      y: 0,
+    },
+  };
+
   return (
     <>
       <m.ul
-        transition={{
-          type: "spring",
-          bounce: 0,
-          duration: 0.7,
-          delayChildren: 0.3,
-          staggerChildren: 0.05,
-        }}
+        variants={container}
+        initial={"hidden"}
+        animate={"show"}
         className="flex gap-5 text-2xl font-bold headerDesktop "
       >
         <Link href={"#home"}>
-          <Buttons icon={<HiOutlineHome />} context={"home"} />
+          <Buttons
+            variants={buttons}
+            icon={<HiOutlineHome />}
+            context={"home"}
+          />
         </Link>
         <Link href={"#experience"}>
-          <Buttons icon={<AiOutlineExperiment />} context={"experience"} />
+          <Buttons
+            variants={buttons}
+            icon={<AiOutlineExperiment />}
+            context={"experience"}
+          />
         </Link>
         <Link href={"#project"}>
-          <Buttons icon={<RiLayout2Line />} context={"project"} />
+          <Buttons
+            variants={buttons}
+            icon={<RiLayout2Line />}
+            context={"project"}
+          />
         </Link>
         <Link href={"/blog"}>
-          <Buttons icon={<HiOutlineAnnotation />} context={"blog"} />
+          <Buttons
+            variants={buttons}
+            icon={<HiOutlineAnnotation />}
+            context={"blog"}
+          />
         </Link>
         <Link href={"/contact"}>
-          <Buttons icon={<RiContactsBook2Line />} context={"contact"} />
+          <Buttons
+            variants={buttons}
+            icon={<RiContactsBook2Line />}
+            context={"contact"}
+          />
         </Link>
       </m.ul>
     </>
