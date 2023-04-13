@@ -218,3 +218,23 @@ a {
 #turbulent {
   width: 53%
 }
+
+.dots {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  color: #8f43ee;
+  box-shadow: 33.4px 0 0 12.3px, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 0;
+  transform: translateX(-66.8px);
+  animation: dots-ijr34dhg 0.5s infinite alternate linear;
+}
+
+@keyframes dots-ijr34dhg {
+  50% {
+    box-shadow: 33.4px 0 0 5.3px, 66.8px 0 0 12.3px, 100.19999999999999px 0 0 5.3px;
+  }
+
+  100% {
+    box-shadow: 33.4px 0 0 0, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 12.3px;
+  }
+}

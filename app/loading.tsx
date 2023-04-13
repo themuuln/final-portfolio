@@ -1,8 +1,8 @@
 const Loading = () => {
   return (
     <>
-      <section className="container h-full w-full items-center justify-center">
-        <div className="text-9xl font-bold">Loading...</div>
+      <section className="container flex items-center justify-center min-h-screen min-w-screen">
+        <div className="dots"></div>
       </section>
     </>
   );
