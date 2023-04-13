@@ -21,32 +21,17 @@ const BlogCategory = ({ context }: IconMappingProps) => {
   const { setHoverType } = useContext(HoverTypeContext);
 
   const icon = () => {
-    switch (context) {
-      case "Neovim":
-        return <SiNeovim />;
-      case "React":
-        return <RiReactjsLine />;
-      case "Tips":
-        return <TiLightbulb />;
-      case "Javascript":
-        return <SiJavascript />;
-      case "Typescript":
-        return <SiTypescript />;
-      case "TailwindCSS":
-        return <SiTailwindcss />;
-      case "ChakraUI":
-        return <SiChakraui />;
-      case "NextJS":
-        return <TbBrandNextjs />;
-      case "SASS/SCSS":
-        return <FaSass />;
-      case "Git":
-        return <FaGitAlt />;
-      case "Framer-motion":
-        return <SiFramer />;
-      default:
-        return null;
-    }
+    if (context == "Neovim") return <SiNeovim />;
+    if (context == "React") return <RiReactjsLine />;
+    if (context == "Tips") return <TiLightbulb />;
+    if (context == "Javascript") return <SiJavascript />;
+    if (context == "Typescript") return <SiTypescript />;
+    if (context == "TailwindCSS") return <SiTailwindcss />;
+    if (context == "ChakraUI") return <SiChakraui />;
+    if (context == "NextJS") return <TbBrandNextjs />;
+    if (context == "SASS/SCSS") return <FaSass />;
+    if (context == "Git") return <FaGitAlt />;
+    if (context == "Framer-motion") return <SiFramer />;
   };
 
   const handleMouseEnter = () => {

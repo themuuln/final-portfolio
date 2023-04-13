@@ -6,8 +6,8 @@ import {
   Lora,
   Roboto_Mono,
   Zen_Tokyo_Zoo,
-} from "next/font/google";
-import localFont from "next/font/local";
+} from "@next/font/google";
+import localFont from "@next/font/local";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export const montserrat = Montserrat({
 export const firacode = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-firacode",
+  variable: '--font-firacode',
 });
 
 export const kanit = Kanit({
