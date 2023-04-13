@@ -8,6 +8,7 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 import { firacode } from "@/public/fonts/fonts";
+import { FiGithub } from "react-icons/fi";
 
 const FooterSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -26,8 +27,9 @@ const FooterSection = () => {
     setHoverType(<MdContentCopy />);
   };
 
-  const handleMouseEnter = () => {
+  const gitHandleHover = () => {
     textEnter();
+    setHoverType(<FiGithub />);
   };
 
   const phoneHandleMouseEnter = () => {
@@ -48,7 +50,7 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="text-white cursor-pointers underline-offset-1 hover:underline"
+                className="text-white cursor-pointer cursor-pointers underline-offset-1 hover:underline"
                 onClick={mailHandleCopy}
               >
                 themuln.official@gmail.com
@@ -73,7 +75,7 @@ const FooterSection = () => {
               >
                 Designed & Built by{" "}
                 <m.span
-                  onMouseEnter={handleMouseEnter}
+                  onMouseEnter={gitHandleHover}
                   onMouseLeave={handleMouseLeave}
                   className=""
                 >
