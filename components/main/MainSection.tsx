@@ -7,6 +7,9 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { HiOutlineCode } from "react-icons/hi";
 import { useContext } from "react";
 import SkillsText from "./skills/SkillsText";
+import Link from "next/link";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { IconContext } from "react-icons";
 
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -114,7 +117,18 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen dark:text-white">test</section>
+      <section className="flex justify-center min-w-full min-h-screen text-5xl place-items-center dark:text-white bg-blue-800/10">
+        <Link href="/me">
+          <div className="flex gap-2 place-items-center ">
+            <h3 className="font-semibold transition-colors duration-200 hover:text-brand_bg-500">
+              SEE MORE DETAILED THINGS ABOUT ME
+            </h3>
+            <IconContext.Provider value={{ size: "1.5em" }}>
+              <HiOutlineArrowNarrowRight className="transition-colors duration-200 hover:text-brand_bg-500" />
+            </IconContext.Provider>
+          </div>
+        </Link>
+      </section>
     </>
   );
 };
