@@ -10,57 +10,17 @@ import SkillsText from "./SkillsText";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { IconContext } from "react-icons";
+import {
+  cardContainer,
+  card,
+  evenCard,
+  container,
+  item,
+} from "../animation/variants";
 
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-  };
-
-  const cardContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const card = {
-    hidden: {
-      x: "100%",
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-    },
-  };
-
-  const evenCard = {
-    hidden: {
-      x: "-100%",
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-    },
-  };
 
   const handleMouseEnter = () => {
     textEnter();

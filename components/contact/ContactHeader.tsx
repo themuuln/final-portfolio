@@ -6,6 +6,7 @@ import { firacode } from "@/public/fonts/fonts";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
+import { buttons } from "../animation/variants";
 
 const ContactHeader = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -28,10 +29,18 @@ const ContactHeader = () => {
         </div>
         <ul className="flex gap-5 text-2xl font-bold ">
           <Link href={"#home"}>
-            <Buttons icon={<HiOutlineHome />} context={"home"} />
+            <Buttons
+              variants={buttons}
+              icon={<HiOutlineHome />}
+              context={"home"}
+            />
           </Link>
           <Link href={"/blog"}>
-            <Buttons icon={<HiOutlineAnnotation />} context={"blog"} />
+            <Buttons
+              variants={buttons}
+              icon={<HiOutlineAnnotation />}
+              context={"blog"}
+            />
           </Link>
         </ul>
       </div>
