@@ -6,7 +6,7 @@ import CursorContext from "@/lib/context/context";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { HiOutlineCode } from "react-icons/hi";
 import { useContext } from "react";
-import SkillsText from "./skills/SkillsText";
+import SkillsText from "./SkillsText";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { IconContext } from "react-icons";
@@ -14,6 +14,53 @@ import { IconContext } from "react-icons";
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
+  const cardContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const card = {
+    hidden: {
+      x: "100%",
+      opacity: 0,
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
+  const evenCard = {
+    hidden: {
+      x: "-100%",
+      opacity: 0,
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+    },
+  };
 
   const handleMouseEnter = () => {
     textEnter();
@@ -27,11 +74,17 @@ const MainSection = () => {
         className="flex flex-col items-center justify-center h-screen "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
-          <div className={`${firacode.className} space-y-10`}>
+          <m.div
+            variants={cardContainer}
+            initial={"hidden"}
+            whileInView={"show"}
+            className={`${firacode.className} space-y-10`}
+          >
             <m.div
-              initial={{ x: "100%", opacity: 0.3 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              // initial={{ x: "100%", opacity: 0.3 }}
+              // whileInView={{ x: 0, opacity: 1 }}
+              variants={card}
+              // transition={{ duration: 0.5 }}
               className="cardContainer"
             >
               <h2 className={`question`}>
@@ -46,9 +99,10 @@ const MainSection = () => {
               </p>
             </m.div>
             <m.div
-              initial={{ x: "-100%" }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.5 }}
+              variants={evenCard}
+              // initial={{ x: "-100%" }}
+              // whileInView={{ x: 0 }}
+              // transition={{ duration: 0.5 }}
               className="cardContainer"
             >
               <h2 className={`question`}>
@@ -63,9 +117,10 @@ const MainSection = () => {
               </p>
             </m.div>
             <m.div
-              initial={{ x: "100%" }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.5 }}
+              variants={card}
+              // initial={{ x: "100%" }}
+              // whileInView={{ x: 0 }}
+              // transition={{ duration: 0.5 }}
               className="cardContainer"
             >
               <h2 className={`question`}>
@@ -78,7 +133,7 @@ const MainSection = () => {
                 your unique needs and objectives.
               </p>
             </m.div>
-          </div>
+          </m.div>
         </div>
       </section>
       <section
@@ -90,17 +145,24 @@ const MainSection = () => {
           <div
             className={`${firacode.className} container flex justify-center space-y-2 font-light`}
           >
-            <ul className="space-y-1 text-xl w-fit md:space-y-2 md:text-2xl ">
-              <h2
-                className={`text-4xl font-semibold text-brand_bg-500 hover:underline`}
+            <m.ul
+              variants={container}
+              initial={"hidden"}
+              whileInView={"show"}
+              className="space-y-1 text-xl w-fit md:space-y-2 md:text-2xl "
+            >
+              <m.h2
+                variants={item}
+                className={`text-4xl font-semibold text-brand_bg-500 ${firacode} underline`}
               >
                 Skills
-              </h2>
+              </m.h2>
               {skills[0].languages.map((skill) => (
                 <m.li
+                  variants={item}
                   whileHover={{ x: 30, scale: 1.1, color: "#8f43ee" }}
-                  initial={{ x: -100, opacity: 0.3 }}
-                  whileInView={{ x: 0, opacity: 1 }}
+                  // initial={{ x: -100, opacity: 0.3 }}
+                  // whileInView={{ x: 0, opacity: 1 }}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={textLeave}
                   className={"transition-colors duration-200"}
@@ -113,7 +175,7 @@ const MainSection = () => {
                   />
                 </m.li>
               ))}
-            </ul>
+            </m.ul>
           </div>
         </div>
       </section>
