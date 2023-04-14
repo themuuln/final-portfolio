@@ -139,7 +139,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="flex justify-center min-w-full min-h-screen text-5xl place-items-center dark:text-white bg-blue-800/10">
+      <section className="flex justify-center min-w-full min-h-screen text-5xl place-items-center dark:text-white ">
         <Link href="/me">
           <div className="flex gap-2 place-items-center ">
             <h3 className="font-semibold transition-colors duration-200 hover:text-brand_bg-500">
