@@ -10,7 +10,8 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import Cursor from "@/components/cursor/Cursor";
+import Cursor from "@/components/Cursor";
+import ContactSection from "@/components/contact/ContactSection";
 
 export default function Home() {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
@@ -80,6 +81,7 @@ export default function Home() {
             <HeaderSection />
             <HeroSection />
             <MainSection />
+            <ContactSection />
             <FooterSection />
             {/* </m.div> */}
           </HoverTypeContext.Provider>
