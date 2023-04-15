@@ -9,6 +9,7 @@ import { useContext } from "react";
 import SkillsText from "./SkillsText";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { IconContext } from "react-icons";
 import {
   cardContainer,
@@ -17,6 +18,7 @@ import {
   container,
   item,
 } from "../animation/variants";
+import { GoTriangleRight } from "react-icons/go";
 
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -25,6 +27,15 @@ const MainSection = () => {
   const handleMouseEnter = () => {
     textEnter();
     setHoverType(<HiOutlineCode />);
+  };
+
+  const meHandleMouseEnter = () => {
+    textEnter();
+    setHoverType(<HiArrowUpRight />);
+  };
+
+  const meHandleMouseLeave = () => {
+    textLeave();
   };
   return (
     <>
@@ -40,13 +51,7 @@ const MainSection = () => {
             whileInView={"show"}
             className={`${firacode.className} space-y-10`}
           >
-            <m.div
-              // initial={{ x: "100%", opacity: 0.3 }}
-              // whileInView={{ x: 0, opacity: 1 }}
-              variants={card}
-              // transition={{ duration: 0.5 }}
-              className="cardContainer"
-            >
+            <m.div variants={card} className="cardContainer">
               <h2 className={`question`}>
                 WHAT I <span className="highlighted">DO?</span>
               </h2>
@@ -58,13 +63,7 @@ const MainSection = () => {
                 requirements and objectives.
               </p>
             </m.div>
-            <m.div
-              variants={evenCard}
-              // initial={{ x: "-100%" }}
-              // whileInView={{ x: 0 }}
-              // transition={{ duration: 0.5 }}
-              className="cardContainer"
-            >
+            <m.div variants={evenCard} className="cardContainer">
               <h2 className={`question`}>
                 WHY CHOOSE <span className="highlighted">ME?</span>
               </h2>
@@ -76,13 +75,7 @@ const MainSection = () => {
                 cater to your unique needs and objectives.
               </p>
             </m.div>
-            <m.div
-              variants={card}
-              // initial={{ x: "100%" }}
-              // whileInView={{ x: 0 }}
-              // transition={{ duration: 0.5 }}
-              className="cardContainer"
-            >
+            <m.div variants={card} className="cardContainer">
               <h2 className={`question`}>
                 PHILOSOPHY OF <span className="highlighted">MINE</span>
               </h2>
@@ -117,17 +110,30 @@ const MainSection = () => {
               >
                 Skills
               </m.h2>
-              {skills[0].languages.map((skill) => (
+              {skills[0].languages.map((skill, i) => (
                 <m.li
-                  variants={item}
-                  whileHover={{ x: 30, scale: 1.1, color: "#8f43ee" }}
-                  // initial={{ x: -100, opacity: 0.3 }}
-                  // whileInView={{ x: 0, opacity: 1 }}
+                  variants={
+                    i % 2 === 0
+                      ? {
+                          hidden: { opacity: 0, x: "100%" },
+                          show: { opacity: 1, x: 0 },
+                        }
+                      : {
+                          hidden: { opacity: 0, x: "-100%" },
+                          show: { opacity: 1, x: 0 },
+                        }
+                  }
+                  whileHover={{ scale: 1.2 }}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={textLeave}
-                  className={"transition-colors duration-200"}
+                  className={
+                    "transition-colors flex space-x-1 hover:text-brand_bg-500 duration-200"
+                  }
                   key={skill.name}
                 >
+                  {/* <IconContext.Provider value={{ size: "0.75em" }}>
+                    <GoTriangleRight />
+                  </IconContext.Provider> */}
                   <SkillsText
                     href={skill.href}
                     name={skill.name}
@@ -141,14 +147,27 @@ const MainSection = () => {
       </section>
       <section className="flex justify-center min-w-full min-h-screen text-5xl place-items-center dark:text-white ">
         <Link href="/me">
-          <div className="flex gap-2 place-items-center ">
-            <h3 className="font-semibold transition-colors duration-200 hover:text-brand_bg-500">
+          <m.div
+            initial={{ x: "100%" }}
+            whileInView={{ x: 0 }}
+            className="flex gap-2 place-items-center "
+          >
+            <m.h3
+              onMouseEnter={meHandleMouseEnter}
+              onMouseLeave={meHandleMouseLeave}
+              className="font-semibold transition-colors duration-200 hover:text-brand_bg-500"
+            >
               SEE MORE DETAILED THINGS ABOUT ME
-            </h3>
+            </m.h3>
             <IconContext.Provider value={{ size: "1.5em" }}>
-              <HiOutlineArrowNarrowRight className="transition-colors duration-200 hover:text-brand_bg-500" />
+              <m.div
+                onMouseEnter={meHandleMouseEnter}
+                onMouseLeave={meHandleMouseLeave}
+              >
+                <HiOutlineArrowNarrowRight className="transition-colors duration-200 hover:text-brand_bg-500" />
+              </m.div>
             </IconContext.Provider>
-          </div>
+          </m.div>
         </Link>
       </section>
     </>
