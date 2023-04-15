@@ -4,7 +4,7 @@ const HeaderMobile = () => {
   return (
     <>
       <div className={`${firacode.className} cursor-pointer font-light`}>
-        (under construction)
+        (building)
       </div>
     </>
   );
