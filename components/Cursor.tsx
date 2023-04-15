@@ -34,7 +34,7 @@ const Cursor = ({
             animate={cursorVariant}
             transition={{
               type: "spring",
-              damping: 11,
+              damping: 8,
               stiffness: 51,
               restDelta: 1.001,
             }}
