@@ -1,12 +1,19 @@
 "use client";
-import HeaderRight from "./HeaderRight";
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { firacode } from "@/public/fonts/fonts";
+import dynamic from "next/dynamic";
+import { useMediaQuery } from "react-responsive";
 
 const HeaderSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
+
+  const HeaderMobile = dynamic(() => import("./HeaderMobile"), { ssr: false });
+  const HeaderDesktop = dynamic(() => import("./HeaderDesktop"), {
+    ssr: false,
+  });
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
       <div
@@ -27,7 +34,7 @@ const HeaderSection = () => {
               <span>/&gt;</span>
             </m.div>
           </div>
-          <HeaderRight />
+          {isPortrait ? <HeaderMobile /> : <HeaderDesktop />}
         </div>
       </div>
     </>
