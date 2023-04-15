@@ -15,5 +15,5 @@
 }
 
 .cardContainer {
-  @apply mb-2 space-y-1 rounded-xl bg-gradient-to-b from-purple-900/10 p-10 border-gray-800/40 border-[1px]
+  @apply mb-2 space-y-1 rounded-xl bg-gradient-to-b from-purple-900/10 p-4 md:p-10 border-gray-800/40 border-[1px]
 }
