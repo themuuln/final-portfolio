@@ -1,6 +1,5 @@
 import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
-import "./styles.css";
 
 const SkillsText = ({ name, href }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext);
