@@ -19,7 +19,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        firacode: ["var(--font-firacode)" ],
+        firacode: ["var(--font-firacode)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       colors: {
         brand_bg: {
