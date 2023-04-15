@@ -6,20 +6,22 @@ import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { FiArrowUpRight } from "react-icons/fi";
 import { RxDoubleArrowDown } from "react-icons/rx";
+import { useMediaQuery } from "react-responsive";
+import useFadeOutOnScroll from "@/lib/hook/useFadeOutOnScroll";
 
 function HeroSection() {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   const greetings = "Hello, my name is";
   const myName = "Themuuln";
   const role = "Front-end Developer";
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
+  const opacity = useFadeOutOnScroll(0.2);
   const handleMouseEnter = ({ letter }: any) => {
-    textEnter();
-    setHoverType(letter);
+    textEnter(), setHoverType(letter);
   };
   const handleMouseLeave = () => {
-    textLeave();
-    setHoverType(<FiArrowUpRight />);
+    textLeave(), setHoverType(<FiArrowUpRight />);
   };
 
   return (
@@ -53,7 +55,7 @@ function HeroSection() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 href="/me"
-                className={`${zen_tokyo_zoo.className} px-3 py-1 text-lg leading-none text-brand_bg-400 sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`}
+                className={`${zen_tokyo_zoo.className} px-3 py-1 text-5xl leading-none text-brand_bg-400 lg:text-8xl xl:text-8xl`}
               >
                 &lt;
                 {myName
@@ -94,7 +96,16 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <RxDoubleArrowDown className="absolute text-3xl text-brand_bg-400 bottom-4 animate-bounce" />
+        {isPortrait ? (
+          <></>
+        ) : (
+          <m.div
+            style={{ opacity }}
+            className="absolute text-3xl text-brand_bg-400 bottom-4 animate-bounce"
+          >
+            <RxDoubleArrowDown />
+          </m.div>
+        )}
       </main>
     </>
   );
