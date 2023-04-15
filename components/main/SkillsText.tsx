@@ -1,5 +1,4 @@
 import CursorContext from "@/lib/context/context";
-import { motion as m } from "framer-motion";
 import { useContext } from "react";
 
 const SkillsText = ({ name, href }: any) => {
@@ -13,7 +12,7 @@ const SkillsText = ({ name, href }: any) => {
     textLeave();
   };
   return (
-    <m.a
+    <a
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       href={href}
@@ -22,7 +21,7 @@ const SkillsText = ({ name, href }: any) => {
       className="text-base font-light leading-3 sm:text-lg md:text-xl md:leading-3 xl:text-2xl xl:leading-6"
     >
       {name}
-    </m.a>
+    </a>
   );
 };
 
