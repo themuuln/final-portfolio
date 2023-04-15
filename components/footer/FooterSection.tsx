@@ -7,7 +7,7 @@ import { motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
-import { firacode } from "@/public/fonts/fonts";
+import { firacode, montserrat } from "@/public/fonts/fonts";
 import { FiGithub } from "react-icons/fi";
 
 const FooterSection = () => {
@@ -43,22 +43,22 @@ const FooterSection = () => {
 
   return (
     <div id="footer" className="flex flex-col justify-end h-fit">
-      <div className="text-brand_main-500 bg-brand_bg-600/5">
+      <div className="text-brand_main-500 bg-brand_bg-800/5">
         <IconContext.Provider value={{ size: "1em" }}>
           <div className="container flex flex-col items-center mt-5 space-y-5 xl:flex xl:flex-row xl:justify-around">
             <div>
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="text-white cursor-pointer cursor-pointers underline-offset-1 hover:underline"
+                className={`${montserrat.className} hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
                 onClick={mailHandleCopy}
               >
-                themuln.official@gmail.com
+                THEMULN.OFFICIAL@GMAIL.COM
               </m.p>
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="cursor-pointer underline-offset-1 hover:underline"
+                className="text-lg transition-colors duration-200 cursor-pointer hover:text-brand_bg-500 underline-offset-1"
                 onClick={phoneHandleCopy}
               >
                 +976 8865-0115
