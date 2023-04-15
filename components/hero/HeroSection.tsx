@@ -51,8 +51,8 @@ function HeroSection() {
             </div>
             <div className="overflow-x-hidden overflow-y-hidden w-fit">
               <m.a
-                initial={{ x: 500, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                initial={{ y: 500, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 href="/me"
                 className={`${zen_tokyo_zoo.className} px-3 py-1 text-5xl leading-none text-brand_bg-400 lg:text-8xl xl:text-8xl`}
@@ -77,7 +77,7 @@ function HeroSection() {
                 /&gt;
               </m.a>
             </div>
-            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+            <div className="self-end overflow-x-hidden overflow-y-hidden w-fit">
               <m.p
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
