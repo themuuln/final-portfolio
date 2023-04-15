@@ -16,7 +16,7 @@ const HeaderSection = () => {
               initial={{ y: 100, opacity: 0.3 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
-              className={`${firacode.className} flex items-center justify-center gap-2 text-xl cursor-pointer leftSideHeader `}
+              className={`${firacode.className} text-sm flex items-center justify-center gap-2 md:text-xl cursor-pointer leftSideHeader `}
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
             >
