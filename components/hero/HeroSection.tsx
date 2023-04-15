@@ -5,6 +5,7 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { FiArrowUpRight } from "react-icons/fi";
+import { RxDoubleArrowDown } from "react-icons/rx";
 
 function HeroSection() {
   const greetings = "Hello, my name is";
@@ -25,7 +26,7 @@ function HeroSection() {
     <>
       <main
         id="hero"
-        className={`flex min-h-screen w-screen snap-center items-center justify-center text-white `}
+        className={`flex relative min-h-screen w-screen snap-center items-center justify-center text-white `}
       >
         <div className="container flex flex-col items-center justify-center w-screen h-full">
           <div className="flex flex-col justify-start select-none textContainer">
@@ -93,6 +94,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
+        <RxDoubleArrowDown className="absolute text-3xl text-brand_bg-400 bottom-4 animate-bounce" />
       </main>
     </>
   );
