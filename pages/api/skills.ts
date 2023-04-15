@@ -6,7 +6,11 @@ export const skills = [
         href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         icon: "<SiJavascript />",
       },
-      { name: "React", href: "https://reactjs.org/", icon: "<FaReact />" },
+      {
+        name: "React",
+        href: "https://reactjs.org/",
+        icon: "<FaReact />",
+      },
       {
         name: "Next.js",
         href: "https://nextjs.org/",
