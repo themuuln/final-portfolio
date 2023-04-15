@@ -102,11 +102,11 @@ const MainSection = () => {
               variants={container}
               initial={"hidden"}
               whileInView={"show"}
-              className="space-y-1 text-xl w-fit md:space-y-2 md:text-2xl "
+              className="space-y-2 text-xl w-fit md:space-y-5 md:text-2xl "
             >
               <m.h2
                 variants={item}
-                className={`text-4xl font-semibold text-brand_bg-500 ${firacode} underline`}
+                className={`text-xl md:text-5xl xl:text-6xl font-semibold text-brand_bg-500 ${firacode} underline`}
               >
                 Skills
               </m.h2>
