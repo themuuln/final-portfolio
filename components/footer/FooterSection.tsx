@@ -1,6 +1,6 @@
 "use client";
 import { IconContext } from "react-icons";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./ConnectSection";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import { motion as m } from "framer-motion";
