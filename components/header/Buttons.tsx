@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { firacode } from "@/public/fonts/fonts";
 import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
@@ -28,7 +28,7 @@ const Buttons = ({
   return (
     <motion.div className="overflow-hidden w-fit">
       <motion.li
-        whileHover={{ color: "purple" }}
+        whileHover={{ color: "black" }}
         whileTap={{ scale: 0.9, color: "#7236be" }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
