@@ -1,7 +1,7 @@
 const ContactSection = () => {
   return (
     <>
-      <section className="flex h-screen bg-brand_bg-600/5">
+      <section className="flex h-screen ">
         <div className="container">
           <div className="flex justify-between gap-10">
             <div className="relative flex flex-col">
