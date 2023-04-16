@@ -63,7 +63,7 @@ const HeaderDesktop = () => {
             context={"blog"}
           />
         </Link>
-        <Link href={"/contact"}>
+        <Link href={"#contact"}>
           <Buttons
             variants={buttons}
             icon={<RiContactsBook2Line />}
