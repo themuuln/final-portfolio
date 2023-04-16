@@ -1,6 +1,7 @@
 const ContactSection = () => {
   return (
     <>
+      Not done yet apologize
       <section className="flex h-screen ">
         <div className="container">
           <div className="flex justify-between gap-10">
