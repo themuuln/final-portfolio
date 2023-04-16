@@ -1,9 +1,9 @@
 const ContactSection = () => {
   return (
     <>
-      Not done yet apologize
       <section className="flex h-screen ">
         <div className="container">
+          Not done yet
           <div className="flex justify-between gap-10">
             <div className="relative flex flex-col">
               <label className="text-sm leading-7 text-gray-600">
