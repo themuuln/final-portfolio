@@ -23,6 +23,9 @@ function HeroSection() {
   const handleMouseLeave = () => {
     textLeave(), setHoverType(<FiArrowUpRight />);
   };
+  const scrollHandleMouse = () => {
+    textEnter(), setHoverType(<RxDoubleArrowDown />);
+  };
 
   return (
     <>
@@ -101,7 +104,9 @@ function HeroSection() {
         ) : (
           <m.div
             style={{ opacity }}
-            className="absolute text-3xl text-brand_bg-400 bottom-4 animate-bounce"
+            onMouseEnter={scrollHandleMouse}
+            onMouseLeave={handleMouseLeave}
+            className="absolute text-3xl transition-colors duration-200 hover:text-black text-brand_bg-400 bottom-4 animate-bounce"
           >
             <RxDoubleArrowDown />
           </m.div>
