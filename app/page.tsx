@@ -11,7 +11,6 @@ import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
-import ContactSection from "@/components/contact/ContactSection";
 
 export default function Home() {
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
