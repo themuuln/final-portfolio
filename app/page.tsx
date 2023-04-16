@@ -81,7 +81,7 @@ export default function Home() {
             <HeaderSection />
             <HeroSection />
             <MainSection />
-            <ContactSection />
+            {/* <ContactSection /> */}
             <FooterSection />
             {/* </m.div> */}
           </HoverTypeContext.Provider>
