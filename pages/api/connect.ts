@@ -20,7 +20,10 @@ export const connects = [
         href: "https://www.github.com/themuuln",
       },
     ],
-    email: [{}],
-    linkedin: [{}],
+    linkedin: [
+      {
+        href: "https://www.linkedin.com/in/themuuln/",
+      },
+    ],
   },
 ];
