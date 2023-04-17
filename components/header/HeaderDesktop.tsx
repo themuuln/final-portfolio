@@ -71,19 +71,6 @@ const HeaderDesktop = () => {
             context={"contact"}
           />
         </Link>
-        {/* {header.map((section) => {
-          return section.buttons.map((button) => {
-            return (
-              <Link key={button.context} href={button.href}>
-                <Buttons
-                  variants={buttons}
-                  icon={eval(button.icon)}
-                  context={button.context}
-                />
-              </Link>
-            );
-          });
-        })} */}
       </m.ul>
     </>
   );

@@ -4,20 +4,12 @@ import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import HeaderRight from "./HeaderRight";
 import Link from "next/link";
-// import dynamic from "next/dynamic";
-// import { useMediaQuery } from "react-responsive";
-
 const HeaderSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-  // const HeaderMobile = dynamic(() => import("./HeaderMobile"), { ssr: false });
-  // const HeaderDesktop = dynamic(() => import("./HeaderDesktop"), {
-  //   ssr: false,
-  // });
-  // const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
       <div
-        className={`absolute  top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur`}
+        className={`fixed left-0 top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur`}
       >
         <div className="container flex justify-between ">
           <div className="overflow-x-hidden overflow-y-hidden w-fit">
@@ -35,7 +27,6 @@ const HeaderSection = () => {
             </m.div>
           </div>
           <HeaderRight />
-          {/* {isPortrait ? <HeaderMobile /> : <HeaderDesktop />} */}
         </div>
       </div>
     </>
