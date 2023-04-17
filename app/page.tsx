@@ -18,10 +18,15 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <HeroSection />
-      <MainSection />
-      {loading && <Loading />}
-    </>
+    <div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <HeroSection />
+          <MainSection />
+        </>
+      )}
+    </div>
   );
 }
