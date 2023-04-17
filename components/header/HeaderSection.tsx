@@ -3,6 +3,7 @@ import { motion as m } from "framer-motion";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import HeaderRight from "./HeaderRight";
+import Link from "next/link";
 // import dynamic from "next/dynamic";
 // import { useMediaQuery } from "react-responsive";
 
@@ -29,7 +30,7 @@ const HeaderSection = () => {
               onMouseLeave={textLeave}
             >
               <span>&lt;</span>
-              Temuulen Undrakhbayar
+              <Link href="/me">Temuulen Undrakhbayar</Link>
               <span>/&gt;</span>
             </m.div>
           </div>

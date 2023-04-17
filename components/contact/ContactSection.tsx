@@ -23,7 +23,8 @@ const ContactSection = () => {
         <div className="space-y-10">
           <div className={`text-6xl`}>
             <h2>Let’s chat.</h2>
-            <h2>Tell me about you project.</h2>
+            <h2>Tell me about you</h2>
+            <h2>project.</h2>
           </div>
           <p className={`text-xl`}>Let’s create something together🤘🏻</p>
           <div className="bg-[#171717] hover:bg-[#141414] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
@@ -34,7 +35,7 @@ const ContactSection = () => {
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={mailHandleCopy}
-                className="cursor-pointer text-brand_bg-400"
+                className="transition-colors duration-500 cursor-pointer text-brand_bg-400 hover:text-black"
               >
                 THEMULN.OFFICIAL@GMAIL.COM
               </h4>
