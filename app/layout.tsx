@@ -2,7 +2,7 @@
 import "./globals.css";
 const HeaderSection = require("@/components/header/HeaderSection").default;
 const FooterSection = require("@/components/footer/FooterSection").default;
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
@@ -10,6 +10,7 @@ import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
+import Loading from "./loading";
 
 export default function RootLayout({
   children,
@@ -19,6 +20,17 @@ export default function RootLayout({
   const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
   const [cursorVariant, setCursorVariant] = useState("default");
   const { mousePosition } = useWindowEvents();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const variants: VariantsType = {
     default: {
@@ -71,22 +83,26 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <IconContext.Provider value={{ size: "2.25em" }}>
-          <CursorContext.Provider value={{ textEnter, textLeave }}>
-            <HoverTypeContext.Provider value={{ setHoverType }}>
-              <Cursor
-                variants={variants}
-                cursorVariant={cursorVariant}
-                variants3={variants2}
-                variants4={variants3}
-                hoverType={hoverType}
-              />
-              <HeaderSection />
-              {children}
-              <FooterSection />
-            </HoverTypeContext.Provider>
-          </CursorContext.Provider>
-        </IconContext.Provider>
+        {loading ? (
+          <Loading />
+        ) : (
+          <IconContext.Provider value={{ size: "2.25em" }}>
+            <CursorContext.Provider value={{ textEnter, textLeave }}>
+              <HoverTypeContext.Provider value={{ setHoverType }}>
+                <Cursor
+                  variants={variants}
+                  cursorVariant={cursorVariant}
+                  variants3={variants2}
+                  variants4={variants3}
+                  hoverType={hoverType}
+                />
+                <HeaderSection />
+                {children}
+                <FooterSection />
+              </HoverTypeContext.Provider>
+            </CursorContext.Provider>
+          </IconContext.Provider>
+        )}
       </body>
     </html>
   );
