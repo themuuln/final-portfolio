@@ -26,6 +26,9 @@ export default function RootLayout({
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
+    document.fonts.ready.then(() => {
+      setLoading(false);
+    });
 
     return () => {
       clearTimeout(timer);
