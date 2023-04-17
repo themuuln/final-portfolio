@@ -50,15 +50,15 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className={`${montserrat.className} hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
                 onClick={mailHandleCopy}
+                className={`${montserrat.className} hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
               >
                 THEMULN.OFFICIAL@GMAIL.COM
               </m.p>
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="text-lg transition-colors duration-200 cursor-pointer hover:text-brand_bg-500 underline-offset-1"
+                className="text-lg transition-colors duration-200 cursor-pointer w-fit hover:text-brand_bg-500 underline-offset-1"
                 onClick={phoneHandleCopy}
               >
                 +976 8865-0115
