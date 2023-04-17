@@ -7,7 +7,6 @@ import { motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
-import { firacode, montserrat } from "@/public/fonts/fonts";
 import { FiGithub } from "react-icons/fi";
 
 const FooterSection = () => {
@@ -51,7 +50,7 @@ const FooterSection = () => {
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={mailHandleCopy}
-                className={`${montserrat.className} hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
+                className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
               >
                 THEMULN.OFFICIAL@GMAIL.COM
               </m.p>
@@ -66,7 +65,7 @@ const FooterSection = () => {
             </div>
             <SocialLinks />
           </div>
-          <div className={`${firacode.className} mb-5 font-light md:mb-10`}>
+          <div className={`mb-5 font-light md:mb-10`}>
             <div className={`flex w-full justify-center`}>
               <a
                 href="http://github.com/themuuln"

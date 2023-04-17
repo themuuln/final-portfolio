@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Buttons from "../header/Buttons";
-import { firacode } from "@/public/fonts/fonts";
 import { motion as m } from "framer-motion";
 import { HiOutlineHome } from "react-icons/hi";
 import { useContext } from "react";
@@ -13,7 +12,7 @@ const BlogHeader = () => {
 
   return (
     <div
-      className={`${firacode.className} sticky left-0 top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur-sm`}
+      className={`sticky left-0 top-0 z-10 h-[80px] w-full px-8 py-6 text-white backdrop-blur-sm`}
     >
       <div className="container flex justify-between ">
         <m.div

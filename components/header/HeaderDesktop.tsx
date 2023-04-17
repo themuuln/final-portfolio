@@ -4,6 +4,7 @@ import { AiOutlineExperiment } from "react-icons/ai";
 import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
+import { header } from "@/pages/api/header";
 
 const HeaderDesktop = () => {
   const container = {
@@ -56,7 +57,7 @@ const HeaderDesktop = () => {
             context={"project"}
           />
         </Link>
-        <Link href={"/blog"}>
+        <Link href={"https://medium.com/@themuuln"}>
           <Buttons
             variants={buttons}
             icon={<HiOutlineAnnotation />}
@@ -70,6 +71,19 @@ const HeaderDesktop = () => {
             context={"contact"}
           />
         </Link>
+        {/* {header.map((section) => {
+          return section.buttons.map((button) => {
+            return (
+              <Link key={button.context} href={button.href}>
+                <Buttons
+                  variants={buttons}
+                  icon={eval(button.icon)}
+                  context={button.context}
+                />
+              </Link>
+            );
+          });
+        })} */}
       </m.ul>
     </>
   );

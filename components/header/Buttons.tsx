@@ -1,5 +1,4 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { firacode } from "@/public/fonts/fonts";
 import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
@@ -40,7 +39,7 @@ const Buttons = ({
         // whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         // transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className={`header-button cursor-pointer ${firacode.className} font-light transition ease-linear hover:text-white`}
+        className={`header-button cursor-pointer font-light transition ease-linear hover:text-white`}
       >
         &#47;&#47; {context}
       </motion.li>
