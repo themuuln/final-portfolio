@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-const HeaderSection = require("@/components/header/HeaderSection").default;
+const BlogHeader = require("@/components/blog/BlogHeader").default;
 const FooterSection = require("@/components/footer/FooterSection").default;
 import { useState } from "react";
 import CursorContext from "@/lib/context/context";
@@ -81,7 +81,7 @@ export default function RootLayout({
                 variants4={variants3}
                 hoverType={hoverType}
               />
-              <HeaderSection />
+              <BlogHeader />
               {children}
               <FooterSection />
             </HoverTypeContext.Provider>
