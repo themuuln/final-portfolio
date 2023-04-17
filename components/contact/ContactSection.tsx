@@ -1,40 +1,79 @@
+import { montserrat } from "@/public/fonts/fonts";
+import { HiOutlineMail } from "react-icons/hi";
+import { useContext } from "react";
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import CursorContext from "@/lib/context/context";
+import { MdContentCopy } from "react-icons/md";
+
 const ContactSection = () => {
+  const { textEnter, textLeave } = useContext(CursorContext);
+  const { setHoverType } = useContext(HoverTypeContext);
+  const mailHandleCopy = () =>
+    navigator.clipboard.writeText("themuln.official@gmail.com");
+  const mailHandleMouseEnter = () => {
+    textEnter();
+    setHoverType(<MdContentCopy />);
+  };
+  const handleMouseLeave = () => textLeave();
   return (
     <>
-      <section className="flex h-screen ">
-        <div className="container">
-          Not done yet
-          <div className="flex justify-between gap-10">
-            <div className="relative flex flex-col">
-              <label className="text-sm leading-7 text-gray-600">
-                Your name
-              </label>
-              <input type="text" id="name" name="name" />
-            </div>
-            <div className="relative flex flex-col">
-              <label className="text-sm leading-7 text-gray-600">
-                Your email
-              </label>
-              <input type="text" id="name" name="name" />
+      <section
+        className={`flex ${montserrat.className} font-semibold items-center justify-center h-screen gap-16`}
+      >
+        <div className="space-y-10">
+          <div className={`text-6xl`}>
+            <h2>Let’s chat.</h2>
+            <h2>Tell me about you project.</h2>
+          </div>
+          <p className={`text-xl`}>Let’s create something together🤘🏻</p>
+          <div className="bg-[#171717] hover:bg-[#141414] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
+            <HiOutlineMail />
+            <div className="">
+              <p className="text-base">Mail me at</p>
+              <h4
+                onMouseEnter={mailHandleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={mailHandleCopy}
+                className="cursor-pointer text-brand_bg-400"
+              >
+                THEMULN.OFFICIAL@GMAIL.COM
+              </h4>
             </div>
           </div>
-          <div className="flex justify-between gap-10">
-            <div className="relative flex flex-col">
-              <label className="text-sm leading-7 text-gray-600">
-                What you are interested
-              </label>
-              <input type="text" id="name" name="name" className="" />
+        </div>
+        <div className="bg-[#171717] py-10 px-14 rounded-2xl">
+          <div className="space-y-8">
+            <h2 className="text-[32px]">Send me a message💌</h2>
+            <div>
+              <input
+                type="text"
+                className="w-full p-4 rounded-2xl"
+                placeholder="Your name"
+              />
             </div>
-            <div className="relative flex flex-col">
-              <label className="text-sm leading-7 text-gray-600">
-                Project Budget
-              </label>
-              <input type="text" id="name" name="name" />
+            <div>
+              <input
+                type="text"
+                className="w-full p-4 rounded-2xl"
+                placeholder="E-mail address"
+              />
             </div>
-          </div>
-          <div className="relative flex flex-col">
-            <label className="text-sm leading-7 text-gray-600">Message</label>
-            <input type="text" id="name" name="name" />
+            <div className="space-y-6">
+              <p className="text-base">Tell me more about your project.</p>
+              <input
+                type="text"
+                className="w-full h-40 p-4 rounded-2xl"
+                placeholder=""
+              />
+              <div>
+                <button
+                  className="px-5 py-3 bg-brand_bg-400 rounded-2xl"
+                  type="submit"
+                >
+                  Send message
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
