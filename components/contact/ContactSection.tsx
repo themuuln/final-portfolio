@@ -1,4 +1,3 @@
-import { montserrat } from "@/public/fonts/fonts";
 import { HiOutlineMail } from "react-icons/hi";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
@@ -7,6 +6,7 @@ import { MdContentCopy } from "react-icons/md";
 
 const ContactSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
+
   const { setHoverType } = useContext(HoverTypeContext);
   const mailHandleCopy = () =>
     navigator.clipboard.writeText("themuln.official@gmail.com");
@@ -18,7 +18,7 @@ const ContactSection = () => {
   return (
     <>
       <section
-        className={`flex ${montserrat.className} font-semibold items-center justify-center h-screen gap-16`}
+        className={`flex font-semibold items-center justify-center h-screen gap-16`}
       >
         <div className="space-y-10">
           <div className={`text-6xl`}>
@@ -47,22 +47,21 @@ const ContactSection = () => {
             <div>
               <input
                 type="text"
-                className="w-full p-4 rounded-2xl"
+                className="w-full p-4 rounded-2xl placeholder-slate-400"
                 placeholder="Your name"
               />
             </div>
             <div>
               <input
-                type="text"
+                type="email"
                 className="w-full p-4 rounded-2xl"
                 placeholder="E-mail address"
               />
             </div>
             <div className="space-y-6">
               <p className="text-base">Tell me more about your project.</p>
-              <input
-                type="text"
-                className="w-full h-40 p-4 rounded-2xl"
+              <textarea
+                className="w-full h-40 p-4 focus:border-brand_bg-400 rounded-2xl"
                 placeholder=""
               />
               <div>

@@ -1,5 +1,4 @@
 import "@/public/css/mainSection.css";
-import { firacode } from "@/public/fonts/fonts";
 import { motion as m } from "framer-motion";
 import { skills } from "@/pages/api/skills";
 import CursorContext from "@/lib/context/context";
@@ -49,7 +48,7 @@ const MainSection = () => {
             variants={cardContainer}
             initial={"hidden"}
             whileInView={"show"}
-            className={`${firacode.className} space-y-10`}
+            className={`space-y-10`}
           >
             <m.div variants={card} className="cardContainer">
               <h2 className={`question`}>
@@ -95,9 +94,7 @@ const MainSection = () => {
         className="flex flex-col items-center justify-center h-screen "
       >
         <div className="container w-full space-y-8 md:flex md:justify-around ">
-          <div
-            className={`${firacode.className} container flex justify-center space-y-2 font-light`}
-          >
+          <div className={`container flex justify-center space-y-2 font-light`}>
             <m.ul
               variants={container}
               initial={"hidden"}
@@ -106,7 +103,7 @@ const MainSection = () => {
             >
               <m.h2
                 variants={item}
-                className={`text-xl md:text-4xl font-semibold text-brand_bg-500 ${firacode} underline`}
+                className={`text-xl md:text-4xl font-semibold text-brand_bg-500 underline`}
               >
                 Skills
               </m.h2>

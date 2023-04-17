@@ -1,6 +1,5 @@
 "use client";
 import { motion as m } from "framer-motion";
-import { firacode, zen_tokyo_zoo } from "@/public/fonts/fonts";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
@@ -8,6 +7,9 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { RxDoubleArrowDown } from "react-icons/rx";
 import { useMediaQuery } from "react-responsive";
 import useFadeOutOnScroll from "@/lib/hook/useFadeOutOnScroll";
+
+import { Zen_Tokyo_Zoo } from "@next/font/google";
+const zentokyozoo = Zen_Tokyo_Zoo({ weight: "400", subsets: ["latin"] });
 
 function HeroSection() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -26,7 +28,6 @@ function HeroSection() {
   const scrollHandleMouse = () => {
     textEnter(), setHoverType(<RxDoubleArrowDown />);
   };
-
   return (
     <>
       <main
@@ -40,7 +41,7 @@ function HeroSection() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className={`${firacode.className} mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
+                className={` mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
               >
                 {greetings.split("").map((letter, index) => (
                   <m.span
@@ -58,7 +59,7 @@ function HeroSection() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 href="/me"
-                className={`${zen_tokyo_zoo.className} px-3 py-1 text-5xl leading-none text-brand_bg-400 lg:text-8xl xl:text-8xl`}
+                className={`${zentokyozoo.className} px-3 py-1 text-5xl leading-none text-brand_bg-400 lg:text-8xl xl:text-8xl`}
               >
                 &lt;
                 {myName
@@ -85,7 +86,7 @@ function HeroSection() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className={`${firacode.className} mt-2 text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
+                className={`mt-2 text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
               >
                 {role.split("").map((letter, index) => (
                   <m.span

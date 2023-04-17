@@ -1,4 +1,3 @@
-import { poppins, montserrat } from "@/public/fonts/fonts";
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
@@ -29,7 +28,7 @@ const DebaterCaption = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         id="debaterCaption"
-        className={`${poppins.className} text-brand_main-500 text-6xl font-semibold transition-colors duration-300 hover:text-brand_bg-500`}
+        className={`text-brand_main-500 text-6xl font-semibold transition-colors duration-300 hover:text-brand_bg-500`}
       >
         Debater
       </m.a>
@@ -41,7 +40,7 @@ const DebaterCaption = () => {
         transition={{ duration: 0.3 }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`${montserrat.className} text text-brand_main-400 text-2xl underline underline-offset-1`}
+        className={`text text-brand_main-400 text-2xl underline underline-offset-1`}
       >
         ENTP-T
       </m.a>
