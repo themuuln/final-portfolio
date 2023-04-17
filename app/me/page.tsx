@@ -1,6 +1,6 @@
 "use client";
 const MbtiSection = require("@/components/main/Mbti/MbtiSection").default;
-import SetupSection from "@/components/me/config/SetupSection";
+const SetupSection = require("@/components/me/config/SetupSection").default;
 
 const Themuuln = () => {
   return (
