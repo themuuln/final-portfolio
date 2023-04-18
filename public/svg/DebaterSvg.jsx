@@ -4,7 +4,7 @@ const DebaterSvg = () => {
   return (
     <m.svg
       className={"w-20 h-20 md:w-[391px] md:h-[411px]"}
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -30, scale: 1.1 }}
       viewBox="0 0 391 411"
       fill="none"
       initial="hidden"
