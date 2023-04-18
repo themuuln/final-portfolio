@@ -16,7 +16,7 @@ const ChartLeft = ({ color, shadowColor }: Props) => {
         whileInView={chart.whileInView}
         whileHover={chart.whileHover}
         transition={{ type: "tween" }}
-        className={`relative h-10 w-[300px] rounded-[30px] bg-chart_bg-600 p-1 md:w-[400px] lg:w-[600px]`}
+        className={`relative h-10 w-[300px] rounded-[30px] bg-light_bg-600/50 dark:bg-chart_bg-600 p-1 md:w-[400px] lg:w-[600px]`}
       >
         <m.div
           id={`${shadowColor}`}
