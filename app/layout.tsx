@@ -94,7 +94,9 @@ export default function RootLayout({
           <Loading />
         ) : (
           <ThemeProvider enableSystem={true} attribute="class">
-            <div className={`${firacode.className}`}>
+            <div
+              className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
+            >
               <IconContext.Provider value={{ size: "2.25em" }}>
                 <CursorContext.Provider value={{ textEnter, textLeave }}>
                   <HoverTypeContext.Provider value={{ setHoverType }}>

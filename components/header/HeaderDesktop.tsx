@@ -5,28 +5,14 @@ import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { IconContext } from "react-icons";
 
 const HeaderDesktop = () => {
   const container = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.5 } },
   };
-
-  const buttons = {
-    hidden: {
-      y: "100%",
-    },
-    show: {
-      y: 0,
-    },
-  };
+  const buttons = { hidden: { y: "100%" }, show: { y: 0 } };
 
   return (
     <>
@@ -34,7 +20,7 @@ const HeaderDesktop = () => {
         variants={container}
         initial={"hidden"}
         animate={"show"}
-        className="flex gap-5 text-2xl font-bold headerDesktop "
+        className="flex items-center gap-5 text-2xl font-bold headerDesktop "
       >
         <Link href={"#home"}>
           <Buttons
@@ -71,7 +57,9 @@ const HeaderDesktop = () => {
             context={"contact"}
           />
         </Link>
-        <ThemeSwitcher />
+        <IconContext.Provider value={{ size: "0.5em" }}>
+          <ThemeSwitcher />
+        </IconContext.Provider>
       </m.ul>
     </>
   );
