@@ -4,7 +4,7 @@ import { AiOutlineExperiment } from "react-icons/ai";
 import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
-import { header } from "@/pages/api/header";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const HeaderDesktop = () => {
   const container = {
@@ -71,6 +71,7 @@ const HeaderDesktop = () => {
             context={"contact"}
           />
         </Link>
+        <ThemeSwitcher />
       </m.ul>
     </>
   );
