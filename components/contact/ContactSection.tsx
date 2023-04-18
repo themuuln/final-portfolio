@@ -11,10 +11,14 @@ const ContactSection = () => {
   const { setHoverType } = useContext(HoverTypeContext);
   const mailHandleCopy = () =>
     navigator.clipboard.writeText("themuln.official@gmail.com");
-  const mailHandleMouseEnter = () => textEnter();
-  setHoverType(<MdContentCopy />);
-  const sendHandler = () => textEnter();
-  setHoverType(<FiSend />);
+  const mailHandleMouseEnter = () => {
+    textEnter();
+    setHoverType(<MdContentCopy />);
+  };
+  const sendHandler = () => {
+    textEnter();
+    setHoverType(<FiSend />);
+  };
   return (
     <>
       <section
