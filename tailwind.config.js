@@ -18,6 +18,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      zIndex: {
+        cursor: "99999",
+      },
       fontFamily: {
         firacode: ["var(--font-firacode)"],
         montserrat: ["var(--font-montserrat)"],
