@@ -33,9 +33,8 @@ const MainSection = () => {
     setHoverType(<HiArrowUpRight />);
   };
 
-  const meHandleMouseLeave = () => {
-    textLeave();
-  };
+  const meHandleMouseLeave = () => textLeave();
+
   return (
     <>
       <section

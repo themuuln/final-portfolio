@@ -33,7 +33,7 @@ const ContactSection = () => {
             <h2>project.</h2>
           </div>
           <p className={`text-xl`}>Let’s create something together🤘🏻</p>
-          <div className="bg-[#171717] hover:bg-[#141414] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
+          <div className="bg-light_bg-500/50 dark:bg-dark_bg-500/50 hover:bg-light_bg-600/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] dark:hover:bg- transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
             <HiOutlineMail />
             <div className="">
               <p className="text-base">Mail me at</p>

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -26,6 +27,28 @@ module.exports = {
         montserrat: ["var(--font-montserrat)"],
       },
       colors: {
+        light_bg: {
+          100: "#f1f1f1",
+          200: "#e3e3e3",
+          300: "#d5d5d5",
+          400: "#c7c7c7",
+          500: "#b9b9b9",
+          600: "#949494",
+          700: "#6f6f6f",
+          800: "#4a4a4a",
+          900: "#252525",
+        },
+        dark_bg: {
+          100: "#d1d1d1",
+          200: "#a2a2a2",
+          300: "#747474",
+          400: "#454545",
+          500: "#171717",
+          600: "#121212",
+          700: "#0e0e0e",
+          800: "#090909",
+          900: "#050505",
+        },
         brand_bg: {
           100: "#e9d9fc",
           200: "#d2b4f8",

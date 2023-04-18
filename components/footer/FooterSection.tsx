@@ -50,7 +50,7 @@ const FooterSection = () => {
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={mailHandleCopy}
-                className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold text-white cursor-pointer cursor-pointers underline-offset-1 `}
+                className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
               >
                 THEMULN.OFFICIAL@GMAIL.COM
               </m.p>

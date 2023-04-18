@@ -34,12 +34,8 @@ const Buttons = ({
         variants={variants}
         initial={"hidden"}
         animate={"show"}
-        // initial={{ y: "100%" }}
-        // animate={{ y: 0 }}
-        // whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        // transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className={`header-button cursor-pointer font-light transition ease-linear hover:text-white`}
+        className={`header-button cursor-pointer font-light transition ease-linear`}
       >
         &#47;&#47; {context}
       </motion.li>
