@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 
-const DebaterSvg = () => {
+const LightDebaterSvg = () => {
   return (
     <m.svg
       className={"w-20 z-10 h-20 md:w-[391px] md:h-[411px]"}
@@ -9,7 +9,7 @@ const DebaterSvg = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M196.5 391C305.024 391 393 303.472 393 195.5C393 87.5283 305.024 0 196.5 0C87.976 0 0 87.5283 0 195.5C0 303.472 87.976 391 196.5 391Z" fill="#1c1821" />
+      <path d="M196.5 391C305.024 391 393 303.472 393 195.5C393 87.5283 305.024 0 196.5 0C87.976 0 0 87.5283 0 195.5C0 303.472 87.976 391 196.5 391Z" fill="#bdbdbd" />
       <path fill-rule="evenodd" clip-rule="evenodd" d="M235.822 111.77L254.765 91.3934L276.313 87.3494L284.431 107.648L285.06 135.096L307.607 258.283L251.003 272.605L183.655 277.219L150.934 161.036L144.388 106.274L191.043 100.655L235.822 111.77Z" fill="#DFBDA5" />
       <path fill-rule="evenodd" clip-rule="evenodd" d="M173.234 148.401L220.473 175.872L232.746 205.789L230.141 170.498L224.156 151.451L173.234 148.401Z" fill="#C3987B" />
       <path fill-rule="evenodd" clip-rule="evenodd" d="M247.478 135.576L241.953 149.004L241.111 162.946L248.185 180.005L279.378 129.477L264.657 112.988L247.478 135.576Z" fill="#C3987B" />
@@ -42,4 +42,4 @@ const DebaterSvg = () => {
   );
 };
 
-export default DebaterSvg;
+export default LightDebaterSvg;
