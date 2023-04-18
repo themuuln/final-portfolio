@@ -89,17 +89,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>
-        {loading ? (
-          <Loading />
-        ) : (
-          <ThemeProvider enableSystem={true} attribute="class">
-            <div
-              className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
-            >
-              <IconContext.Provider value={{ size: "2.25em" }}>
-                <CursorContext.Provider value={{ textEnter, textLeave }}>
-                  <HoverTypeContext.Provider value={{ setHoverType }}>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <IconContext.Provider value={{ size: "2.25em" }}>
+          <CursorContext.Provider value={{ textEnter, textLeave }}>
+            <HoverTypeContext.Provider value={{ setHoverType }}>
+              <body>
+                {loading ? (
+                  <Loading />
+                ) : (
+                  <div
+                    className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
+                  >
                     <Cursor
                       variants={variants}
                       cursorVariant={cursorVariant}
@@ -110,13 +110,13 @@ export default function RootLayout({
                     <HeaderSection />
                     {children}
                     <FooterSection />
-                  </HoverTypeContext.Provider>
-                </CursorContext.Provider>
-              </IconContext.Provider>
-            </div>
-          </ThemeProvider>
-        )}
-      </body>
+                  </div>
+                )}
+              </body>
+            </HoverTypeContext.Provider>
+          </CursorContext.Provider>
+        </IconContext.Provider>
+      </ThemeProvider>
     </html>
   );
 }
