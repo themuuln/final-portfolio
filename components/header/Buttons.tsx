@@ -27,8 +27,6 @@ const Buttons = ({
   return (
     <motion.div className="overflow-hidden w-fit">
       <motion.li
-        whileHover={{ color: "black" }}
-        whileTap={{ scale: 0.9, color: "#7236be" }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         variants={variants}

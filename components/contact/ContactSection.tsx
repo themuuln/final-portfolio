@@ -26,7 +26,9 @@ const ContactSection = () => {
       >
         <div className="space-y-10">
           <div className={`text-6xl`}>
-            <h2>Let’s chat.</h2>
+            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+              <h2>Let’s chat.</h2>
+            </div>
             <h2>Tell me about your</h2>
             <h2>project.</h2>
           </div>
@@ -53,14 +55,14 @@ const ContactSection = () => {
               <input
                 type="text"
                 className="w-full p-4 rounded-2xl placeholder-slate-400"
-                placeholder="Your name"
+                placeholder="Enter your name"
               />
             </div>
             <div>
               <input
                 type="email"
                 className="w-full p-4 rounded-2xl"
-                placeholder="E-mail address"
+                placeholder="Enter your email"
               />
             </div>
             <div className="space-y-6">

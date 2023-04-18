@@ -10,14 +10,8 @@ import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { IconContext } from "react-icons";
-import {
-  cardContainer,
-  card,
-  evenCard,
-  container,
-  item,
-} from "../animation/variants";
-import { GoTriangleRight } from "react-icons/go";
+import { cardContainer, container, item } from "../animation/variants";
+import { cardData } from "./cardData";
 
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -49,41 +43,29 @@ const MainSection = () => {
             whileInView={"show"}
             className={`space-y-10`}
           >
-            <m.div variants={card} className="cardContainer">
-              <h2 className={`question`}>
-                WHAT I <span className="highlighted">DO?</span>
-              </h2>
-              <p className="answer">
-                I create customized websites that are visually appealing, highly
-                functional, and geared towards boosting your online profile,
-                branding, and revenue. I leverage the latest web technologies to
-                provide tailored digital solutions that cater to your specific
-                requirements and objectives.
-              </p>
-            </m.div>
-            <m.div variants={evenCard} className="cardContainer">
-              <h2 className={`question`}>
-                WHY CHOOSE <span className="highlighted">ME?</span>
-              </h2>
-              <p className="answer ">
-                I specialize in crafting bespoke, visually stunning websites
-                that function seamlessly to enhance your online presence, brand
-                identity, and revenue streams. With my expertise in the latest
-                web technologies, I provide customized digital solutions that
-                cater to your unique needs and objectives.
-              </p>
-            </m.div>
-            <m.div variants={card} className="cardContainer">
-              <h2 className={`question`}>
-                PHILOSOPHY OF <span className="highlighted">MINE</span>
-              </h2>
-              <p className="answer ">
-                I create stunning bespoke websites that enhance your online
-                presence, brand identity, and revenue streams. Using the latest
-                web technologies, I provide tailored digital solutions to meet
-                your unique needs and objectives.
-              </p>
-            </m.div>
+            {cardData.map((card, index) => (
+              <m.div
+                key={index}
+                variants={
+                  index % 2 === 0
+                    ? {
+                        hidden: { opacity: 0, x: "100%" },
+                        show: { opacity: 1, x: 0 },
+                      }
+                    : {
+                        hidden: { opacity: 0, x: "-100%" },
+                        show: { opacity: 1, x: 0 },
+                      }
+                }
+                className="cardContainer"
+              >
+                <h2 className={`question`}>
+                  {card.title}{" "}
+                  <span className="highlighted">{card.highlightedText}</span>
+                </h2>
+                <p className="answer">{card.description}</p>
+              </m.div>
+            ))}
           </m.div>
         </div>
       </section>

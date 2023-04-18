@@ -6,6 +6,7 @@ import { HiOutlineAnnotation, HiOutlineHome } from "react-icons/hi";
 import { motion as m } from "framer-motion";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { IconContext } from "react-icons";
+import ButtonData from "./ButtonData";
 
 const HeaderDesktop = () => {
   const container = {
@@ -13,7 +14,6 @@ const HeaderDesktop = () => {
     show: { opacity: 1, transition: { staggerChildren: 0.5 } },
   };
   const buttons = { hidden: { y: "100%" }, show: { y: 0 } };
-
   return (
     <>
       <m.ul
@@ -22,41 +22,15 @@ const HeaderDesktop = () => {
         animate={"show"}
         className="flex items-center gap-5 text-2xl font-bold headerDesktop "
       >
-        <Link href={"#home"}>
-          <Buttons
-            variants={buttons}
-            icon={<HiOutlineHome />}
-            context={"home"}
-          />
-        </Link>
-        <Link href={"#experience"}>
-          <Buttons
-            variants={buttons}
-            icon={<AiOutlineExperiment />}
-            context={"experience"}
-          />
-        </Link>
-        <Link href={"#project"}>
-          <Buttons
-            variants={buttons}
-            icon={<RiLayout2Line />}
-            context={"project"}
-          />
-        </Link>
-        <Link href={"https://medium.com/@themuuln"}>
-          <Buttons
-            variants={buttons}
-            icon={<HiOutlineAnnotation />}
-            context={"blog"}
-          />
-        </Link>
-        <Link href={"#contact"}>
-          <Buttons
-            variants={buttons}
-            icon={<RiContactsBook2Line />}
-            context={"contact"}
-          />
-        </Link>
+        {ButtonData.map((link, index) => (
+          <Link key={index} href={link.href}>
+            <Buttons
+              variants={buttons}
+              icon={link.icon}
+              context={link.context}
+            />
+          </Link>
+        ))}
         <IconContext.Provider value={{ size: "0.5em" }}>
           <ThemeSwitcher />
         </IconContext.Provider>

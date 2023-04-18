@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-  background-color: rgb(135, 76, 212);
+  background-color: #bc88ff;
   color: white;
 }
 
@@ -41,13 +41,28 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+@layer base {
+  @media (prefers-color-scheme: dark) {
 
-html,
-body {
-  max-width: 100vw;
-  background-size: 30px 30px;
-  background-image: radial-gradient(#232323 1.6px, transparent 1px);
-  @apply text-white bg-[#111] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
+    html,
+    body {
+      max-width: 100vw;
+      background-size: 30px 30px;
+      background-image: radial-gradient(#232323 1.6px, transparent 1px);
+      @apply text-white bg-[#111] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+
+    html,
+    body {
+      max-width: 100vw;
+      background-size: 30px 30px;
+      background-image: radial-gradient(#777777 1.6px, transparent 1px);
+      @apply text-black bg-[#e6e6e6] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
+    }
+  }
 }
 
 * {
@@ -56,36 +71,13 @@ body {
   margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-
-  html,
-  body {
-    max-width: 100vw;
-    background-size: 30px 30px;
-    background-image: radial-gradient(#777777 1.6px, transparent 1px);
-    @apply text-black bg-[#e6e6e6] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
-  }
-}
-
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-/* Firefox */
+/* firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #7236be #0B1F2E;
+  scrollbar-color: #7236be #0b1f2e;
 }
 
-/* Chrome, Edge and Safari */
+/* chrome, edge and Safari */
 *::-webkit-scrollbar {
   width: 5px;
   width: 5px;
@@ -116,14 +108,6 @@ a {
 *::-webkit-scrollbar-thumb:active {
   background-color: #5d28a1;
 }
-
-/* footer {
-  background-image: url(../public/svg/footerCloud.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* glow.css */
 
 .extravertedGlow {
   box-shadow: 0px 4px 105px 10px rgba(66, 152, 180, 0.9)
@@ -193,10 +177,10 @@ a {
   color: #8f43ee;
   box-shadow: 33.4px 0 0 12.3px, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 0;
   transform: translateX(-66.8px);
-  animation: dots-ijr34dhg 0.5s infinite alternate linear;
+  animation: dots 0.5s infinite alternate linear;
 }
 
-@keyframes dots-ijr34dhg {
+@keyframes dots {
   50% {
     box-shadow: 33.4px 0 0 5.3px, 66.8px 0 0 12.3px, 100.19999999999999px 0 0 5.3px;
   }

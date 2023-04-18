@@ -27,13 +27,6 @@ const SocialLinks: React.FC = () => {
               href={connect.instagram[0].href}
             />
           )}
-          {connect.twitter && (
-            <ConnectText
-              social={"Twitter"}
-              icon={<RxTwitterLogo />}
-              href={connect.twitter[0].href}
-            />
-          )}
           {connect.github && (
             <ConnectText
               social={"Github"}
@@ -46,6 +39,13 @@ const SocialLinks: React.FC = () => {
               social={"LinkedIn"}
               icon={<RxLinkedinLogo />}
               href={connect.linkedin[0].href}
+            />
+          )}
+          {connect.twitter && (
+            <ConnectText
+              social={"Twitter"}
+              icon={<RxTwitterLogo />}
+              href={connect.twitter[0].href}
             />
           )}
         </ul>
