@@ -32,7 +32,7 @@ function HeroSection() {
     <>
       <main
         id="hero"
-        className={`flex relative min-h-screen w-screen snap-center items-center justify-center text-white `}
+        className={`flex relative min-h-screen w-screen snap-center items-center justify-center`}
       >
         <div className="container flex flex-col items-center justify-center w-screen h-full">
           <div className="flex flex-col justify-start select-none textContainer">

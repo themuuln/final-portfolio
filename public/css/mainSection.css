@@ -3,7 +3,7 @@
 }
 
 .question {
-  @apply text-xl pointer-events-none select-none md:text-4xl font-semibold text-[#fff]
+  @apply text-xl pointer-events-none select-none md:text-4xl font-semibold 
 }
 
 .answer {
