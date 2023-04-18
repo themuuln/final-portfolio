@@ -12,6 +12,7 @@ import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
 import Loading from "./loading";
 import { Fira_Code } from "@next/font/google";
+import { ThemeProvider } from "next-themes";
 
 const firacode = Fira_Code({ subsets: ["latin"] });
 
@@ -92,24 +93,26 @@ export default function RootLayout({
         {loading ? (
           <Loading />
         ) : (
-          <div className={`${firacode.className}`}>
-            <IconContext.Provider value={{ size: "2.25em" }}>
-              <CursorContext.Provider value={{ textEnter, textLeave }}>
-                <HoverTypeContext.Provider value={{ setHoverType }}>
-                  <Cursor
-                    variants={variants}
-                    cursorVariant={cursorVariant}
-                    variants3={variants2}
-                    variants4={variants3}
-                    hoverType={hoverType}
-                  />
-                  <HeaderSection />
-                  {children}
-                  <FooterSection />
-                </HoverTypeContext.Provider>
-              </CursorContext.Provider>
-            </IconContext.Provider>
-          </div>
+          <ThemeProvider enableSystem={true} attribute="class">
+            <div className={`${firacode.className}`}>
+              <IconContext.Provider value={{ size: "2.25em" }}>
+                <CursorContext.Provider value={{ textEnter, textLeave }}>
+                  <HoverTypeContext.Provider value={{ setHoverType }}>
+                    <Cursor
+                      variants={variants}
+                      cursorVariant={cursorVariant}
+                      variants3={variants2}
+                      variants4={variants3}
+                      hoverType={hoverType}
+                    />
+                    <HeaderSection />
+                    {children}
+                    <FooterSection />
+                  </HoverTypeContext.Provider>
+                </CursorContext.Provider>
+              </IconContext.Provider>
+            </div>
+          </ThemeProvider>
         )}
       </body>
     </html>
