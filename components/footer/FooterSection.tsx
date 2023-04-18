@@ -83,7 +83,7 @@ const FooterSection = () => {
               </a>
             </div>
           </div>
-          <div className="botRow container flex h-fit justify-center border-t-[1px]">
+          <div className="botRow container flex h-fit justify-center border-t-[1px] border-light_bg-600 dark:border-dark_bg-400">
             <p className="my-5 md:my-10">© Temuulen Undrakhbayar 2023</p>
           </div>
         </IconContext.Provider>
