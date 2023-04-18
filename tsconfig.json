@@ -32,7 +32,8 @@
     "public/svg/DebaterText.tsx",
     "public/svg/DebaterSvg.jsx",
     "components/WorldMap.jsx",
-    "public/svg/ScrollDown.tsx"
+    "public/svg/ScrollDown.tsx",
+    "components/header/ButtonData.js"
   ],
   "exclude": ["node_modules"]
 }
