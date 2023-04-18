@@ -1,5 +1,5 @@
 import { useTheme } from "next-themes";
-import { HiMoon, HiOutlineSun } from "react-icons/hi";
+import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 import { motion as m, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
@@ -14,7 +14,7 @@ const ThemeSwitcher = () => {
 
   const handleMouseEnter = () => {
     textEnter();
-    setHoverType(theme == "dark" ? <HiOutlineSun /> : <HiMoon />);
+    setHoverType(theme == "dark" ? <HiOutlineSun /> : <HiOutlineMoon />);
   };
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const ThemeSwitcher = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={textLeave}
           onClick={() => setTheme("light")}
-          className="p-2 border-light_bg-800 rounded-lg border-[1px]"
+          className="p-2 border-light_bg-800 rounded-lg border-[2px]"
         >
           <HiOutlineSun className="w-7 h-7" />
         </m.button>
@@ -44,10 +44,10 @@ const ThemeSwitcher = () => {
         <m.button
           onMouseEnter={handleMouseEnter}
           onMouseLeave={textLeave}
-          className="p-2 border-light_bg-800 rounded-lg border-[1px]"
+          className="p-2 border-light_bg-700 rounded-lg border-[2px]"
           onClick={() => setTheme("dark")}
         >
-          <HiMoon className="w-7 h-7" />
+          <HiOutlineMoon className="w-7 h-7" />
         </m.button>
       );
     }
