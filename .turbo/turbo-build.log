@@ -1,0 +1,41 @@
+yarn run v1.22.19
+$ next build
+warn  - You have enabled experimental feature (appDir) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
+info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Linting and checking validity of types...
+info  - Collecting page data...
+info  - Generating static pages (0/5)
+info  - Generating static pages (1/5)
+info  - Generating static pages (2/5)
+info  - Generating static pages (3/5)
+info  - Generating static pages (5/5)
+info  - Finalizing page optimization...
+
+Route (app)                                Size     First Load JS
+┌ ○ /                                      0 B                0 B
+├ ○ /blog                                  5.71 kB         123 kB
+└ ○ /me                                    3.54 kB         121 kB
++ First Load JS shared by all              82.4 kB
+  ├ chunks/17-bb4b2c096b693144.js          80.4 kB
+  ├ chunks/main-app-1bb7d889e33c7267.js    215 B
+  └ chunks/webpack-1dec6f69b1f01550.js     1.77 kB
+
+Route (pages)                              Size     First Load JS
+┌ ○ /404                                   179 B          80.9 kB
+├ λ /api/connect                           0 B            80.7 kB
+├ λ /api/header                            0 B            80.7 kB
+├ λ /api/hello                             0 B            80.7 kB
+└ λ /api/skills                            0 B            80.7 kB
++ First Load JS shared by all              80.7 kB
+  ├ chunks/main-adc3d55a8f4209df.js        78.7 kB
+  ├ chunks/pages/_app-5841ab2cb3aa228d.js  192 B
+  └ chunks/webpack-1dec6f69b1f01550.js     1.77 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+Done in 27.29s.

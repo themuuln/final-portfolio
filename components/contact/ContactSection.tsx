@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import CursorContext from "@/lib/context/context";
 import { MdContentCopy } from "react-icons/md";
+import { FiSend } from "react-icons/fi";
+import { motion as m } from "framer-motion";
 
 const ContactSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -13,6 +15,10 @@ const ContactSection = () => {
   const mailHandleMouseEnter = () => {
     textEnter();
     setHoverType(<MdContentCopy />);
+  };
+  const sendHandler = () => {
+    textEnter();
+    setHoverType(<FiSend />);
   };
   const handleMouseLeave = () => textLeave();
   return (
@@ -66,12 +72,14 @@ const ContactSection = () => {
                 placeholder=""
               />
               <div>
-                <button
-                  className="px-5 py-3 bg-brand_bg-400 rounded-2xl"
+                <m.button
+                  className="px-5 py-3 transition-colors duration-200 bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl"
+                  onMouseEnter={sendHandler}
+                  onMouseLeave={handleMouseLeave}
                   type="submit"
                 >
                   Send message
-                </button>
+                </m.button>
               </div>
             </div>
           </div>
