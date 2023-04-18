@@ -8,19 +8,13 @@ import { motion as m } from "framer-motion";
 
 const ContactSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
-
   const { setHoverType } = useContext(HoverTypeContext);
   const mailHandleCopy = () =>
     navigator.clipboard.writeText("themuln.official@gmail.com");
-  const mailHandleMouseEnter = () => {
-    textEnter();
-    setHoverType(<MdContentCopy />);
-  };
-  const sendHandler = () => {
-    textEnter();
-    setHoverType(<FiSend />);
-  };
-  const handleMouseLeave = () => textLeave();
+  const mailHandleMouseEnter = () => textEnter();
+  setHoverType(<MdContentCopy />);
+  const sendHandler = () => textEnter();
+  setHoverType(<FiSend />);
   return (
     <>
       <section
@@ -39,7 +33,7 @@ const ContactSection = () => {
               <p className="text-base">Mail me at</p>
               <h4
                 onMouseEnter={mailHandleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={textLeave}
                 onClick={mailHandleCopy}
                 className="transition-colors duration-500 cursor-pointer text-brand_bg-400 hover:text-black"
               >
@@ -48,9 +42,9 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#171717] py-10 px-14 rounded-2xl">
+        <div className=" bg-light_bg-500/50 dark:bg-[#171717] py-10 px-14 rounded-2xl">
           <div className="space-y-8">
-            <h2 className="text-[32px]">Send me a message💌</h2>
+            <h2 className="text-[32px] ">Send me a message💌</h2>
             <div>
               <input
                 type="text"
@@ -73,9 +67,9 @@ const ContactSection = () => {
               />
               <div>
                 <m.button
-                  className="px-5 py-3 transition-colors duration-200 bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl"
+                  className="px-5 py-3 text-white transition-colors duration-200 bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl"
                   onMouseEnter={sendHandler}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseLeave={textLeave}
                   type="submit"
                 >
                   Send message
