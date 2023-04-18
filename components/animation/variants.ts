@@ -23,28 +23,6 @@ export const cardContainer = {
   },
 };
 
-export const card = {
-  hidden: {
-    x: "100%",
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-  },
-};
-
-export const evenCard = {
-  hidden: {
-    x: "-100%",
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-  },
-};
-
 export const buttons = {
   hidden: {
     y: "100%",
