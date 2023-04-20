@@ -49,5 +49,6 @@ export type VariantsType = {
     stiffness: number;
     restDelta: number;
   };
+  clicked?: any;
   exit?: {};
 };
