@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { motion as m } from "framer-motion";
 import CursorContext from "@/lib/context/context";
-import Blog from "./Blog";
 import BlogCategory from "./BlogCategory";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -38,7 +37,6 @@ const BlogCard = () => {
           <BlogCategory context={"Framer-motion"} />
           <BlogCategory context={"NextJS"} />
         </div>
-        <Blog title={"Test"} createdAt={"TEst"} />
       </div>
     </>
   );

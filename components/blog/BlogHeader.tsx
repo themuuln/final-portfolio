@@ -22,14 +22,6 @@ const BlogHeader = () => {
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
         >
-          {/* <div className="rounded-full border-[1px]  bg-[#1a1a1a] p-4">
-              <IconContext.Provider value={{ size: "1em" }}>
-                <AiOutlineMail />
-              </IconContext.Provider>
-            </div>
-            <p className="px-3 py-1 transition-colors duration-200 rounded-md bg-brand_bg-500/10 hover:bg-brand_bg-500/30">
-              {context}
-            </p> */}
           Temuulen Undrakhbayar
         </m.div>
         <ul className="flex gap-5 text-2xl font-bold rightSideHeader ">
