@@ -6,11 +6,14 @@ import { GiSkills } from "react-icons/gi";
 import CursorContext from "@/lib/context/context";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
-import VerticalLine from "../VerticalLine";
+import dynamic from "next/dynamic";
+import { useMediaQuery } from "react-responsive";
+const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const SkillSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
   const skillMouseEnter = () => {
     textEnter();
     setHoverType(<GiSkills />);
@@ -23,7 +26,7 @@ const SkillSection = () => {
     >
       <div className="container w-full space-y-8 md:flex md:justify-around ">
         <div className={`container flex justify-center space-y-2 font-light`}>
-          <VerticalLine element="skills" />
+          {isPortrait ? null : <VerticalLine element={"div"} />}
           <m.ul
             variants={container}
             initial={"hidden"}
