@@ -33,7 +33,8 @@
     "public/svg/DebaterSvg.jsx",
     "components/WorldMap.jsx",
     "public/svg/ScrollDown.tsx",
-    "components/header/ButtonData.js"
+    "components/header/ButtonData.js",
+    "pages/api/skills.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 import "@/public/css/mainSection.css";
 import { motion as m } from "framer-motion";
-import { skills } from "@/pages/api/skills";
+import { skills } from "@/pages/api/skills.js";
 import CursorContext from "@/lib/context/context";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { HiOutlineCode } from "react-icons/hi";
@@ -12,6 +12,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { IconContext } from "react-icons";
 import { cardContainer, container, item } from "../animation/variants";
 import { cardData } from "./cardData";
+import { GiSkills } from "react-icons/gi";
 
 const MainSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -20,6 +21,11 @@ const MainSection = () => {
   const handleMouseEnter = () => {
     textEnter();
     setHoverType(<HiOutlineCode />);
+  };
+
+  const skillMouseEnter = () => {
+    textEnter();
+    setHoverType(<GiSkills />);
   };
 
   const meHandleMouseEnter = () => {
@@ -84,7 +90,9 @@ const MainSection = () => {
             >
               <m.h2
                 variants={item}
-                className={`text-xl md:text-4xl font-semibold text-brand_bg-500 underline`}
+                onMouseEnter={skillMouseEnter}
+                onMouseLeave={textLeave}
+                className={`text-xl md:text-4xl cursor-pointer font-semibold text-brand_bg-500 hover:underline`}
               >
                 Skills
               </m.h2>
@@ -102,16 +110,9 @@ const MainSection = () => {
                         }
                   }
                   whileHover={{ scale: 1.2 }}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={textLeave}
-                  className={
-                    "transition-colors flex space-x-1 hover:text-brand_bg-500 duration-200"
-                  }
+                  className={"flex space-x-2"}
                   key={skill.name}
                 >
-                  {/* <IconContext.Provider value={{ size: "0.75em" }}>
-                    <GoTriangleRight />
-                  </IconContext.Provider> */}
                   <SkillsText
                     href={skill.href}
                     name={skill.name}
