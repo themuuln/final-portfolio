@@ -9,14 +9,12 @@ const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 export default function TimelineSection() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
   return (
-    <div className="flex items-center justify-center w-full h-screen">
+    <div
+      data-scroll-section
+      className="flex items-center justify-center w-full p-80 h-fit"
+    >
       <div className="max-w-[1000px] justify-between h-fit w-full flex gap-4">
-        <motion.div
-          variants={cardContainer}
-          initial={"hidden"}
-          whileInView={"show"}
-          className="flex items-center"
-        >
+        <motion.div className="flex items-center">
           {isPortrait ? null : <VerticalLine element={"Timeline"} />}
           <motion.div
             variants={{
@@ -30,7 +28,7 @@ export default function TimelineSection() {
             }}
             initial={"hidden"}
             whileInView={"show"}
-            className="p-5 rounded-md bg-darkcolor"
+            className="max-w-[1000px] w-[1000px] p-5 rounded-md bg-darkcolor"
           >
             {accordions.map((item, id) => {
               const { question, answer } = item;

@@ -19,7 +19,10 @@ const SeeMoreSection = () => {
   const meHandleMouseLeave = () => textLeave();
 
   return (
-    <section className="flex justify-center min-w-full min-h-screen text-2xl md:text-3xl xl:text-5xl place-items-center dark:text-white ">
+    <section
+      data-scroll-section
+      className="flex justify-center min-w-full text-2xl py-80 h-fit md:text-3xl xl:text-5xl place-items-center dark:text-white "
+    >
       <Link href="/me">
         <m.div
           initial={{ x: "100%" }}
