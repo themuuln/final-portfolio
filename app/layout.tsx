@@ -2,6 +2,7 @@
 import "./globals.css";
 const HeaderSection = require("@/components/header/HeaderSection").default;
 const FooterSection = require("@/components/footer/FooterSection").default;
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
@@ -13,6 +14,7 @@ import Cursor from "@/components/Cursor";
 import Loading from "./loading";
 import { Fira_Code } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
 const firacode = Fira_Code({ subsets: ["latin"] });
 
@@ -51,6 +53,13 @@ export default function RootLayout({
       y: mousePosition.y - 51,
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
+    clicked: {
+      height: 80,
+      width: 80,
+      x: mousePosition.x - 40,
+      y: mousePosition.y - 40,
+      mixBlendMode: "color-dodge" as MixBlendMode,
+    },
   };
   const variants2: VariantsType = {
     default: {
@@ -62,6 +71,13 @@ export default function RootLayout({
       width: 126,
       x: mousePosition.x - 63.5,
       y: mousePosition.y - 63.5,
+      mixBlendMode: "color-dodge" as MixBlendMode,
+    },
+    clicked: {
+      height: 101,
+      width: 101,
+      x: mousePosition.x - 51,
+      y: mousePosition.y - 51,
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
   };
@@ -77,15 +93,20 @@ export default function RootLayout({
       x: mousePosition.x - 41,
       y: mousePosition.y - 26,
     },
-    transition: {
-      type: "spring",
-      damping: 11,
-      stiffness: 51,
-      restDelta: 1.001,
+    clicked: {
+      height: 50,
+      width: 50,
+      display: "flex",
+      x: mousePosition.x - 25,
+      y: mousePosition.y - 25,
     },
   };
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
+  const clicked = () => {
+    setCursorVariant("clicked");
+    setHoverType(<HiOutlineCursorClick />);
+  };
   return (
     <html lang="en">
       <head />
@@ -93,7 +114,7 @@ export default function RootLayout({
         <IconContext.Provider value={{ size: "2.25em" }}>
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
-              <body>
+              <motion.body onMouseDown={clicked} onMouseUp={textLeave}>
                 {loading ? (
                   <Loading />
                 ) : (
@@ -112,7 +133,7 @@ export default function RootLayout({
                     <FooterSection />
                   </div>
                 )}
-              </body>
+              </motion.body>
             </HoverTypeContext.Provider>
           </CursorContext.Provider>
         </IconContext.Provider>
