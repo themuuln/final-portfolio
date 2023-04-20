@@ -1,22 +1,38 @@
+// Import necessary libraries and components
+import React from "react";
 import { motion as m } from "framer-motion";
 import { IconContext } from "react-icons";
 import { Zen_Tokyo_Zoo } from "@next/font/google";
+
+// Get font from Zen_Tokyo_Zoo with specified weight and subsets
 const zentokyozoo = Zen_Tokyo_Zoo({ weight: "400", subsets: ["latin"] });
 
-const Cursor = ({
+// Define prop types for Cursor component
+interface CursorProps {
+  variants: any;
+  cursorVariant: string;
+  variants3: any;
+  variants4: any;
+  hoverType: JSX.Element;
+}
+
+// Define Cursor component
+const Cursor: React.FC<CursorProps> = ({
   variants,
   cursorVariant,
   variants3,
   variants4,
   hoverType,
-}: { hoverType: JSX.Element; cursorVariant: String } & any) => {
+}) => {
   return (
     <>
+      {/* Cursor dot */}
       <m.div
         variants={variants}
         animate={cursorVariant}
         className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-cursor cursorr bg-brand_bg-500 "
       />
+      {/* Cursor ring */}
       <m.div
         variants={variants3}
         animate={cursorVariant}
@@ -48,4 +64,4 @@ const Cursor = ({
   );
 };
 
-export default Cursor;
+export default Cursor; // Export Cursor component as default
