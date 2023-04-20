@@ -1,21 +1,26 @@
 // Import necessary libraries and components
 import CursorContext from "@/lib/context/context";
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
+import { HiOutlineCode } from "react-icons/hi";
 
 // Define SkillsText component
-const SkillsText = ({ name, href }: any) => {
+const SkillsText = ({ name, href, icon }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext); // Accessing textEnter and textLeave functions from CursorContext
-  const handleMouseEnter = () => textEnter(); // Function to handle mouse enter event and call textEnter
-  const handleMouseLeave = () => textLeave(); // Function to handle mouse leave event and call textLeave
+  const { setHoverType } = useContext(HoverTypeContext); // Use HoverTypeContext for setHoverType function
+  const handleMouseEnter = () => {
+    textEnter(); // Function to handle mouse enter event and call textEnter
+    setHoverType(<HiOutlineCode />);
+  };
 
   return (
     <a
       onMouseEnter={handleMouseEnter} // Attach handleMouseEnter to onMouseEnter event
-      onMouseLeave={handleMouseLeave} // Attach handleMouseLeave to onMouseLeave event
+      onMouseLeave={textLeave} // Attach handleMouseLeave to onMouseLeave event
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-base font-light leading-3 md:text-xl md:leading-3 xl:text-2xl xl:leading-6`}
+      className={`text-base w-full hover:text-brand_bg-500 transition-colors duration-200 font-light leading-3 md:text-xl md:leading-3 xl:text-2xl xl:leading-6`}
     >
       {name}
     </a>
