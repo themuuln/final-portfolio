@@ -25,18 +25,22 @@ const ContactSection = () => {
         className={`flex font-semibold items-center justify-center h-screen gap-16`}
       >
         <div className="space-y-10">
-          <div className={`text-6xl`}>
+          <div className={`text-6xl pointer-events-none`}>
             <div className="overflow-x-hidden overflow-y-hidden w-fit">
               <h2>Let’s chat.</h2>
             </div>
             <h2>Tell me about your</h2>
             <h2>project.</h2>
           </div>
-          <p className={`text-xl`}>Let’s create something together🤘🏻</p>
-          <div className="bg-light_bg-500/50 dark:bg-dark_bg-500/50 hover:bg-light_bg-600/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] dark:hover:bg- transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
-            <HiOutlineMail />
+          <p className={`text-xl pointer-events-none`}>
+            Let’s create something together🤘🏻
+          </p>
+          <div className="bg-light_bg-500/50  dark:bg-dark_bg-500/50 hover:bg-light_bg-600/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] dark:hover:bg- transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
+            <div className="transition-colors duration-200 hover:text-brand_bg-500">
+              <HiOutlineMail />
+            </div>
             <div className="">
-              <p className="text-base">Mail me at</p>
+              <p className="text-base pointer-events-none">Mail me at</p>
               <h4
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={textLeave}
