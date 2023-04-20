@@ -1,18 +1,61 @@
-import Accordion from "../animation/Accordion";
 import { accordions } from "@/pages/api/accordions";
+import { motion } from "framer-motion";
+import { cardContainer, container } from "../animation/variants";
+import Card from "../animation/Card";
+import dynamic from "next/dynamic";
+import { useMediaQuery } from "react-responsive";
+const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 export default function TimelineSection() {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
   return (
-    <div className="w-full px-4 pt-16">
-      <div className="max-w-[700px] w-full mx-auto mt-10 flex flex-col gap-4">
-        {accordions.map((item, id) => {
-          const { question, answer } = item;
-          return (
-            <div className="p-5 rounded-md bg-darkcolor" key={id}>
-              <Accordion question={question} answer={answer}></Accordion>
-            </div>
-          );
-        })}
+    <div className="flex items-center justify-center w-full h-screen">
+      <div className="max-w-[1000px] justify-between h-fit w-full flex gap-4">
+        <motion.div
+          variants={cardContainer}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="flex items-center"
+        >
+          {isPortrait ? null : <VerticalLine element={"Timeline"} />}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0.3 },
+              show: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+            initial={"hidden"}
+            whileInView={"show"}
+            className="p-5 rounded-md bg-darkcolor"
+          >
+            {accordions.map((item, id) => {
+              const { question, answer } = item;
+              return (
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0.3 },
+                    show: {
+                      opacity: 1,
+                      transition: {
+                        staggerChildren: 0.3,
+                      },
+                    },
+                  }}
+                  initial={"hidden"}
+                  whileInView={"show"}
+                  className="p-5 rounded-md bg-darkcolor"
+                  key={id}
+                >
+                  <Card question={question} answer={answer} id={id} />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

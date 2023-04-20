@@ -26,7 +26,7 @@ const SkillSection = () => {
     >
       <div className="container w-full space-y-8 md:flex md:justify-around ">
         <div className={`container flex justify-center space-y-2 font-light`}>
-          {isPortrait ? null : <VerticalLine element={"div"} />}
+          {isPortrait ? null : <VerticalLine element={"skills"} />}
           <m.ul
             variants={container}
             initial={"hidden"}

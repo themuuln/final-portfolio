@@ -18,8 +18,8 @@ const MainSection = () => {
         id="qna"
         className="relative flex flex-col items-center justify-center h-screen "
       >
-        <div className="container space-y-8 h-fit md:flex md:justify-around ">
-          {isPortrait ? null : <VerticalLine element={"div"} />}
+        <div className="container space-y-8 h-fit md:flex md:justify-around">
+          {isPortrait ? null : <VerticalLine element={"q&a"} />}
           <m.div
             variants={cardContainer}
             initial={"hidden"}
