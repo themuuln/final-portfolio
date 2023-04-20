@@ -31,6 +31,7 @@ function HeroSection() {
   return (
     <>
       <main
+        data-scroll-section
         id="hero"
         className={`flex relative min-h-screen w-screen snap-center items-center justify-center`}
       >

@@ -41,7 +41,11 @@ const FooterSection = () => {
   };
 
   return (
-    <div id="footer" className="flex flex-col justify-end h-fit">
+    <div
+      data-scroll-section
+      id="footer"
+      className="flex flex-col justify-end h-fit"
+    >
       <div className="text-brand_main-500 bg-brand_bg-800/5">
         <IconContext.Provider value={{ size: "1em" }}>
           <div className="container flex flex-col items-center mt-5 space-y-5 xl:flex xl:flex-row xl:justify-around">

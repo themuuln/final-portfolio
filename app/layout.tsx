@@ -11,6 +11,7 @@ import { MixBlendMode, VariantsType } from "@/lib/types/types";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
+import useLocoScroll from "@/components/useLocoScroll";
 import Loading from "./loading";
 import { Fira_Code } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -119,6 +120,7 @@ export default function RootLayout({
                   <Loading />
                 ) : (
                   <div
+                    data-scroll-container
                     className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
                   >
                     <Cursor

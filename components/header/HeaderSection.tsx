@@ -9,6 +9,7 @@ const HeaderSection = () => {
   return (
     <>
       <div
+        data-scroll-section
         className={`fixed left-0 top-0 z-10 h-[80px] w-full px-8 py-6 backdrop-blur`}
       >
         <div className="container flex justify-between ">
