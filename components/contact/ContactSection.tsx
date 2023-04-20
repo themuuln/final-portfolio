@@ -35,7 +35,7 @@ const ContactSection = () => {
           <p className={`text-xl pointer-events-none`}>
             Let’s create something together🤘🏻
           </p>
-          <div className="bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40  dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] dark:hover:bg- transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit  rounded-2xl">
+          <div className="bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40  dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl">
             <div className="transition-colors duration-200 hover:text-brand_bg-500">
               <HiOutlineMail />
             </div>
