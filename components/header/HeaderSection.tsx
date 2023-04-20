@@ -1,11 +1,11 @@
-"use client";
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import HeaderRight from "./HeaderRight";
 import Link from "next/link";
+
 const HeaderSection = () => {
-  const { textEnter, textLeave } = useContext(CursorContext);
+  const { textEnter, textLeave } = useContext(CursorContext); // Access textEnter and textLeave from CursorContext
   return (
     <>
       <div
@@ -26,7 +26,7 @@ const HeaderSection = () => {
               <span>/&gt;</span>
             </m.div>
           </div>
-          <HeaderRight />
+          <HeaderRight /> {/* Render HeaderRight component */}
         </div>
       </div>
     </>
