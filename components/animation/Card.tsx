@@ -30,14 +30,14 @@ const Card = ({
 
   return (
     <m.div
-      transition={{ layout: { duration: 0.5, type: "spring" } }}
+      transition={{ layout: { duration: 0.5, type: "spring" }, duration: 0.5 }}
       initial={
         id % 2 === 0 ? { x: "100%", opacity: 0 } : { x: "-100%", opacity: 0 }
       }
       whileInView={{ opacity: 1, x: 0 }} // Use "animate" instead of "whileInView"
       layout
       onClick={handleCardClick}
-      className="px-4 py-3 w-auto space-y-2 transition-colors duration-200 rounded-lg cursor-pointer bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40 dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 border-gray-500/30 border-[1px] "
+      className="px-4 w-full py-3 space-y-2 transition-colors duration-200 rounded-lg cursor-pointer bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40 dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 border-gray-500/30 border-[1px] "
     >
       <m.div
         onMouseEnter={handleMouseEnter}
