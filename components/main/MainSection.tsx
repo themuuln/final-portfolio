@@ -4,16 +4,22 @@ import { cardContainer } from "../animation/variants";
 import { cardData } from "./cardData";
 import SkillSection from "./SkillSection";
 import SeeMoreSection from "./SeeMoreSection";
+import TimelineSection from "./TimelineSection";
+import dynamic from "next/dynamic";
+import { useMediaQuery } from "react-responsive";
+const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const MainSection = () => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
   return (
     <>
       <section
         data-scroll-section
         id="qna"
-        className="flex flex-col items-center justify-center h-screen "
+        className="relative flex flex-col items-center justify-center h-screen "
       >
-        <div className="container w-full space-y-8 md:flex md:justify-around ">
+        <div className="container space-y-8 h-fit md:flex md:justify-around ">
+          {isPortrait ? null : <VerticalLine element={"div"} />}
           <m.div
             variants={cardContainer}
             initial={"hidden"}
@@ -47,6 +53,7 @@ const MainSection = () => {
         </div>
       </section>
       <SkillSection />
+      <TimelineSection />
       <SeeMoreSection />
     </>
   );
