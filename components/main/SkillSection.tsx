@@ -1,23 +1,25 @@
 import { motion as m } from "framer-motion";
-import { container, item } from "../animation/variants";
+import { container } from "../animation/variants";
 import { skills } from "@/pages/api/skills.js";
 import SkillsText from "./SkillsText";
-import { GiSkills } from "react-icons/gi";
-import CursorContext from "@/lib/context/context";
-import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
-import { useContext } from "react";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
+import SkillTitle from "./Skills/SkillTitle";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const SkillSection = () => {
-  const { textEnter, textLeave } = useContext(CursorContext);
-  const { setHoverType } = useContext(HoverTypeContext);
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
-  const skillMouseEnter = () => {
-    textEnter();
-    setHoverType(<GiSkills />);
-  };
+
+  const getVariant = (i: number) => ({
+    hidden: {
+      opacity: 0,
+      x: i % 2 === 0 ? "100%" : "-100%",
+      y: i % 2 === 0 ? "100%" : "100%",
+    },
+    show: { opacity: 1, x: 0, y: 0 },
+    whileHover: { scale: 1.2 },
+  });
+
   return (
     <section
       id="skills"
@@ -31,40 +33,92 @@ const SkillSection = () => {
             variants={container}
             initial={"hidden"}
             whileInView={"show"}
-            className="space-y-2 text-xl w-fit md:space-y-4 md:text-2xl "
+            className="flex flex-col space-y-4 text-xl md:space-x-10 md:flex-row w-fit md:space-y-4 md:text-2xl "
           >
-            <m.h2
-              variants={item}
-              onMouseEnter={skillMouseEnter}
-              onMouseLeave={textLeave}
-              className={`text-xl md:text-4xl cursor-pointer font-semibold text-brand_bg-500 hover:underline`}
-            >
-              Skills
-            </m.h2>
-            {skills[0].languages.map((skill, i) => (
-              <m.li
-                variants={
-                  i % 2 === 0
-                    ? {
-                        hidden: { opacity: 0, x: "100%" },
-                        show: { opacity: 1, x: 0 },
-                      }
-                    : {
-                        hidden: { opacity: 0, x: "-100%" },
-                        show: { opacity: 1, x: 0 },
-                      }
-                }
-                whileHover={{ scale: 1.2 }}
-                className={"flex space-x-2"}
-                key={skill.name}
-              >
-                <SkillsText
-                  href={skill.href}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              </m.li>
-            ))}
+            <div>
+              <SkillTitle>Languages</SkillTitle>
+              {skills[0].languages.map((skill, i) => (
+                <m.li
+                  variants={getVariant(i)}
+                  transition={{ duration: 0.3 }}
+                  whileHover={{ scale: 1.2 }}
+                  className={"flex space-y-10"}
+                  key={skill.name}
+                >
+                  <SkillsText
+                    href={skill.href}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                </m.li>
+              ))}
+              <SkillTitle>Frameworks, Libraries</SkillTitle>
+              {skills[0].frameworks_libraries_platforms.map((skill, i) => (
+                <m.li
+                  variants={getVariant(i)}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
+                  className={"flex space-x-2"}
+                  key={skill.name}
+                >
+                  <SkillsText
+                    href={skill.href}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                </m.li>
+              ))}
+            </div>
+            <div>
+              <SkillTitle>Hosting</SkillTitle>
+              {skills[0].hosting.map((skill, i) => (
+                <m.li
+                  variants={getVariant(i)}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
+                  className={"flex space-x-2"}
+                  key={skill.name}
+                >
+                  <SkillsText
+                    href={skill.href}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                </m.li>
+              ))}
+              <SkillTitle>Design</SkillTitle>
+              {skills[0].design.map((skill, i) => (
+                <m.li
+                  variants={getVariant(i)}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
+                  className={"flex space-x-2"}
+                  key={skill.name}
+                >
+                  <SkillsText
+                    href={skill.href}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                </m.li>
+              ))}
+              <SkillTitle>Other</SkillTitle>
+              {skills[0].other.map((skill, i) => (
+                <m.li
+                  variants={getVariant(i)}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
+                  className={"flex space-x-2"}
+                  key={skill.name}
+                >
+                  <SkillsText
+                    href={skill.href}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                </m.li>
+              ))}
+            </div>
           </m.ul>
         </div>
       </div>

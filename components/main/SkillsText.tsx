@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { HiOutlineCode } from "react-icons/hi";
 
 // Define SkillsText component
-const SkillsText = ({ name, href, icon }: any) => {
+const SkillsText = ({ name, href, icon, color }: any) => {
   const { textEnter, textLeave } = useContext(CursorContext); // Accessing textEnter and textLeave functions from CursorContext
   const { setHoverType } = useContext(HoverTypeContext); // Use HoverTypeContext for setHoverType function
   const handleMouseEnter = () => {
@@ -20,7 +20,7 @@ const SkillsText = ({ name, href, icon }: any) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-base w-full hover:text-brand_bg-500 transition-colors duration-200 font-light leading-3 md:text-xl md:leading-3 xl:text-2xl xl:leading-6`}
+      className={`text-base mb-2 w-full hover:text-brand_bg-500 transition-colors duration-200 font-light leading-3 md:text-xl md:leading-3 xl:text-2xl xl:leading-6`}
     >
       {name}
     </a>
