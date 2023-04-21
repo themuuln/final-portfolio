@@ -46,9 +46,9 @@
 
     html,
     body {
-      max-width: 100vw;
+      /* max-width: 100vw;
       background-size: 30px 30px;
-      background-image: radial-gradient(#232323 1.6px, transparent 1px);
+      background-image: radial-gradient(#232323 1.6px, transparent 1px); */
       @apply text-white bg-[#111] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
     }
   }
@@ -57,9 +57,9 @@
 
     html,
     body {
-      max-width: 100vw;
+      /* max-width: 100vw;
       background-size: 30px 30px;
-      background-image: radial-gradient(#777777 1.6px, transparent 1px);
+      background-image: radial-gradient(#777777 1.6px, transparent 1px); */
       @apply text-black bg-[#e6e6e6] bg-repeat backdrop-blur-[10px] scroll-smooth overflow-x-hidden
     }
   }
