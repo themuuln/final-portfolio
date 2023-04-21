@@ -30,7 +30,7 @@ export default function TimelineSection() {
             }}
             initial={"hidden"}
             whileInView={"show"}
-            className="p-5 rounded-md bg-darkcolor"
+            className="max-w-5xl p-5 rounded-md bg-darkcolor"
           >
             {accordions.map((item, id) => {
               const { question, answer } = item;
