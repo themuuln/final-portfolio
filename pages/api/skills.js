@@ -13,9 +13,31 @@ export const skills = [
   {
     languages: [
       {
+        name: "HTML5",
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        icon: "",
+      },
+      {
+        name: "CSS",
+        href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        icon: "",
+      },
+      {
         name: "JavaScript (ES6+)",
         href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         icon: <SiJavascript />,
+      },
+      {
+        name: "TypeScript",
+        href: "https://www.typescriptlang.org/",
+        icon: <SiTypescript />,
+      },
+    ],
+    frameworks_libraries_platforms: [
+      {
+        name: "ChakraUI",
+        href: "https://chakra-ui.com/",
+        icon: <SiChakraui />,
       },
       {
         name: "React",
@@ -25,12 +47,7 @@ export const skills = [
       {
         name: "Next.js",
         href: "https://nextjs.org/",
-        icon: <TbBrandNextjs />, // replace with actual library component
-      },
-      {
-        name: "TypeScript",
-        href: "https://www.typescriptlang.org/",
-        icon: <SiTypescript />,
+        icon: <TbBrandNextjs />,
       },
       {
         name: "TailwindCSS",
@@ -43,14 +60,60 @@ export const skills = [
         icon: <FaSass />,
       },
       {
-        name: "ChakraUI",
-        href: "https://chakra-ui.com/",
-        icon: <SiChakraui />,
-      },
-      {
         name: "Framer-Motion",
         href: "https://www.framer.com/motion/",
-        icon: <RxFramerLogo />, // replace with actual library component
+        icon: <RxFramerLogo />,
+      },
+      // {
+      //   name: "ExpressJS",
+      //   href: "https://expressjs.com/",
+      //   icon: "",
+      // },
+      // {
+      //   name: "MaterialUI",
+      //   href: "https://mui.com/",
+      //   icon: "",
+      // },
+      // {
+      //   name: "NodeJS",
+      //   href: "https://nodejs.org/",
+      //   icon: "",
+      // },
+      {
+        name: "Styled-components",
+        href: "https://styled-components.com/",
+        icon: "",
+      },
+    ],
+    hosting: [
+      // {
+      //   name: "AWS",
+      //   href: "https://aws.amazon.com/",
+      //   icon: "",
+      // },
+      {
+        name: "Firebase",
+        href: "https://firebase.google.com/",
+        icon: "",
+      },
+      {
+        name: "Vercel",
+        href: "https://vercel.com/",
+        icon: "",
+      },
+    ],
+    design: [
+      {
+        name: "Figma",
+        href: "https://www.figma.com/",
+        icon: "",
+      },
+    ],
+    other: [
+      {
+        name: "ESLint",
+        href: "https://eslint.org/",
+        icon: "",
       },
       { name: "Neovim", href: "https://neovim.io/", icon: <SiNeovim /> },
       { name: "Git", href: "https://git-scm.com/", icon: <FaGitAlt /> },
