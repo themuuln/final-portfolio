@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 import { container } from "../animation/variants";
 import { skills } from "@/pages/api/skills.js";
-import SkillsText from "./SkillsText";
+import SkillsText from "./Skills/SkillsText";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
 import SkillTitle from "./Skills/SkillTitle";

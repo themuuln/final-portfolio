@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { skills } from "@/pages/api/skills.js";
-import SkillsText from "../SkillsText";
+import SkillsText from "./SkillsText";
 
 const SkillNames = () => {
   return (
