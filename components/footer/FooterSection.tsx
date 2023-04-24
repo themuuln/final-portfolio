@@ -12,34 +12,24 @@ import { FiGithub } from "react-icons/fi";
 const FooterSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
-
   const mailHandleCopy = () => {
     navigator.clipboard.writeText("themuln.official@gmail.com");
   };
-
   const phoneHandleCopy = () => {
     navigator.clipboard.writeText("+97688650115");
   };
-
   const mailHandleMouseEnter = () => {
     textEnter();
     setHoverType(<MdContentCopy />);
   };
-
   const gitHandleHover = () => {
     textEnter();
     setHoverType(<FiGithub />);
   };
-
   const phoneHandleMouseEnter = () => {
     textEnter();
     setHoverType(<HiOutlinePhoneOutgoing />);
   };
-
-  const handleMouseLeave = () => {
-    textLeave();
-  };
-
   return (
     <div id="footer" className="flex flex-col justify-end h-fit">
       <div className="text-brand_main-500 bg-brand_bg-800/5">
@@ -48,7 +38,7 @@ const FooterSection = () => {
             <div>
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={textLeave}
                 onClick={mailHandleCopy}
                 className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
               >
@@ -56,7 +46,7 @@ const FooterSection = () => {
               </m.p>
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={textLeave}
                 className="text-lg transition-colors duration-200 cursor-pointer w-fit hover:text-brand_bg-500 underline-offset-1"
                 onClick={phoneHandleCopy}
               >
@@ -75,7 +65,7 @@ const FooterSection = () => {
                 Designed & Built by{" "}
                 <m.span
                   onMouseEnter={gitHandleHover}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseLeave={textLeave}
                   className=""
                 >
                   Themuuln
