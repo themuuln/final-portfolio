@@ -19,6 +19,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
       zIndex: {
         cursor: "99999",
       },
