@@ -49,6 +49,12 @@ export type VariantsType = {
     stiffness: number;
     restDelta: number;
   };
-  clicked?: any;
+  clicked?: {
+    height: number;
+    width: number;
+    x: number;
+    y: number;
+    mixBlendMode?: MixBlendMode;
+  };
   exit?: {};
 };
