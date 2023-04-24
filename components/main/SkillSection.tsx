@@ -5,11 +5,16 @@ import SkillsText from "./Skills/SkillsText";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
 import SkillTitle from "./Skills/SkillTitle";
+import { HiOutlineLanguage } from "react-icons/hi2";
+import { AiOutlineBuild } from "react-icons/ai";
+import { GrHost } from "react-icons/gr";
+import { HiOutlineCode } from "react-icons/hi";
+import { MdOutlineDesignServices } from "react-icons/md";
+
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const SkillSection = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
-
   const getVariant = (i: number) => ({
     hidden: {
       opacity: 0,
@@ -19,7 +24,6 @@ const SkillSection = () => {
     show: { opacity: 1, x: 0, y: 0 },
     whileHover: { scale: 1.2 },
   });
-
   return (
     <section
       id="skills"
@@ -36,7 +40,7 @@ const SkillSection = () => {
             className="flex flex-col space-y-4 text-xl md:space-x-10 md:flex-row w-fit md:space-y-4 md:text-2xl "
           >
             <div>
-              <SkillTitle>Languages</SkillTitle>
+              <SkillTitle icon={<HiOutlineLanguage />}>Languages</SkillTitle>
               {skills[0].languages.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
@@ -52,7 +56,9 @@ const SkillSection = () => {
                   />
                 </m.li>
               ))}
-              <SkillTitle>Frameworks, Libraries</SkillTitle>
+              <SkillTitle icon={<AiOutlineBuild />}>
+                Frameworks, Libraries
+              </SkillTitle>
               {skills[0].frameworks_libraries_platforms.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
@@ -70,7 +76,7 @@ const SkillSection = () => {
               ))}
             </div>
             <div>
-              <SkillTitle>Hosting</SkillTitle>
+              <SkillTitle icon={<GrHost />}>Hosting</SkillTitle>
               {skills[0].hosting.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
@@ -86,7 +92,7 @@ const SkillSection = () => {
                   />
                 </m.li>
               ))}
-              <SkillTitle>Design</SkillTitle>
+              <SkillTitle icon={<MdOutlineDesignServices />}>Design</SkillTitle>
               {skills[0].design.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
@@ -102,7 +108,7 @@ const SkillSection = () => {
                   />
                 </m.li>
               ))}
-              <SkillTitle>Other</SkillTitle>
+              <SkillTitle icon={<HiOutlineCode />}>Other</SkillTitle>
               {skills[0].other.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}

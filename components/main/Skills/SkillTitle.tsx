@@ -1,16 +1,15 @@
 import { item } from "@/components/animation/variants";
 import { motion } from "framer-motion";
-import { GiSkills } from "react-icons/gi";
 import CursorContext from "@/lib/context/context";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 
-const SkillTitle = ({ children }: { children: String }) => {
+const SkillTitle = ({ children, icon }: { icon: any; children: String }) => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
   const skillMouseEnter = () => {
     textEnter();
-    setHoverType(<GiSkills />);
+    setHoverType(icon);
   };
   return (
     <>
