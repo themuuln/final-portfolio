@@ -8,7 +8,6 @@ import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MixBlendMode, VariantsType } from "@/lib/types/types";
-import { FiArrowUpRight } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import Cursor from "@/components/Cursor";
 import Loading from "./loading";
@@ -23,7 +22,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
+  const [hoverType, setHoverType] = useState(<HiOutlineCursorClick />);
   const [cursorVariant, setCursorVariant] = useState("default");
   const { mousePosition } = useWindowEvents();
   const [loading, setLoading] = useState(true);
@@ -81,7 +80,7 @@ export default function RootLayout({
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
   };
-  const variants3 = {
+  const variants3: VariantsType = {
     default: {
       x: mousePosition.x - 3,
       y: mousePosition.y - 3,
@@ -94,19 +93,16 @@ export default function RootLayout({
       y: mousePosition.y - 26,
     },
     clicked: {
-      height: 50,
-      width: 50,
-      display: "flex",
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25,
+      height: 51,
+      width: 81,
+      // display: "flex",
+      x: mousePosition.x - 41,
+      y: mousePosition.y - 26,
     },
   };
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
-  const clicked = () => {
-    setCursorVariant("clicked");
-    setHoverType(<HiOutlineCursorClick />);
-  };
+  const clicked = () => setCursorVariant("clicked");
   return (
     <html lang="en">
       <head />
