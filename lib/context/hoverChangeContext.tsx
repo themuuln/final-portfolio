@@ -1,4 +1,3 @@
-// const [hoverType, setHoverType] = useState(<FiArrowUpRight />);
 import { createContext } from "react";
 
 const HoverChangeContext = createContext({
