@@ -8,6 +8,7 @@ import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi";
+import QuickLinks from "./QuickLinks";
 
 const FooterSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
@@ -47,13 +48,15 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
                 onMouseLeave={textLeave}
-                className="text-lg transition-colors duration-200 cursor-pointer w-fit hover:text-brand_bg-500 underline-offset-1"
+                // className="text-lg transition-colors duration-200 cursor-pointer w-fit hover:text-brand_bg-500 underline-offset-1"
+                className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
                 onClick={phoneHandleCopy}
               >
                 +976 8865-0115
               </m.p>
             </div>
             <SocialLinks />
+            <QuickLinks />
           </div>
           <div className={`mb-5 font-light md:mb-10`}>
             <div className={`flex w-full justify-center`}>
@@ -74,7 +77,9 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="botRow container flex h-fit justify-center border-t-[1px] border-light_bg-600 dark:border-dark_bg-400">
-            <p className="my-5 md:my-10">© Temuulen Undrakhbayar 2023</p>
+            <p className="my-5 pointer-events-none md:my-10">
+              © Temuulen Undrakhbayar 2023
+            </p>
           </div>
         </IconContext.Provider>
       </div>
