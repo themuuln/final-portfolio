@@ -8,7 +8,6 @@ import TimelineSection from "./TimelineSection";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
 import ProjectsSection from "./ProjectsSection";
-import CompareSection from "./compare/CompareSection";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const MainSection = () => {
@@ -55,8 +54,7 @@ const MainSection = () => {
         </div>
       </section>
       <SkillSection />
-      <ProjectsSection />
-      <CompareSection />
+      {/* <ProjectsSection /> */}
       <TimelineSection />
       <SeeMoreSection />
     </>
