@@ -3,7 +3,7 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import { BsChevronDown } from "react-icons/bs";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import CursorContext from "@/lib/context/context";
-import { MdOutlineExpand } from "react-icons/md";
+import { AiOutlinePlus } from "react-icons/ai";
 
 const Card = ({
   question,
@@ -25,12 +25,14 @@ const Card = ({
 
   const handleMouseEnter = () => {
     textEnter();
-    setHoverType(<MdOutlineExpand />);
+    setHoverType(<AiOutlinePlus />);
   };
 
   return (
     <m.div
       transition={{ layout: { duration: 0.5, type: "spring" } }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={textLeave}
       initial={
         id % 2 === 0 ? { x: "100%", opacity: 0 } : { x: "-100%", opacity: 0 }
       }
@@ -39,12 +41,7 @@ const Card = ({
       onClick={handleCardClick}
       className="px-4 w-auto md:w-[700px] py-3 space-y-2 transition-colors duration-200 rounded-lg cursor-pointer bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40 dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 border-gray-500/30 border-[1px] "
     >
-      <m.div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={textLeave}
-        layout
-        className="flex justify-between"
-      >
+      <m.div layout className="flex justify-between">
         <m.h2 layout="position" className="text-xl font-semibold">
           {question}
         </m.h2>

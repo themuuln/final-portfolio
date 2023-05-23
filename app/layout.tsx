@@ -111,24 +111,26 @@ export default function RootLayout({
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
               <motion.body onMouseDown={clicked} onMouseUp={textLeave}>
-                {loading ? (
-                  <Loading />
-                ) : (
-                  <div
-                    className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
-                  >
-                    <Cursor
-                      variants={variants}
-                      cursorVariant={cursorVariant}
-                      variants3={variants2}
-                      variants4={variants3}
-                      hoverType={hoverType}
-                    />
-                    <HeaderSection />
-                    {children}
-                    <FooterSection />
-                  </div>
-                )}
+                <>
+                  {loading ? (
+                    <Loading />
+                  ) : (
+                    <div
+                      className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
+                    >
+                      <Cursor
+                        variants={variants}
+                        cursorVariant={cursorVariant}
+                        variants3={variants2}
+                        variants4={variants3}
+                        hoverType={hoverType}
+                      />
+                      <HeaderSection />
+                      {children}
+                      <FooterSection />
+                    </div>
+                  )}
+                </>
               </motion.body>
             </HoverTypeContext.Provider>
           </CursorContext.Provider>
