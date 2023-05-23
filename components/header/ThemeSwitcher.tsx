@@ -46,7 +46,11 @@ const ThemeSwitcher = () => {
           onClick={() => setTheme("light")}
           className="p-2 border-light_bg-800 rounded-lg border-[2px]"
         >
-          <m.div initial={{ y: "100%" }} animate={{ y: 0 }}>
+          <m.div
+            initial={{ y: "100%" }}
+            transition={{ duration: 0.3 }}
+            animate={{ y: 0 }}
+          >
             <HiOutlineSun className="w-7 h-7" />
           </m.div>
         </m.button>
@@ -60,9 +64,16 @@ const ThemeSwitcher = () => {
           className="p-2 border-light_bg-700 rounded-lg border-[2px]"
           onClick={() => setTheme("dark")}
         >
-          <m.div initial={{ y: "100%" }} animate={{ y: 0 }}>
-            <HiOutlineMoon className="w-7 h-7" />
-          </m.div>
+          <AnimatePresence>
+            <m.div
+              transition={{ duration: 0.3 }}
+              initial={{ y: "100%" }}
+              exit={{ y: "100%" }}
+              animate={{ y: 0 }}
+            >
+              <HiOutlineMoon className="w-7 h-7" />
+            </m.div>
+          </AnimatePresence>
         </m.button>
       );
     }
