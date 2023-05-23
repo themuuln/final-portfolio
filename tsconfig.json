@@ -34,7 +34,8 @@
     "components/WorldMap.jsx",
     "public/svg/ScrollDown.tsx",
     "components/header/ButtonData.js",
-    "pages/api/skills.js"
+    "pages/api/skills.js",
+    "components/Texture.jsx"
   ],
   "exclude": ["node_modules"]
 }
