@@ -45,7 +45,6 @@ const SkillSection = () => {
                 <m.li
                   variants={getVariant(i)}
                   transition={{ duration: 0.3 }}
-                  whileHover={{ scale: 1.2 }}
                   className={"flex space-y-10"}
                   key={skill.name}
                 >
@@ -62,7 +61,6 @@ const SkillSection = () => {
               {skills[0].frameworks_libraries_platforms.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
-                  whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                   className={"flex space-x-2"}
                   key={skill.name}
@@ -80,7 +78,6 @@ const SkillSection = () => {
               {skills[0].hosting.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
-                  whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                   className={"flex space-x-2"}
                   key={skill.name}
@@ -96,7 +93,6 @@ const SkillSection = () => {
               {skills[0].design.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
-                  whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                   className={"flex space-x-2"}
                   key={skill.name}
@@ -112,7 +108,6 @@ const SkillSection = () => {
               {skills[0].other.map((skill, i) => (
                 <m.li
                   variants={getVariant(i)}
-                  whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                   className={"flex space-x-2"}
                   key={skill.name}
