@@ -29,6 +29,7 @@ const resumeData = [
       title: "Front-end Developer Intern",
       company: "Mongolian National Lottery",
       location: "Ulaanbaatar, Mongolia",
+      date: "12/2022 - 03/2023",
       responsibilities: [
         "Skilled at working independently and collaboratively in a team environment.",
         "Self-motivated, with a strong sense of personal responsibility.",
@@ -41,7 +42,7 @@ const resumeData = [
     education: ["Erdmiin Urgoo - Bayangol, Ulaanbaatar 06/2022"],
     languages: [
       { name: "Mongolian", proficiency: "Native language" },
-      { name: "English", proficiency: "B2 (Upper intermediate)" },
+      { name: "English", proficiency: "B2 - Upper intermediate" },
     ],
   },
 ];
