@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
-const HeaderSection = require("@/components/header/HeaderSection").default;
-const FooterSection = require("@/components/footer/FooterSection").default;
+import HeaderSection from "@/components/header/HeaderSection";
+import FooterSection from "@/components/footer/FooterSection";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorContext from "@/lib/context/context";
@@ -95,7 +95,6 @@ export default function RootLayout({
     clicked: {
       height: 51,
       width: 81,
-      // display: "flex",
       x: mousePosition.x - 41,
       y: mousePosition.y - 26,
     },
@@ -116,7 +115,7 @@ export default function RootLayout({
                     <Loading />
                   ) : (
                     <div
-                      className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#111]`}
+                      className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#121212]`}
                     >
                       <Cursor
                         variants={variants}
