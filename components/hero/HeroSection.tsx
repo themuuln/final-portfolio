@@ -41,7 +41,7 @@ function HeroSection() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className={` mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
+                className={`mb-2 w-fit text-lg font-light leading-3 sm:text-xl md:text-2xl md:leading-3 xl:text-3xl xl:leading-6`}
               >
                 {greetings.split("").map((letter, index) => (
                   <m.span
@@ -100,14 +100,12 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        {isPortrait ? (
-          <></>
-        ) : (
+        {isPortrait ? null : (
           <m.div
             style={{ opacity }}
             onMouseEnter={scrollHandleMouse}
             onMouseLeave={handleMouseLeave}
-            className="absolute text-3xl transition-colors duration-200 hover:text-black text-brand_bg-400 bottom-4 animate-bounce"
+            className="absolute text-3xl transition-colors duration-200 bottom-[80px] hover:text-black text-brand_bg-400 animate-bounce"
           >
             <RxDoubleArrowDown />
           </m.div>

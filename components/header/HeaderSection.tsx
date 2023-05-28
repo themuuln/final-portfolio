@@ -8,7 +8,7 @@ const HeaderSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext); // Access textEnter and textLeave from CursorContext
   return (
     <>
-      <div
+      <header
         className={`sticky noise-container top-0 z-10 h-[80px] w-full px-8 py-6 backdrop-blur`}
       >
         <div className="noise" />
@@ -27,9 +27,9 @@ const HeaderSection = () => {
               <span>/&gt;</span>
             </m.div>
           </div>
-          <HeaderRight /> {/* Render HeaderRight component */}
+          <HeaderRight />
         </div>
-      </div>
+      </header>
     </>
   );
 };

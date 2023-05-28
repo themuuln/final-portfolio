@@ -2,9 +2,6 @@ import "@/public/css/mainSection.css";
 import { motion as m } from "framer-motion";
 import { cardContainer } from "../animation/variants";
 import { cardData } from "./cardData";
-import SkillSection from "./SkillSection";
-import SeeMoreSection from "./SeeMoreSection";
-import TimelineSection from "./TimelineSection";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
@@ -52,10 +49,6 @@ const MainSection = () => {
           </m.div>
         </div>
       </section>
-      <SkillSection />
-      {/* <ProjectsSection /> */}
-      <TimelineSection />
-      <SeeMoreSection />
     </>
   );
 };

@@ -28,7 +28,7 @@ const SkillSection = () => {
     <section
       id="skills"
       data-scroll-section
-      className="flex flex-col items-center justify-center h-screen "
+      className="flex flex-col items-center justify-center h-fit"
     >
       <div className="container w-full space-y-8 md:flex md:justify-around ">
         <div className={`container flex justify-center space-y-2 font-light`}>

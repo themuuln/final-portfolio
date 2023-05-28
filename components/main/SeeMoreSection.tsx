@@ -20,7 +20,7 @@ const SeeMoreSection = () => {
     setHoverType(<HiArrowUpRight />);
   };
   return (
-    <section className="flex justify-center min-w-full min-h-screen place-items-center dark:text-white ">
+    <section className="flex justify-center min-w-full border-t border-b bg-slate-700 border-border h-fit place-items-center dark:text-white ">
       <Link href="/me">
         <m.div
           initial={{ x: "100%" }}

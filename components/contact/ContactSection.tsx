@@ -32,7 +32,7 @@ const ContactSection = () => {
   return (
     <>
       <section
-        className={`flex font-semibold items-center justify-center h-screen gap-16`}
+        className={`flex font-semibold items-center justify-center pb-40 mt-40 h-fit gap-16`}
       >
         <div className="flex w-full h-fit">
           <div className="container flex flex-col md:space-x-10 md:flex-row">

@@ -22,7 +22,7 @@ export default function TimelineSection() {
       variants={cardContainer}
       initial={"hidden"}
       whileInView={"show"}
-      className="flex items-center justify-center w-full h-screen"
+      className="flex items-center justify-center w-full h-fit"
     >
       <motion.div
         initial={"hidden"}
