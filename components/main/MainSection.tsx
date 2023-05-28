@@ -7,7 +7,6 @@ import SeeMoreSection from "./SeeMoreSection";
 import TimelineSection from "./TimelineSection";
 import dynamic from "next/dynamic";
 import { useMediaQuery } from "react-responsive";
-import ProjectsSection from "./ProjectsSection";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const MainSection = () => {
