@@ -5,8 +5,11 @@ const SetupSection = require("@/components/me/config/SetupSection").default;
 const Themuuln = () => {
   return (
     <>
-      <MbtiSection />
-      <SetupSection />
+      <div className="noise-container">
+        <div className="noise"></div>
+        <MbtiSection />
+        <SetupSection />
+      </div>
     </>
   );
 };

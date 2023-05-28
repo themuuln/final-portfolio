@@ -189,3 +189,17 @@
     box-shadow: 33.4px 0 0 0, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 12.3px;
   }
 }
+
+.noise {
+  z-index: -20;
+  position: absolute;
+  inset: 0;
+  background-image: url(../public/assets/noise.webp);
+  opacity: .4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.noise-container {
+  @apply relative isolate bg-neutral-600 dark:bg-[#16181f]
+}

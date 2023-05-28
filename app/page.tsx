@@ -6,9 +6,12 @@ import ContactSection from "@/components/contact/ContactSection";
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <MainSection />
-      <ContactSection />
+      <div className="noise-container">
+        <div className="noise" />
+        <HeroSection />
+        <MainSection />
+        <ContactSection />
+      </div>
     </>
   );
 }

@@ -109,7 +109,12 @@ export default function RootLayout({
         <IconContext.Provider value={{ size: "2.25em" }}>
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
-              <motion.body onMouseDown={clicked} onMouseUp={textLeave}>
+              <motion.body
+                className="noise-container"
+                onMouseDown={clicked}
+                onMouseUp={textLeave}
+              >
+                <div className="noise"></div>
                 <>
                   {loading ? (
                     <Loading />
