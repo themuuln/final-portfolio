@@ -41,6 +41,8 @@ module.exports = {
           800: "#4a4a4a",
           900: "#252525",
         },
+        border: "#343841",
+        background: "#23262d",
         dark_bg: {
           100: "#d1d1d1",
           200: "#a2a2a2",
