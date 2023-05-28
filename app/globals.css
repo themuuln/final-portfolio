@@ -205,5 +205,12 @@
 }
 
 .noise-panel {
-  @apply relative border border-opacity-100 border-gray-400 bg-opacity-100 bg-gray-800 shadow 
+  @apply relative border border-gray-400 bg-gray-800 shadow 
+}
+
+.bodydiv {
+  background-image: linear-gradient(rgb(26, 30, 41) 1px, transparent 1px),
+  linear-gradient(to right, rgb(26, 30, 41) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: rgba(255, 255, 255, 0);
 }
