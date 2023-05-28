@@ -9,7 +9,7 @@ const HeaderSection = () => {
   return (
     <>
       <div
-        className={`sticky noise-container left-0 top-0 z-10 h-[80px] w-full px-8 py-6 backdrop-blur`}
+        className={`sticky noise-container top-0 z-10 h-[80px] w-full px-8 py-6 backdrop-blur`}
       >
         <div className="noise" />
         <div className="container flex items-center justify-between ">

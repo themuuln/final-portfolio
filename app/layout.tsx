@@ -120,7 +120,7 @@ export default function RootLayout({
                     <Loading />
                   ) : (
                     <div
-                      className={`${firacode.className} text-black dark:text-white bg-[#e6e6e6] dark:bg-[#121212]`}
+                      className={`${firacode.className} relative text-black dark:text-white bg-[#e6e6e6] dark:bg-[#121212]`}
                     >
                       <Cursor
                         variants={variants}
