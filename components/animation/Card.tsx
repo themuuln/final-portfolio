@@ -36,8 +36,9 @@ const Card = ({
       whileInView={{ opacity: 1, x: 0 }}
       layout
       onClick={handleCardClick}
-      className="px-4 w-auto md:w-[700px] py-3 space-y-2 transition-colors duration-200 rounded-lg cursor-pointer bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40 dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 border-gray-500/30 border-[1px] "
+      className="px-4 noise-panel w-auto md:w-[700px] py-3 space-y-2 transition-colors duration-200 rounded-lg cursor-pointer"
     >
+      <div className="noise" />
       <m.div layout className="flex justify-between">
         <m.h2 layout="position" className="text-xl font-semibold">
           {question}

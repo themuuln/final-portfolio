@@ -114,7 +114,7 @@ export default function RootLayout({
                 onMouseDown={clicked}
                 onMouseUp={textLeave}
               >
-                <div className="noise"></div>
+                <div className="noise" />
                 <>
                   {loading ? (
                     <Loading />
