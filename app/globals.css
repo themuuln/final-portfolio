@@ -201,5 +201,9 @@
 }
 
 .noise-container {
-  @apply relative isolate bg-neutral-600 dark:bg-[#16181f]
+  @apply relative isolate bg-[#e6e6e6] dark:bg-[#16181f]
+}
+
+.noise-panel {
+  @apply relative border border-opacity-100 border-gray-400 bg-opacity-100 bg-gray-800 shadow 
 }
