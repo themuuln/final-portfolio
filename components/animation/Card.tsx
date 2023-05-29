@@ -36,7 +36,7 @@ const Card = ({
       whileInView={{ opacity: 1, x: 0 }}
       layout
       onClick={handleCardClick}
-      className="px-4 backdrop-blur-[2px] border-gray-800/40 border border-border bg-slate-100/90 dark:bg-background/90 w-auto md:w-[700px] py-3 space-y-2 transition-colors duration-200 cursor-pointer"
+      className="px-4 drop-shadow-xl backdrop-blur-[2px] border-gray-800/40 border border-border bg-slate-100/90 dark:bg-background/90 w-auto md:w-[700px] py-3 space-y-2 transition-colors duration-200 cursor-pointer"
     >
       <div className="noise" />
       <m.div layout className="flex justify-between">
