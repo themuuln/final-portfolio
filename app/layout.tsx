@@ -34,7 +34,6 @@ export default function RootLayout({
     document.fonts.ready.then(() => {
       setLoading(false);
     });
-
     return () => {
       clearTimeout(timer);
     };
@@ -52,13 +51,6 @@ export default function RootLayout({
       y: mousePosition.y - 51,
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
-    clicked: {
-      height: 80,
-      width: 80,
-      x: mousePosition.x - 40,
-      y: mousePosition.y - 40,
-      mixBlendMode: "color-dodge" as MixBlendMode,
-    },
   };
   const variants2: VariantsType = {
     default: {
@@ -70,13 +62,6 @@ export default function RootLayout({
       width: 126,
       x: mousePosition.x - 63.5,
       y: mousePosition.y - 63.5,
-      mixBlendMode: "color-dodge" as MixBlendMode,
-    },
-    clicked: {
-      height: 101,
-      width: 101,
-      x: mousePosition.x - 51,
-      y: mousePosition.y - 51,
       mixBlendMode: "color-dodge" as MixBlendMode,
     },
   };
@@ -92,16 +77,9 @@ export default function RootLayout({
       x: mousePosition.x - 41,
       y: mousePosition.y - 26,
     },
-    clicked: {
-      height: 51,
-      width: 81,
-      x: mousePosition.x - 41,
-      y: mousePosition.y - 26,
-    },
   };
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
-  const clicked = () => setCursorVariant("clicked");
   return (
     <html lang="en">
       <head />
@@ -109,11 +87,7 @@ export default function RootLayout({
         <IconContext.Provider value={{ size: "2.25em" }}>
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
-              <motion.body
-                className="noise-container"
-                onMouseDown={clicked}
-                onMouseUp={textLeave}
-              >
+              <motion.body className="noise-container selection:bg-black selection:text-white">
                 <div className="noise" />
                 <>
                   {loading ? (
