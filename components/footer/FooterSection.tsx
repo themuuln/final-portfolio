@@ -76,7 +76,10 @@ const FooterSection = () => {
                   className=""
                 >
                   Themuuln
-                </m.span>
+                </m.span>{" "}
+                <span className="text-brand_bg-400">
+                  v1.0
+                </span>
               </a>
             </div>
           </div>
