@@ -11,9 +11,12 @@ export default function Home() {
   return (
     <>
       <div className="noise-container ">
+        {/* noise */}
         <div className="noise" />
         <HeroSection />
+        {/* background pattern */}
         <div className="space-y-72 bodydivLight dark:bodydivDark ">
+          {/* fade in lines */}
           <div className="absolute w-full h-96 bg-gradient-to-b from-[#e6e6e6] via-[#e6e6e6] dark:from-[#16181f]/80 dark:via-[#16181f]/80" />
           <MainSection />
           <SkillSection />
@@ -21,6 +24,7 @@ export default function Home() {
           <SeeMoreSection />
           <ContactSection />
           <MadeWith />
+          {/* fade out lines */}
           <div className="absolute bottom-0 w-full h-96 bg-gradient-to-t from-[#e6e6e6] via-[#e6e6e6] dark:from-[#171920]/80 dark:via-[#171920]/80" />
         </div>
       </div>
