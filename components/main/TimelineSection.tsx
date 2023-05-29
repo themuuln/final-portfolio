@@ -27,7 +27,7 @@ export default function TimelineSection() {
       <motion.div
         initial={"hidden"}
         whileInView={"show"}
-        className="max-w-[1000px] justify-between h-fit w-full flex gap-4"
+        className="max-w-[1000px] justify-center h-fit w-full flex gap-4"
       >
         <motion.div
           initial={"hidden"}

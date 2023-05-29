@@ -1,7 +1,7 @@
 export const accordions = [
   {
     id: 1,
-    question: "How can I book a workout class?",
+    question: "Lorem",
     answer:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae temporibus beatae, totam repudiandae nam recusandae ea dolores tempora maxime. adipisicing elit. Molestiae temporibus beatae, totam repudiandae adipisicing elit. Molestiae temporibus beatae, totam repudiandae nam",
   },

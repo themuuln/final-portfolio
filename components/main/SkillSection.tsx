@@ -14,7 +14,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const SkillSection = () => {
-  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   const getVariant = (i: number) => ({
     hidden: {
       opacity: 0,
