@@ -34,7 +34,7 @@ function HeroSection() {
         id="hero"
         className={`flex relative min-h-screen w-screen snap-center items-center justify-center`}
       >
-        <div className="container flex flex-col items-center justify-center w-screen h-full">
+        <div className="container flex flex-col items-center justify-center w-screen h-full herooo">
           <div className="flex flex-col justify-start select-none textContainer">
             <div className="overflow-x-hidden overflow-y-hidden w-fit">
               <m.p
@@ -100,12 +100,15 @@ function HeroSection() {
             </div>
           </div>
         </div>
+        {/* scroll down button */}
         {isPortrait ? null : (
           <m.div
             style={{ opacity }}
             onMouseEnter={scrollHandleMouse}
             onMouseLeave={handleMouseLeave}
-            className="absolute text-3xl transition-colors duration-200 bottom-[80px] hover:text-black text-brand_bg-400 animate-bounce"
+            className={`absolute ${
+              isPortrait ? "hidden" : ""
+            } text-3xl transition-colors duration-200 bottom-[80px] hover:text-black text-brand_bg-400 animate-bounce`}
           >
             <RxDoubleArrowDown />
           </m.div>
