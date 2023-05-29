@@ -205,7 +205,7 @@
 }
 
 .noise-panel {
-  @apply relative border border-gray-400 bg-gray-800 shadow 
+  @apply relative border border-gray-400 bg-gray-800 shadow
 }
 
 @layer utilities {
@@ -214,6 +214,7 @@
     background-size: 24px 24px;
     background-color: rgb(255, 255, 255);
   }
+
   .dark .bodydivDark {
     background-image: linear-gradient(#202431 1px, transparent 1px), linear-gradient(to right, #202431 1px, transparent 1px);
     background-size: 24px 24px;
@@ -227,16 +228,15 @@
 }
 
 .progress {
-   width: 158.4px;
-   height: 26.4px;
-   mask: linear-gradient(90deg,#8f43ee 70%,#0000 0) left/20% 100%;
-   background: linear-gradient(#8f43ee 0 0) left/0% 100% no-repeat
-       #dbdcef;
-   animation: progress-422c3u 2s infinite steps(6);
+  width: 158.4px;
+  height: 26.4px;
+  mask: linear-gradient(90deg, #8f43ee 70%, #0000 0) left/20% 100%;
+  background: linear-gradient(#8f43ee 0 0) left/0% 100% no-repeat #dbdcef;
+  animation: progress-422c3u 2s infinite steps(6);
 }
 
 @keyframes progress-422c3u {
-   100% {
-      background-size: 120% 100%;
-   }
+  100% {
+    background-size: 120% 100%;
+  }
 }
