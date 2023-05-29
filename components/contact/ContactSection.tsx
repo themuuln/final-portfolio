@@ -40,18 +40,40 @@ const ContactSection = () => {
             <div className=" md:space-y-10">
               {/* title */}
               <div className={`text-3xl md:text-6xl pointer-events-none`}>
-                <div className="overflow-x-hidden overflow-y-hidden w-fit">
-                  <h2>Let’s chat.</h2>
+                <div className="overflow-hidden h-fit w-fit">
+                  <m.h2
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                  >
+                    Let’s chat.
+                  </m.h2>
                 </div>
-                <h2>Tell me about your</h2>
-                <h2>project.</h2>
+                <div className="overflow-hidden h-fit w-fit">
+                  <m.h2
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    transition={{ duration: 1, delay: 1 }}
+                  >
+                    Tell me about your
+                  </m.h2>
+                </div>
+                <div className="overflow-hidden h-fit w-fit">
+                  <m.h2
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                  >
+                    project.
+                  </m.h2>
+                </div>
               </div>
 
               <p className={`text-xl pointer-events-none`}>
                 Let’s create something together🤘🏻
               </p>
               {/* mail at me button */}
-              <div className="bg-light_bg-300/50 dark:hover:bg-dark_bg-500/40  dark:bg-dark_bg-500/50 hover:bg-light_bg-400/50 backdrop-blur-[1px] hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl">
+              <div className="backdrop-blur-[2px] border-border drop-shadow-xl bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl">
                 <div
                   onMouseEnter={mailHandleMouseEnter}
                   onMouseLeave={textLeave}
@@ -74,7 +96,7 @@ const ContactSection = () => {
               </div>
             </div>
             {/* send me a message section */}
-            <div className="z-10 py-10 bg-light_bg-300/50 dark:bg-dark_bg-500/50 px-14 rounded-2xl">
+            <div className="z-10 py-10 backdrop-blur-[2px] drop-shadow-xl border-border bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border  px-14 rounded-2xl">
               <div className="space-y-8">
                 <h2 className="text-[32px] ">Send me a message💌</h2>
                 <div>
