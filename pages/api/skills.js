@@ -35,11 +35,6 @@ export const skills = [
     ],
     frameworks_libraries_platforms: [
       {
-        name: "ChakraUI",
-        href: "https://chakra-ui.com/",
-        icon: <SiChakraui />,
-      },
-      {
         name: "React",
         href: "https://reactjs.org/",
         icon: <FaReact />,
@@ -53,6 +48,11 @@ export const skills = [
         name: "TailwindCSS",
         href: "https://tailwindcss.com/",
         icon: <SiTailwindCSS />,
+      },
+      {
+        name: "ChakraUI",
+        href: "https://chakra-ui.com/",
+        icon: <SiChakraui />,
       },
       {
         name: "SASS / SCSS",
@@ -110,12 +110,12 @@ export const skills = [
       },
     ],
     other: [
+      { name: "Neovim", href: "https://neovim.io/", icon: <SiNeovim /> },
       {
         name: "ESLint",
         href: "https://eslint.org/",
         icon: "",
       },
-      { name: "Neovim", href: "https://neovim.io/", icon: <SiNeovim /> },
       { name: "Git", href: "https://git-scm.com/", icon: <FaGitAlt /> },
     ],
   },
