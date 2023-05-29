@@ -15,5 +15,5 @@
 }
 
 .cardContainer {
-  @apply mb-2 space-y-1 rounded-xl backdrop-blur-[2px] border-gray-800/40 border border-border bg-slate-100/90 dark:bg-background/90 p-4 md:p-10 
+  @apply mb-2 drop-shadow-xl space-y-1 rounded-xl backdrop-blur-[2px] border-gray-800/40 border border-border bg-slate-100/80 dark:bg-background/80 p-4 md:p-10 
 }
