@@ -87,7 +87,7 @@ export default function RootLayout({
         <IconContext.Provider value={{ size: "2.25em" }}>
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
-              <motion.body className="noise-container selection:bg-black selection:text-white">
+              <motion.body className="noise-container">
                 <div className="noise" />
                 <>
                   {loading ? (
