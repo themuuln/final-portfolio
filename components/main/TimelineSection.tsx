@@ -47,7 +47,7 @@ export default function TimelineSection() {
                 <motion.div
                   key={id}
                   variants={variant(id)}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1, type: "spring", stiffness: 100 }}
                   initial={"hidden"}
                   whileInView={"show"}
                   className="p-5 rounded-md bg-darkcolor"
