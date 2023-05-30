@@ -53,7 +53,7 @@ const ContactSection = () => {
                   <m.h2
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
-                    transition={{ duration: 1, delay: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
                   >
                     Tell me about your
                   </m.h2>
@@ -62,16 +62,23 @@ const ContactSection = () => {
                   <m.h2
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
-                    transition={{ duration: 1, delay: 1.5 }}
+                    transition={{ duration: 1, delay: 1.1 }}
                   >
                     project.
                   </m.h2>
                 </div>
               </div>
 
-              <p className={`text-xl pointer-events-none`}>
-                Let’s create something together🤘🏻
-              </p>
+              <div className="overflow-hidden h-fit w-fit">
+                <m.p
+                  initial={{ y: "100%" }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1, delay: 1.4 }}
+                  className={`text-xl pointer-events-none`}
+                >
+                  Let’s create something together🤘🏻
+                </m.p>
+              </div>
               {/* mail at me button */}
               <div className="backdrop-blur-[2px] border-border drop-shadow-xl bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl">
                 <div
