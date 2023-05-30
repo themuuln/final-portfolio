@@ -211,13 +211,13 @@
 @layer utilities {
   .bodydivLight {
     background-image: linear-gradient(#c5c5c5 1px, transparent 1px), linear-gradient(to right, #c5c5c5 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-size: 22px 22px;
     background-color: rgb(255, 255, 255);
   }
 
   .dark .bodydivDark {
     background-image: linear-gradient(#202431 1px, transparent 1px), linear-gradient(to right, #202431 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-size: 22px 22px;
     background-color: rgb(23 25 30 / var(--tw-bg-opacity));
   }
 }
