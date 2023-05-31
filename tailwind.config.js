@@ -96,11 +96,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography")({
-      fontFamily: {
-        firacode: ["Fira Code", "monospace"],
-      },
-    }),
-  ],
+  plugins: [require("flowbite/plugin")],
+  autoprefixer: {},
+  ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
 };
