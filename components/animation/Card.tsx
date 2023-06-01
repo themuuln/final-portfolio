@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { textEnter, textLeave } = useContext(CursorContext);
-  const { setHoverType } = useContext(HoverTypeContext); // Use HoverTypeContext for setHoverType function
+  const { setHoverType } = useContext(HoverTypeContext);
 
   const handleCardClick = () => setIsOpen(!isOpen);
 
