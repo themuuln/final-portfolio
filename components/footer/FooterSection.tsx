@@ -1,9 +1,10 @@
 "use client";
 import { IconContext } from "react-icons";
+import { IoCopySharp } from "react-icons/io5";
 import SocialLinks from "./ConnectSection";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CursorContext from "@/lib/context/context";
-import { motion as m } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
@@ -11,13 +12,26 @@ import { FiGithub } from "react-icons/fi";
 import QuickLinks from "./QuickLinks";
 
 const FooterSection = () => {
+  const [showToast, setShowToast] = useState(false);
+  const [toastContext, setToastContext] = useState("");
+
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
   const mailHandleCopy = () => {
     navigator.clipboard.writeText("themuln.official@gmail.com");
+    setShowToast(true);
+    setToastContext("Mail copied successfully.");
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
   };
   const phoneHandleCopy = () => {
     navigator.clipboard.writeText("+97688650115");
+    setShowToast(true);
+    setToastContext("Phone copied successfully.");
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
   };
   const mailHandleMouseEnter = () => {
     textEnter();
@@ -77,9 +91,7 @@ const FooterSection = () => {
                 >
                   Themuuln
                 </m.span>{" "}
-                <span className="text-brand_bg-400">
-                  v1.0
-                </span>
+                <span className="text-brand_bg-400">v1.0</span>
               </a>
             </div>
           </div>
@@ -90,6 +102,21 @@ const FooterSection = () => {
           </div>
         </IconContext.Provider>
       </div>
+      <AnimatePresence>
+        {showToast && (
+          <m.div
+            initial={{ bottom: -20, opacity: 0 }}
+            animate={{ bottom: 0, opacity: 1 }}
+            exit={{ bottom: -20, opacity: 0 }}
+            id="toast-simple"
+            className="fixed left-auto flex items-center self-center w-full max-w-xs p-4 mb-4 space-x-4 text-gray-500 divide-x divide-gray-200 rounded-lg shadow bottom-4 bg-slate-100/90 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-background/90 backdrop-blur-1"
+            role="alert"
+          >
+            <IoCopySharp className="w-5 h-5 text-blue-600 dark:text-blue-500" />
+            <div className="pl-4 text-sm font-normal">{toastContext}</div>
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
