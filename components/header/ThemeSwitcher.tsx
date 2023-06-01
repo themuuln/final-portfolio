@@ -7,38 +7,28 @@ import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
 
 const ThemeSwitcher = () => {
-  // Get cursor context and hover type context
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
 
-  // Get theme data from next-themes
   const { systemTheme, theme, setTheme } = useTheme();
 
-  // State to track if component is mounted
   const [mounted, setMounted] = useState(false);
 
-  // Handler for mouse enter event
   const handleMouseEnter = () => {
     textEnter();
-    // Set hover type based on current theme
     setHoverType(theme === "dark" ? <HiSun /> : <HiMoon />);
   };
 
   useEffect(() => {
-    // Set mounted state to true on component mount
     setMounted(true);
   }, []);
 
-  // Function to render theme changer button
   const renderThemeChanger = () => {
-    // Return null if component is not mounted
     if (!mounted) return null;
 
-    // Determine current theme (either systemTheme or theme)
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
-      // Render light mode button
       return (
         <m.button
           onMouseEnter={handleMouseEnter}
@@ -50,13 +40,13 @@ const ThemeSwitcher = () => {
             initial={{ y: "100%" }}
             transition={{ duration: 0.3 }}
             animate={{ y: 0 }}
+            exit={{ y: "100%" }}
           >
             <HiOutlineSun className="w-7 h-7" />
           </m.div>
         </m.button>
       );
     } else {
-      // Render dark mode button
       return (
         <m.button
           onMouseEnter={handleMouseEnter}
