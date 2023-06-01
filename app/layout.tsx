@@ -2,7 +2,6 @@
 import "./globals.css";
 import HeaderSection from "@/components/header/HeaderSection";
 import FooterSection from "@/components/footer/FooterSection";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CursorContext from "@/lib/context/context";
 import useWindowEvents from "@/lib/hook/WindowEvents";
@@ -87,7 +86,7 @@ export default function RootLayout({
         <IconContext.Provider value={{ size: "2.25em" }}>
           <CursorContext.Provider value={{ textEnter, textLeave }}>
             <HoverTypeContext.Provider value={{ setHoverType }}>
-              <motion.body className="noise-container">
+              <body className="noise-container scroll-smooth">
                 <div className="noise" />
                 <>
                   {loading ? (
@@ -109,7 +108,7 @@ export default function RootLayout({
                     </div>
                   )}
                 </>
-              </motion.body>
+              </body>
             </HoverTypeContext.Provider>
           </CursorContext.Provider>
         </IconContext.Provider>
