@@ -3,7 +3,7 @@ import { RiInputCursorMove } from "react-icons/ri";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import CursorContext from "@/lib/context/context";
-import { MdContentCopy } from "react-icons/md";
+import { MdContentCopy, MdOutlineDoneAll } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
 import { motion as m } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
@@ -14,33 +14,43 @@ const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 const ContactSection = () => {
   const { textEnter, textLeave } = useContext(CursorContext);
   const { setHoverType } = useContext(HoverTypeContext);
-  const mailHandleCopy = () =>
+  const mailHandleCopy = () => {
+    setHoverType(<MdOutlineDoneAll />);
     navigator.clipboard.writeText("themuln.official@gmail.com");
+  };
+
+  const mouseDownDone = () => {
+    setHoverType(<MdOutlineDoneAll />);
+  };
+
   const mailHandleMouseEnter = () => {
     textEnter();
     setHoverType(<MdContentCopy />);
   };
+
   const sendHandler = () => {
     textEnter();
     setHoverType(<FiSend />);
   };
+
   const inputHandler = () => {
     textEnter();
     setHoverType(<RiInputCursorMove />);
   };
-  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
+
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
       <section
         className={`flex font-semibold items-center justify-center pb-40 mt-40 h-fit gap-16`}
       >
-        <div className="flex w-full h-fit">
-          <div className="container flex flex-col md:space-x-10 md:flex-row">
-            {isPortrait ? null : <VerticalLine element={"contact"} />}
+        <div className="h-fit flex w-full">
+          <div className="md:space-x-10 md:flex-row container flex flex-col">
+            {isPortrait ? null : <VerticalLine element={"Contact"} />}
             <div className=" md:space-y-10">
               {/* title */}
               <div className={`text-3xl md:text-6xl pointer-events-none`}>
-                <div className="overflow-hidden h-fit w-fit">
+                <div className="h-fit w-fit overflow-hidden">
                   <m.h2
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
@@ -49,7 +59,7 @@ const ContactSection = () => {
                     Let’s chat.
                   </m.h2>
                 </div>
-                <div className="overflow-hidden h-fit w-fit">
+                <div className="h-fit w-fit overflow-hidden">
                   <m.h2
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
@@ -58,7 +68,7 @@ const ContactSection = () => {
                     Tell me about your
                   </m.h2>
                 </div>
-                <div className="overflow-hidden h-fit w-fit">
+                <div className="h-fit w-fit overflow-hidden">
                   <m.h2
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
@@ -69,7 +79,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="overflow-hidden h-fit w-fit">
+              <div className="h-fit w-fit overflow-hidden">
                 <m.p
                   initial={{ y: "100%" }}
                   whileInView={{ y: 0 }}
@@ -84,8 +94,10 @@ const ContactSection = () => {
                 <div
                   onMouseEnter={mailHandleMouseEnter}
                   onMouseLeave={textLeave}
+                  onMouseUp={textLeave}
+                  onMouseDown={mouseDownDone}
                   onClick={mailHandleCopy}
-                  className="transition-colors duration-200 hover:text-brand_bg-500"
+                  className="hover:text-brand_bg-500 transition-colors duration-200"
                 >
                   <HiOutlineMail />
                 </div>
@@ -94,8 +106,10 @@ const ContactSection = () => {
                   <h4
                     onMouseEnter={mailHandleMouseEnter}
                     onMouseLeave={textLeave}
+                    // onMouseUp={textLeave}
+                    onMouseDown={mouseDownDone}
                     onClick={mailHandleCopy}
-                    className="transition-colors duration-500 cursor-pointer text-brand_bg-400 hover:text-black"
+                    className="text-brand_bg-400 hover:text-black transition-colors duration-500 cursor-pointer"
                   >
                     THEMULN.OFFICIAL@GMAIL.COM
                   </h4>
@@ -111,7 +125,7 @@ const ContactSection = () => {
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
                     type="text"
-                    className="w-full p-4 rounded-2xl placeholder-slate-400"
+                    className="rounded-2xl placeholder-slate-400 w-full p-4"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -120,7 +134,7 @@ const ContactSection = () => {
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
                     type="email"
-                    className="w-full p-4 rounded-2xl"
+                    className="rounded-2xl w-full p-4"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -129,12 +143,12 @@ const ContactSection = () => {
                   <textarea
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
-                    className="w-full h-40 p-4 focus:border-brand_bg-400 rounded-2xl"
+                    className="focus:border-brand_bg-400 rounded-2xl w-full h-40 p-4"
                     placeholder=""
                   />
                   <div>
                     <m.button
-                      className="px-5 py-3 text-white transition-colors duration-200 bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl"
+                      className="bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl px-5 py-3 text-white transition-colors duration-200"
                       onMouseEnter={sendHandler}
                       onMouseLeave={textLeave}
                       type="submit"
