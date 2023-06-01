@@ -21,23 +21,23 @@ const SkillSection = () => {
       x: i % 2 === 0 ? "100%" : "-100%",
       y: i % 2 === 0 ? "100%" : "100%",
     },
-    show: { opacity: 1, x: 0, y: 0 },
+    show: { opacity: 1, x: 0, y: 0, transition: { repeat: 0 } },
     whileHover: { scale: 1.2 },
   });
   return (
     <section
       id="skills"
       data-scroll-section
-      className="flex flex-col items-center justify-center h-fit"
+      className="h-fit flex flex-col items-center justify-center"
     >
-      <div className="container w-full space-y-8 md:flex md:justify-around ">
+      <div className="md:flex md:justify-around container w-full space-y-8">
         <div className={`container flex justify-center space-y-2 font-light`}>
           {isPortrait ? null : <VerticalLine element={"skills"} />}
           <m.ul
             variants={container}
             initial={"hidden"}
             whileInView={"show"}
-            className="flex flex-col space-y-4 text-xl md:space-x-10 md:flex-row w-fit md:space-y-4 md:text-2xl "
+            className="md:space-x-10 md:flex-row w-fit md:space-y-4 md:text-2xl flex flex-col space-y-4 text-xl"
           >
             <div>
               <SkillTitle icon={<HiOutlineLanguage />}>Languages</SkillTitle>

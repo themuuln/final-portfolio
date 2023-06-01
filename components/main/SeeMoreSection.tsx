@@ -14,17 +14,17 @@ const SeeMoreSection = () => {
     setHoverType(<HiArrowUpRight />);
   };
   return (
-    <section className="flex justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white ">
+    <section className="flex select-none justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white ">
       <Link href="/me">
         <m.div
           initial={{ x: "100%" }}
           whileInView={{ x: 0 }}
-          className="flex gap-2 place-items-center"
+          className="place-items-center flex gap-2"
         >
           <m.h3
             onMouseEnter={meHandleMouseEnter}
             onMouseLeave={textLeave}
-            className="text-xl font-semibold transition-colors duration-200 md:text-3xl xl:text-5xl hover:text-brand_bg-500"
+            className="md:text-3xl xl:text-5xl hover:text-brand_bg-500 text-xl font-semibold transition-colors duration-200"
           >
             Explore My Story: Dive Deeper into My Journey
           </m.h3>
