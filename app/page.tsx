@@ -6,6 +6,7 @@ import SkillSection from "@/components/main/SkillSection";
 import TimelineSection from "@/components/main/TimelineSection";
 import SeeMoreSection from "@/components/main/SeeMoreSection";
 import MadeWith from "@/components/madewith/MadeWith";
+import { ParallaxText } from "@/lib/parallax/ParallaxText";
 
 export default function Home() {
   return (
@@ -15,15 +16,27 @@ export default function Home() {
         <div className="noise" />
         <HeroSection />
         {/* background pattern */}
-        <div className="flex flex-col gap-96 bodydivLight dark:bodydivDark">
+        <div className="bodydivLight dark:bodydivDark">
           {/* fade in lines */}
           <div className="absolute w-full h-96 bg-gradient-to-b from-[#e6e6e6] via-[#e6e6e6] dark:from-[#16181f]/80 dark:via-[#16181f]/80" />
-          <MainSection />
-          <SkillSection />
-          <TimelineSection />
-          <SeeMoreSection />
-          <ContactSection />
-          <MadeWith />
+          <div className="z-10">
+            <div className="relative">
+              <ParallaxText baseVelocity={-1}>
+                Temuulen Undrakhbayar
+              </ParallaxText>
+              <ParallaxText baseVelocity={1}>
+                Temuulen Undrakhbayar
+              </ParallaxText>
+            </div>
+            <div className="space-y-96">
+              <MainSection />
+              <SkillSection />
+              <TimelineSection />
+              <SeeMoreSection />
+              <ContactSection />
+              <MadeWith />
+            </div>
+          </div>
           {/* fade out lines */}
           <div className="absolute bottom-0 w-full h-96 bg-gradient-to-t from-[#e6e6e6] via-[#e6e6e6] dark:from-[#16181f]/80 dark:via-[#16181f]/80" />
         </div>
