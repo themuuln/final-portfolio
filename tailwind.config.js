@@ -29,6 +29,9 @@ module.exports = {
         firacode: ["var(--font-firacode)"],
         montserrat: ["var(--font-montserrat)"],
       },
+      backdropBlur: {
+        1: "1px",
+      },
       colors: {
         light_bg: {
           100: "#f1f1f1",
