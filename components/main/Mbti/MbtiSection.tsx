@@ -25,16 +25,16 @@ const MbtiSection = () => {
   return (
     <section
       id="mbti"
-      className="container flex justify-center min-h-screen place-items-center"
+      className="place-items-center container flex justify-center min-h-screen"
     >
-      <div className="flex flex-col items-center justify-center gap-8 lg:flex-row xl:gap-20">
+      <div className="lg:flex-row xl:gap-20 flex flex-col items-center justify-center gap-8">
         <m.div
           initial={{ x: -100, opacity: 0 }}
           transition={{ type: "tween" }}
           whileInView={{ x: 0, opacity: 1 }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="flex flex-col items-center debaterSection"
+          className="debaterSection flex flex-col items-center"
         >
           {theme == "dark" ? <DebaterSvg /> : <LightDebaterSvg />}
           <m.a
@@ -62,7 +62,7 @@ const MbtiSection = () => {
         </m.div>
         <div className="flex flex-col items-center gap-4 mt-3">
           {chartData.map((data, index) => (
-            <React.Fragment key={index}>
+            <div key={index}>
               {data.chartColor ? null : (
                 <ChartLeft
                   color={data.color || ""}
@@ -83,7 +83,7 @@ const MbtiSection = () => {
                 left={data.left}
                 right={data.right}
               />
-            </React.Fragment>
+            </div>
           ))}
         </div>
       </div>
