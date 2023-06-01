@@ -7,6 +7,12 @@ import { MdContentCopy, MdOutlineDoneAll } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
 import { motion as m } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import {
+  contactContainer,
+  contactItem,
+  contactSecondItem,
+  contactThirdItem,
+} from "../animation/variants";
 
 import dynamic from "next/dynamic";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
@@ -41,60 +47,37 @@ const ContactSection = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
-      <section
+      <m.section
+        id="contact"
+        variants={contactContainer}
+        initial="hidden"
+        whileInView="show"
         className={`flex font-semibold items-center justify-center pb-40 mt-40 h-fit gap-16`}
       >
         <div className="h-fit flex w-full">
           <div className="md:space-x-10 md:flex-row container flex flex-col">
             {isPortrait ? null : <VerticalLine element={"Contact"} />}
-            <div className=" md:space-y-10">
+            <div className="md:space-y-10 select-none">
               {/* title */}
-              <div className={`text-3xl md:text-6xl pointer-events-none`}>
-                <div className="h-fit w-fit overflow-hidden">
-                  <m.h2
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                  >
-                    Let’s chat.
-                  </m.h2>
-                </div>
-                <div className="h-fit w-fit overflow-hidden">
-                  <m.h2
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                  >
-                    Tell me about your
-                  </m.h2>
-                </div>
-                <div className="h-fit w-fit overflow-hidden">
-                  <m.h2
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    transition={{ duration: 1, delay: 1.1 }}
-                  >
-                    project.
-                  </m.h2>
-                </div>
-              </div>
-
-              <div className="h-fit w-fit overflow-hidden">
+              <m.div className={`text-3xl md:text-6xl pointer-events-none`}>
+                <m.h2 variants={contactItem}>Let’s chat.</m.h2>
+                <m.h2 variants={contactItem}>Tell me about your</m.h2>
+                <m.h2 variants={contactItem}>project.</m.h2>
                 <m.p
-                  initial={{ y: "100%" }}
-                  whileInView={{ y: 0 }}
-                  transition={{ duration: 1, delay: 1.4 }}
-                  className={`text-xl pointer-events-none`}
+                  variants={contactItem}
+                  className={`text-xl md:mt-10 pointer-events-none`}
                 >
                   Let’s create something together🤘🏻
                 </m.p>
-              </div>
+              </m.div>
               {/* mail at me button */}
-              <div className="backdrop-blur-[2px] border-border drop-shadow-xl bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl">
+              <m.div
+                variants={contactSecondItem}
+                className="backdrop-blur-[2px] border-border drop-shadow-xl bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border hover:backdrop-blur-[2px] transition-colors duration-300 gap-7 items-center flex py-3 px-5 w-fit rounded-2xl"
+              >
                 <div
                   onMouseEnter={mailHandleMouseEnter}
                   onMouseLeave={textLeave}
-                  onMouseUp={textLeave}
                   onMouseDown={mouseDownDone}
                   onClick={mailHandleCopy}
                   className="hover:text-brand_bg-500 transition-colors duration-200"
@@ -106,7 +89,6 @@ const ContactSection = () => {
                   <h4
                     onMouseEnter={mailHandleMouseEnter}
                     onMouseLeave={textLeave}
-                    // onMouseUp={textLeave}
                     onMouseDown={mouseDownDone}
                     onClick={mailHandleCopy}
                     className="text-brand_bg-400 hover:text-black transition-colors duration-500 cursor-pointer"
@@ -114,12 +96,15 @@ const ContactSection = () => {
                     THEMULN.OFFICIAL@GMAIL.COM
                   </h4>
                 </div>
-              </div>
+              </m.div>
             </div>
             {/* send me a message section */}
-            <div className="z-10 py-10 backdrop-blur-[2px] drop-shadow-xl border-border bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border  px-14 rounded-2xl">
+            <m.div
+              variants={contactThirdItem}
+              className="z-10 py-10 backdrop-blur-[2px] drop-shadow-xl border-border bg-slate-100/90 dark:bg-background/90 border-gray-800/40 border  px-14 rounded-2xl"
+            >
               <div className="space-y-8">
-                <h2 className="text-[32px] ">Send me a message💌</h2>
+                <h2 className="text-[32px] ">Send me a message</h2>
                 <div>
                   <input
                     onMouseEnter={inputHandler}
@@ -158,10 +143,10 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </m.div>
           </div>
         </div>
-      </section>
+      </m.section>
     </>
   );
 };
