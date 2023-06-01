@@ -2,6 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import CursorContext from "@/lib/context/context";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import { useMediaQuery } from "react-responsive";
 
 const Buttons = ({
   context, // Prop for button context
@@ -14,26 +15,25 @@ const Buttons = ({
 }) => {
   const { textEnter, textLeave } = useContext(CursorContext); // Use CursorContext for textEnter and textLeave functions
   const { setHoverType } = useContext(HoverTypeContext); // Use HoverTypeContext for setHoverType function
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" }); // Check if the current screen orientation is portrait
 
   const handleMouseEnter = () => {
     textEnter(); // Call textEnter function on mouse enter
     setHoverType(icon); // Call setHoverType function with icon prop as argument
   };
 
-  const handleMouseLeave = () => {
-    textLeave(); // Call textLeave function on mouse leave
-  };
-
   return (
     <motion.div className="overflow-hidden w-fit">
       <motion.li
         onMouseEnter={handleMouseEnter} // Attach handleMouseEnter function to onMouseEnter event
-        onMouseLeave={handleMouseLeave} // Attach handleMouseLeave function to onMouseLeave event
+        onMouseLeave={textLeave} // Attach handleMouseLeave function to onMouseLeave event
         variants={variants} // Apply variants prop for animation
         initial={"hidden"} // Set initial animation state
         animate={"show"} // Set target animation state
         transition={{ duration: 0.5 }} // Set animation duration
-        className={`header-button cursor-pointer font-light transition ease-linear`}
+        className={`${
+          isPortrait ? "hidden" : null
+        }  header-button cursor-pointer font-light transition ease-linear`}
       >
         &#47;&#47; {context} {/* Render button context */}
       </motion.li>
