@@ -11,12 +11,16 @@ import turbopackIcon from "public/svg/turbopack.svg";
 import npmIcon from "public/svg/npm.svg";
 import yarnIcon from "public/svg/yarn.svg";
 import reactIconsIcon from "public/svg/react-icons.svg";
+import sassIcon from "public/svg/sass.svg";
+import flowbiteIcon from "public/svg/flowbite.svg";
 
 const icons = [
   reactIcon,
   nextjsIcon,
-  tailwindcssIcon,
   typescriptIcon,
+  tailwindcssIcon,
+  flowbiteIcon,
+  sassIcon,
   framerIcon,
   // axiosIcon,
   turbopackIcon,
@@ -38,7 +42,11 @@ const MadeWith = () => {
               key={index}
               className="w-full mb-4 text-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 sm:mb-0"
             >
-              <Image className="h-12 mx-auto mb-2 sm:h-16" src={icon} alt="" />
+              <Image
+                className="z-50 h-12 mx-auto mb-2 sm:h-16"
+                src={icon}
+                alt=""
+              />
             </div>
           ))}
         </div>
