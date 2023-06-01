@@ -48,12 +48,12 @@ const FooterSection = () => {
   return (
     <div
       id="footer"
-      className="flex flex-col justify-end h-fit noise-container"
+      className="h-fit noise-container flex flex-col justify-end"
     >
       <div className="noise" />
       <div className="text-brand_main-500 bg-brand_bg-800/5">
         <IconContext.Provider value={{ size: "1em" }}>
-          <div className="container flex flex-col items-center mt-5 space-y-5 xl:flex xl:flex-row xl:justify-around">
+          <div className="xl:flex xl:flex-row xl:justify-around container flex flex-col items-center mt-5 space-y-5">
             <div>
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
@@ -66,15 +66,17 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
                 onMouseLeave={textLeave}
-                // className="text-lg transition-colors duration-200 cursor-pointer w-fit hover:text-brand_bg-500 underline-offset-1"
+                // className="w-fit hover:text-brand_bg-500 underline-offset-1 text-lg transition-colors duration-200 cursor-pointer"
                 className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
                 onClick={phoneHandleCopy}
               >
                 +976 8865-0115
               </m.p>
             </div>
-            <SocialLinks />
-            <QuickLinks />
+            <div className="md:flex-row md:justify-between md:gap-20 flex flex-col">
+              <SocialLinks />
+              <QuickLinks />
+            </div>
           </div>
           <div className={`mb-5 font-light md:mb-10`}>
             <div className={`flex w-full justify-center`}>
@@ -96,7 +98,7 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="botRow container flex h-fit justify-center border-t-[1px] border-light_bg-600 dark:border-dark_bg-400">
-            <p className="my-5 pointer-events-none md:my-10">
+            <p className="md:my-10 my-5 pointer-events-none">
               © Temuulen Undrakhbayar 2023
             </p>
           </div>
@@ -109,10 +111,10 @@ const FooterSection = () => {
             animate={{ bottom: 0, opacity: 1 }}
             exit={{ bottom: -20, opacity: 0 }}
             id="toast-simple"
-            className="fixed left-auto flex items-center self-center w-full max-w-xs p-4 mb-4 space-x-4 text-gray-500 divide-x divide-gray-200 rounded-lg shadow bottom-4 bg-slate-100/90 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-background/90 backdrop-blur-1"
+            className="bottom-4 bg-slate-100/90 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-background/90 backdrop-blur-1 fixed left-auto flex items-center self-center w-full max-w-xs p-4 mb-4 space-x-4 text-gray-500 divide-x divide-gray-200 rounded-lg shadow"
             role="alert"
           >
-            <IoCopySharp className="w-5 h-5 text-blue-600 dark:text-blue-500" />
+            <IoCopySharp className="dark:text-blue-500 w-5 h-5 text-blue-600" />
             <div className="pl-4 text-sm font-normal">{toastContext}</div>
           </m.div>
         )}
