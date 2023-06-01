@@ -47,7 +47,6 @@ const Cursor: React.FC<CursorProps> = ({
             stiffness: 51,
             restDelta: 1.001,
           }}
-          exit={{ opacity: 0 }}
           className={`${zentokyozoo.className} z-cursor pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl bg-brand_bg-300/50 backdrop-blur font-bold text-[#333333]`}
         >
           {hoverType}

@@ -13,7 +13,7 @@ const MainSection = () => {
       <section
         data-scroll-section
         id="qna"
-        className="relative flex flex-col items-center justify-center h-screen "
+        className="relative flex flex-col items-center justify-center h-screen pt-48 "
       >
         <div className="container space-y-8 h-fit md:flex md:justify-around">
           {isPortrait ? null : <VerticalLine element={"q&a"} />}
