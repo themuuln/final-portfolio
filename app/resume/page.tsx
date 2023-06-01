@@ -113,7 +113,7 @@ const Resume = () => {
                 <span className="font-bold">{language.name}:</span>{" "}
                 {language.proficiency}
               </p>
-              {language.name === "English" && (
+              {/* {language.name === "English" && (
                 <div className="flex gap-1">
                   {[...Array(4)].map((_, index) => (
                     <Block key={index} active={true} />
@@ -122,7 +122,7 @@ const Resume = () => {
                     <Block key={index} active={false} />
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </SectionContainer>
