@@ -9,11 +9,11 @@ const HeaderSection = () => {
   return (
     <>
       <header
-        className={`sticky noise-container top-0 z-10 h-[80px] w-full px-8 py-6 backdrop-blur`}
+        className={`absolute noise-container top-0 z-10 h-20 w-full px-8 py-6 backdrop-blur`}
       >
         <div className="noise" />
-        <div className="container flex items-center justify-between ">
-          <div className="overflow-x-hidden overflow-y-hidden w-fit">
+        <div className=" container flex items-center justify-between">
+          <div className="w-fit overflow-x-hidden overflow-y-hidden">
             <m.div
               initial={{ y: 100, opacity: 0.3 }}
               animate={{ y: 0, opacity: 1 }}

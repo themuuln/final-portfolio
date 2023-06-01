@@ -9,7 +9,7 @@ const ButtonData = [
     context: "home",
   },
   {
-    href: "#experience",
+    href: "#skills",
     icon: <AiOutlineExperiment />,
     context: "experience",
   },
