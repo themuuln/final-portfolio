@@ -1,4 +1,5 @@
 "use client";
+import "./styles.scss";
 import { motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
@@ -27,8 +28,8 @@ function HeroSection() {
   return (
     <>
       <main
-        id="hero"
-        className={`flex relative min-h-screen w-screen snap-center items-center justify-center`}
+        id="home"
+        className={`flex relative min-h-screen w-screen items-center justify-center`}
       >
         <div className="herooo container flex flex-col items-center justify-center w-screen h-full">
           <div className="textContainer flex flex-col justify-start select-none">
@@ -104,7 +105,7 @@ function HeroSection() {
             onMouseLeave={textLeave}
             className={`absolute ${
               isPortrait ? "hidden" : ""
-            } text-3xl transition-colors duration-200 bottom-[80px] hover:text-black text-brand_bg-400 animate-bounce`}
+            } text-3xl transition-colors duration-200 bottom-2 hover:text-black text-brand_bg-400 animate-bounce`}
           >
             <RxDoubleArrowDown />
           </m.div>
