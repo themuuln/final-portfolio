@@ -1,10 +1,6 @@
-import {
-  HiOutlineHome,
-  AiOutlineExperiment,
-  RiLayout2Line,
-  RiContactsBook2Line,
-  HiOutlineAnnotation,
-} from "react-icons/all";
+import { AiOutlineExperiment } from "react-icons/ai";
+import { HiOutlineHome, HiOutlineAnnotation } from "react-icons/hi";
+import { RiContactsBook2Line, RiLayout2Line } from "react-icons/ri";
 
 const ButtonData = [
   {
