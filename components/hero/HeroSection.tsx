@@ -3,7 +3,6 @@ import { motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
-import { FiArrowUpRight } from "react-icons/fi";
 import { RxDoubleArrowDown } from "react-icons/rx";
 import { useMediaQuery } from "react-responsive";
 import useFadeOutOnScroll from "@/lib/hook/useFadeOutOnScroll";
@@ -22,9 +21,6 @@ function HeroSection() {
   const handleMouseEnter = ({ letter }: any) => {
     textEnter(), setHoverType(letter);
   };
-  const handleMouseLeave = () => {
-    textLeave(), setHoverType(<FiArrowUpRight />);
-  };
   const scrollHandleMouse = () => {
     textEnter(), setHoverType(<RxDoubleArrowDown />);
   };
@@ -34,9 +30,9 @@ function HeroSection() {
         id="hero"
         className={`flex relative min-h-screen w-screen snap-center items-center justify-center`}
       >
-        <div className="container flex flex-col items-center justify-center w-screen h-full herooo">
-          <div className="flex flex-col justify-start select-none textContainer">
-            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+        <div className="herooo container flex flex-col items-center justify-center w-screen h-full">
+          <div className="textContainer flex flex-col justify-start select-none">
+            <div className="w-fit overflow-x-hidden overflow-y-hidden">
               <m.p
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -45,7 +41,7 @@ function HeroSection() {
               >
                 {greetings.split("").map((letter, index) => (
                   <m.span
-                    className="transition-all duration-500 hover:text-brand_bg-400"
+                    className="hover:text-brand_bg-400 transition-all duration-500"
                     key={index}
                   >
                     {letter}
@@ -53,7 +49,7 @@ function HeroSection() {
                 ))}
               </m.p>
             </div>
-            <div className="overflow-x-hidden overflow-y-hidden w-fit">
+            <div className="w-fit overflow-x-hidden overflow-y-hidden">
               <m.a
                 initial={{ y: 500, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -72,7 +68,7 @@ function HeroSection() {
                       transition={{ delay: 1, duration: 1 }}
                       className="transition-all duration-200 hover:text-[#000]"
                       onMouseEnter={() => handleMouseEnter({ letter })}
-                      onMouseLeave={handleMouseLeave}
+                      onMouseLeave={textLeave}
                       key={index}
                     >
                       {letter}
@@ -81,7 +77,7 @@ function HeroSection() {
                 /&gt;
               </m.a>
             </div>
-            <div className="self-end overflow-x-hidden overflow-y-hidden w-fit">
+            <div className="w-fit self-end overflow-x-hidden overflow-y-hidden">
               <m.p
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -90,7 +86,7 @@ function HeroSection() {
               >
                 {role.split("").map((letter, index) => (
                   <m.span
-                    className="transition-all duration-500 hover:text-brand_bg-400"
+                    className="hover:text-brand_bg-400 transition-all duration-500"
                     key={index}
                   >
                     {letter}
@@ -105,7 +101,7 @@ function HeroSection() {
           <m.div
             style={{ opacity }}
             onMouseEnter={scrollHandleMouse}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={textLeave}
             className={`absolute ${
               isPortrait ? "hidden" : ""
             } text-3xl transition-colors duration-200 bottom-[80px] hover:text-black text-brand_bg-400 animate-bounce`}
