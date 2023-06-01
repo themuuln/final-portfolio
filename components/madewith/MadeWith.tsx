@@ -35,7 +35,7 @@ const MadeWith = () => {
   return (
     <div className="pb-72">
       <div className="sm:px-6 lg:px-8 container px-4 mx-auto">
-        <div className="mt-8 relative shadow-lg bg-slate-100 backdrop-blur-[2px] dark:bg-background py-8 px-6 sm:py-10 sm:px-8 md:py-12 md:px-10 lg:py-16 lg:px-12">
+        <div className="mt-8 select-none pointer-events-none relative shadow-lg bg-slate-100 backdrop-blur-[2px] dark:bg-background py-8 px-6 sm:py-10 sm:px-8 md:py-12 md:px-10 lg:py-16 lg:px-12">
           <p className="mb-4 text-lg text-center">Made this website with</p>
           <div className="flex flex-wrap justify-center gap-4">
             {icons.map((icon, index) => (
