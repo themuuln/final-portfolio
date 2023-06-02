@@ -70,7 +70,7 @@ const MadeWith = () => {
           initial="hidden"
           whileInView="show"
           transition={{ ease: "easeInOut", delay: 0.5 }}
-          className="mt-8 select-none pointer-events-none relative shadow-lg bg-slate-100 backdrop-blur-[2px] dark:bg-background py-8 px-6 sm:py-10 sm:px-8 md:py-12 md:px-10 lg:py-16 lg:px-12"
+          className="mt-8 pointer-events-none relative shadow-lg bg-slate-100 backdrop-blur-[2px] dark:bg-background py-8 px-6 sm:py-10 sm:px-8 md:py-12 md:px-10 lg:py-16 lg:px-12"
         >
           <p className="md:text-2xl md:mb-8 mb-4 text-lg text-center">
             Made this website with
@@ -83,7 +83,7 @@ const MadeWith = () => {
               >
                 <m.div
                   variants={item}
-                  className="sm:h-20 z-50 h-12 mx-auto mb-2"
+                  className="sm:h-20 md:mb-8 z-50 h-12 mx-auto mb-4"
                 >
                   <Image
                     className="sm:h-20 z-50 h-12 mx-auto mb-2"
