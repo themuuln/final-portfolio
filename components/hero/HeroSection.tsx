@@ -33,7 +33,7 @@ function HeroSection() {
         className={`flex relative min-h-screen w-screen items-center justify-center`}
       >
         <div className="herooo container flex flex-col items-center justify-center w-screen h-full">
-          <div className="textContainer flex flex-col justify-start select-none">
+          <div className="textContainer flex flex-col justify-start">
             <div className="w-fit overflow-x-hidden overflow-y-hidden">
               <m.p
                 initial={{ y: 100, opacity: 0 }}

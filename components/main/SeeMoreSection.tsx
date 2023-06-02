@@ -16,7 +16,7 @@ const SeeMoreSection = () => {
   return (
     <section
       id="seemore"
-      className="flex select-none justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white "
+      className="flex justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white "
     >
       <Link href="/me">
         <m.div

@@ -11,7 +11,7 @@ const VerticalLine = ({ element }: VerticalLineProps) => {
         initial={{ x: "-100%", opacity: 0, scale: 1.1 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="space-y-2 h-[115%] select-none font-normal dark:text-white/30 text-black/30 pointer-events-none px-2 -mt-[2%]"
+        className="space-y-2 h-[115%] font-normal dark:text-white/30 text-black/30 pointer-events-none px-2 -mt-[2%]"
       >
         <div className="">&lt;{element}&gt;</div>
         <m.div className="relative w-[1px] ml-[50%] h-[90%] dark:bg-white/10 bg-black/10" />
