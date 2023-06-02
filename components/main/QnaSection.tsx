@@ -7,9 +7,9 @@ const QnaSection = () => {
     <section
       data-scroll-section
       id="qna"
-      className="flex flex-col items-center justify-center h-screen "
+      className=" flex flex-col items-center justify-center h-screen"
     >
-      <div className="container w-full space-y-8 md:flex md:justify-around ">
+      <div className="md:flex md:justify-around container w-full space-y-8">
         <m.div
           variants={cardContainer}
           initial={"hidden"}
