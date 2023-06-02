@@ -21,7 +21,7 @@ const SkillSection = () => {
       x: i % 2 === 0 ? "100%" : "-100%",
       y: i % 2 === 0 ? "100%" : "100%",
     },
-    show: { opacity: 1, x: 0, y: 0, transition: { repeat: 0 } },
+    show: { opacity: 1, x: 0, y: 0, transition: { ease: "easeInOut" } },
     whileHover: { scale: 1.2 },
   });
   return (

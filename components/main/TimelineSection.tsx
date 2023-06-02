@@ -29,9 +29,7 @@ export default function TimelineSection() {
                 <motion.div
                   key={id}
                   variants={cardItem(id)}
-                  transition={{ duration: 1, type: "spring", stiffness: 100 }}
-                  initial={"hidden"}
-                  whileInView={"show"}
+                  transition={{ duration: 1, ease: "easeIn" }}
                   className="bg-darkcolor p-5 rounded-md"
                 >
                   <Card question={question} answer={answer} id={id} />
