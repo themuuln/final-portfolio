@@ -62,7 +62,7 @@ const MbtiSection = () => {
         </m.div>
         <div className="flex flex-col items-center gap-4 mt-3">
           {chartData.map((data, index) => (
-            <div key={index}>
+            <div className="flex flex-col items-center gap-4 mt-3" key={index}>
               {data.chartColor ? null : (
                 <ChartLeft
                   color={data.color || ""}
