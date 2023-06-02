@@ -9,6 +9,7 @@ import { useMediaQuery } from "react-responsive";
 import useFadeOutOnScroll from "@/lib/hook/useFadeOutOnScroll";
 
 import { Zen_Tokyo_Zoo } from "@next/font/google";
+import Link from "next/link";
 const zentokyozoo = Zen_Tokyo_Zoo({ weight: "400", subsets: ["latin"] });
 
 function HeroSection() {
@@ -107,7 +108,9 @@ function HeroSection() {
               isPortrait ? "hidden" : ""
             } text-3xl transition-colors duration-200 bottom-2 hover:text-black text-brand_bg-400 animate-bounce`}
           >
-            <RxDoubleArrowDown />
+            <Link href={"#parallax"}>
+              <RxDoubleArrowDown />
+            </Link>
           </m.div>
         )}
       </main>

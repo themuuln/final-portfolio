@@ -20,7 +20,7 @@ export default function Home() {
           {/* fade in lines */}
           <div className="absolute w-full h-96 bg-gradient-to-b from-[#e6e6e6] via-[#e6e6e6] dark:from-[#16181f]/80 dark:via-[#16181f]/80" />
           <div className="z-10">
-            <div className="relative">
+            <div id="parallax" className="relative">
               <ParallaxText baseVelocity={-1}>
                 Temuulen Undrakhbayar
               </ParallaxText>
