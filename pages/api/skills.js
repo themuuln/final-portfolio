@@ -1,11 +1,6 @@
 import { SiJavascript } from "react-icons/si";
 import { FaReact, FaSass, FaGitAlt } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiTailwindCSS,
-  SiChakraui,
-  SiNeovim,
-} from "react-icons/si";
+import { SiTypescript, SiChakraui, SiNeovim } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { RxFramerLogo } from "react-icons/rx";
 
@@ -47,7 +42,6 @@ export const skills = [
       {
         name: "TailwindCSS",
         href: "https://tailwindcss.com/",
-        icon: <SiTailwindCSS />,
       },
       {
         name: "ChakraUI",
