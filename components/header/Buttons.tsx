@@ -11,7 +11,7 @@ const Buttons = ({
 }: {
   context: string;
   icon: any;
-  variants: any;
+  variants?: any;
 }) => {
   const { textEnter, textLeave } = useContext(CursorContext); // Use CursorContext for textEnter and textLeave functions
   const { setHoverType } = useContext(HoverTypeContext); // Use HoverTypeContext for setHoverType function
@@ -23,7 +23,7 @@ const Buttons = ({
   };
 
   return (
-    <motion.div className="overflow-hidden w-fit">
+    <motion.div className="w-fit overflow-hidden">
       <motion.li
         onMouseEnter={handleMouseEnter} // Attach handleMouseEnter function to onMouseEnter event
         onMouseLeave={textLeave} // Attach handleMouseLeave function to onMouseLeave event
