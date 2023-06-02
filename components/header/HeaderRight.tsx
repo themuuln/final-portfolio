@@ -7,15 +7,18 @@ import ButtonData from "./ButtonData";
 import { useMediaQuery } from "react-responsive";
 
 const HeaderRight = () => {
+  // variants
   const container = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.5 } },
   };
-
   const item = { hidden: { y: "100%" }, show: { y: 0 } };
+
+  // portrait detector
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
+      {/* buttons */}
       <m.ul
         variants={container}
         initial={"hidden"}
@@ -38,6 +41,8 @@ const HeaderRight = () => {
             </Link>
           ))}
         </m.div>
+
+        {/* theme switcher button */}
         <IconContext.Provider value={{ size: "0.5em" }}>
           <ThemeSwitcher />
         </IconContext.Provider>
