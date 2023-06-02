@@ -119,7 +119,7 @@ const ContactSection = () => {
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
                     type="email"
-                    className="rounded-2xl focus:border-brand_bg-400 bg-slate-100 dark:bg-background w-full p-4"
+                    className="rounded-2xl placeholder-slate-400 focus:border-brand_bg-400 bg-slate-100 dark:bg-background w-full p-4"
                     placeholder="Enter your email"
                   />
                 </div>
