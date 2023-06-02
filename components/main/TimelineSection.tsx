@@ -10,7 +10,10 @@ export default function TimelineSection() {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
 
   return (
-    <motion.div className="h-fit flex items-center justify-center w-full">
+    <motion.div
+      id="timeline"
+      className="h-fit flex items-center justify-center w-full"
+    >
       <motion.div className="max-w-[1000px] justify-center h-fit w-full flex gap-4">
         <motion.div className="flex items-center">
           {isPortrait ? null : <VerticalLine element={"Timeline"} />}

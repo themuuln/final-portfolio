@@ -14,11 +14,15 @@ const SeeMoreSection = () => {
     setHoverType(<HiArrowUpRight />);
   };
   return (
-    <section className="flex select-none justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white ">
+    <section
+      id="seemore"
+      className="flex select-none justify-center drop-shadow-xl min-w-full backdrop-blur-[2px] border-border bg-slate-100/90 dark:bg-background/90 py-10 border-gray-800/40 border h-fit place-items-center dark:text-white "
+    >
       <Link href="/me">
         <m.div
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ y: "30%", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", delay: 0.3 }}
           className="place-items-center flex gap-2"
         >
           <m.h3
