@@ -19,6 +19,8 @@ export const cardContainer = {
     opacity: 1,
     transition: {
       staggerChildren: 0.3,
+      ease: "easeInOut",
+      duration: 1,
     },
   },
 };
@@ -63,6 +65,9 @@ export const contactItem = {
   show: {
     opacity: 1,
     y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
   },
 };
 
