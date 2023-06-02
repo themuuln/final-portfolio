@@ -6,10 +6,10 @@ import { useContext, useState } from "react";
 import CursorContext from "@/lib/context/context";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
-import { MdContentCopy } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi";
 import QuickLinks from "./QuickLinks";
+import { MdContentCopy, MdOutlineDoneAll } from "react-icons/md";
 
 const FooterSection = () => {
   const [showToast, setShowToast] = useState(false);
@@ -45,6 +45,9 @@ const FooterSection = () => {
     textEnter();
     setHoverType(<HiOutlinePhoneOutgoing />);
   };
+  const mouseDownDone = () => {
+    setHoverType(<MdOutlineDoneAll />);
+  };
   return (
     <div
       id="footer"
@@ -58,6 +61,7 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={mailHandleMouseEnter}
                 onMouseLeave={textLeave}
+                onMouseDown={mouseDownDone}
                 onClick={mailHandleCopy}
                 className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
               >
@@ -66,7 +70,7 @@ const FooterSection = () => {
               <m.p
                 onMouseEnter={phoneHandleMouseEnter}
                 onMouseLeave={textLeave}
-                // className="w-fit hover:text-brand_bg-500 underline-offset-1 text-lg transition-colors duration-200 cursor-pointer"
+                onMouseDown={mouseDownDone}
                 className={`hover:text-brand_bg-500 transition-colors duration-200 text-lg md:text-4xl font-bold cursor-pointer cursor-pointers underline-offset-1 `}
                 onClick={phoneHandleCopy}
               >
