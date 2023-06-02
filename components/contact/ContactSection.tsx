@@ -1,5 +1,4 @@
 import { HiOutlineMail } from "react-icons/hi";
-import { RiInputCursorMove } from "react-icons/ri";
 import { useContext } from "react";
 import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
 import CursorContext from "@/lib/context/context";
@@ -15,6 +14,7 @@ import {
 } from "../animation/variants";
 
 import dynamic from "next/dynamic";
+import { BsTypeItalic } from "react-icons/bs";
 const VerticalLine = dynamic(() => import("../VerticalLine"), { ssr: false });
 
 const ContactSection = () => {
@@ -41,7 +41,7 @@ const ContactSection = () => {
 
   const inputHandler = () => {
     textEnter();
-    setHoverType(<RiInputCursorMove />);
+    setHoverType(<BsTypeItalic />);
   };
 
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -110,7 +110,7 @@ const ContactSection = () => {
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
                     type="text"
-                    className="rounded-2xl placeholder-slate-400 w-full p-4"
+                    className="rounded-2xl placeholder-slate-400 focus:border-brand_bg-400 bg-slate-100 dark:bg-background w-full p-4"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
                     type="email"
-                    className="rounded-2xl w-full p-4"
+                    className="rounded-2xl focus:border-brand_bg-400 bg-slate-100 dark:bg-background w-full p-4"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -128,7 +128,7 @@ const ContactSection = () => {
                   <textarea
                     onMouseEnter={inputHandler}
                     onMouseLeave={textLeave}
-                    className="focus:border-brand_bg-400 rounded-2xl w-full h-40 p-4"
+                    className="focus:border-brand_bg-400 dark:text-white rounded-2xl bg-slate-100 dark:bg-background w-full h-40 p-4 text-black"
                     placeholder=""
                   />
                   <div>
