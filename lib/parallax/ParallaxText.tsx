@@ -50,6 +50,11 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         className="scroller text-brand_bg-500 backdrop-blur-1"
         style={{ x }}
       >
+        {/* thanks for framer :) */}
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
