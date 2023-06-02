@@ -3,9 +3,17 @@ import { useContext } from "react";
 import CursorContext from "@/lib/context/context";
 import HeaderRight from "./HeaderRight";
 import Link from "next/link";
+import { HoverTypeContext } from "@/lib/context/HoverTypeContext";
+import { RxPerson } from "react-icons/rx";
 
 const HeaderSection = () => {
-  const { textEnter, textLeave } = useContext(CursorContext); // Access textEnter and textLeave from CursorContext
+  const { textEnter, textLeave } = useContext(CursorContext);
+  const { setHoverType } = useContext(HoverTypeContext);
+
+  function handleMouseEnter() {
+    textEnter();
+    setHoverType(<RxPerson />);
+  }
   return (
     <>
       <header
@@ -19,7 +27,7 @@ const HeaderSection = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               className={`flex items-center justify-center gap-2 md:text-2xl cursor-pointer leftSideHeader `}
-              onMouseEnter={textEnter}
+              onMouseEnter={handleMouseEnter}
               onMouseLeave={textLeave}
             >
               <span>&lt;</span>
