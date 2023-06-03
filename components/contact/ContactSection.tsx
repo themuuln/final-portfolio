@@ -36,7 +36,8 @@ const ContactSection = () => {
 
   const sendHandler = () => {
     textEnter();
-    setHoverType(<FiSend />);
+    // setHoverType(<FiSend />);
+    setHoverType("XXX");
   };
 
   const inputHandler = () => {
@@ -133,6 +134,9 @@ const ContactSection = () => {
                   />
                   <div>
                     <m.button
+                      id="contactSubmitButton"
+                      data-popover-target="popover-top"
+                      data-popover-placement="top"
                       className="bg-brand_bg-400 hover:bg-brand_bg-500 active:bg-brand_bg-600 rounded-2xl px-5 py-3 text-white transition-colors duration-200"
                       onMouseEnter={sendHandler}
                       onMouseLeave={textLeave}

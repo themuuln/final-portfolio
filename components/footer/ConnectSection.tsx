@@ -10,7 +10,7 @@ const SocialLinks: React.FC = () => {
     return connects.map((connect, index) => {
       return (
         <ul
-          className="flex flex-col items-start gap-1 mb-5 text-xl md:mb-10 md:gap-2"
+          className="md:mb-10 md:gap-2 flex flex-col items-start gap-1 mb-5 text-xl"
           key={index}
         >
           {connect.facebook && (

@@ -31,7 +31,7 @@ const Card = ({
   return (
     <m.div
       transition={{
-        layout: { duration: 0.5, type: "spring" },
+        layout: { duration: 0.5, type: "spring", bounce: 0.1 },
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={textLeave}

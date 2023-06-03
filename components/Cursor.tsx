@@ -24,7 +24,7 @@ const Cursor: React.FC<CursorProps> = ({
       <m.div
         variants={variants}
         animate={cursorVariant}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-cursor cursorr bg-brand_bg-500"
+        className="z-cursor cursorr bg-brand_bg-500 fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none"
       />
       <m.div
         variants={variants3}
@@ -47,7 +47,7 @@ const Cursor: React.FC<CursorProps> = ({
             stiffness: 51,
             restDelta: 1.001,
           }}
-          className={`${zentokyozoo.className} z-cursor pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl bg-brand_bg-300/50 backdrop-blur font-bold text-[#333333]`}
+          className={`${zentokyozoo.className} z-cursor pointer-events-none absolute left-0 top-0 hidden h-1 w-1 items-center justify-center rounded-3xl bg-brand_bg-300/40 backdrop-blur font-bold text-[#333333]`}
         >
           {hoverType}
         </m.div>
