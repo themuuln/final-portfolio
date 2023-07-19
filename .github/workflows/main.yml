@@ -1,0 +1,29 @@
+name: Daily Empty Commits
+
+on:
+  schedule:
+    - cron: "44 14 * * *"
+
+jobs:
+  daily_empty_commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config user.name "themuuln"
+          git config user.email "zerone.offical@gmail.com"
+
+      - name: Create Empty Commits
+        run: |
+          for i in {1..20}; do
+            touch empty_commit_$i.txt
+            git add empty_commit_$i.txt
+            git commit -m "Daily empty commit $i"
+          done
+
+      - name: Push Commits
+        run: |
+          git push origin HEAD
